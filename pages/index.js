@@ -20,8 +20,8 @@ import CardImg1 from '../public/images/card-img-1.png';
 import CardImg2 from '../public/images/card-img-2.png';
 import CardImg3 from '../public/images/card-img-3.png';
 import Star from '../public/images/star.svg';
-import styles from '../styles/Home.module.scss';
 import ContactForm from '../components/ContactForm';
+import styles from '../styles/Home.module.scss';
 
 
 const Home = () => {
