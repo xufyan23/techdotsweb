@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import styles from '../../styles/Header.module.scss';
 
 

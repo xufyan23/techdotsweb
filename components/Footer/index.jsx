@@ -1,6 +1,4 @@
 import Link from "next/link";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import styles from "../../styles/Footer.module.scss";
 
 const Footer = () => {
