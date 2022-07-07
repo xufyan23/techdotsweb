@@ -1,7 +1,7 @@
 
 const WhoWeAre = () => {
   return (
-    <h1></h1>
+    <h1>Who we are</h1>
   );
 };
 
