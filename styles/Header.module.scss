@@ -1,0 +1,62 @@
+@import './vaiables.scss';
+
+.navheader {
+  .navbar {
+    padding-top: 2rem;
+  }
+  .navbar_brand {
+    color: $clr-white;
+  }
+  .nav_link {
+    position: relative;
+    padding: 0 1.5rem !important;
+    font-size: 13px !important;
+    color: $clr-white;
+    &:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      background-color: $clr-green-400;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover, &.active {
+      &:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      a {
+        color: $clr-white;
+      }
+    }
+  }
+  .header_cta {
+    margin-left: 1rem;
+  }
+  .social_icon {
+    margin-left: 1rem;
+    a {
+      font-size: 18px;
+
+      &:hover {
+        color: $clr-white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .navheader {
+    .navbar {
+      .collapse{
+        justify-content: flex-end !important;
+      }
+    }
+  }
+}
+
+
