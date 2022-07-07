@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
 @import './vaiables.scss';
 
 @font-face {
   font-family: Helvetica;
   src: url('https://res.cloudinary.com/dcfzux5xq/raw/upload/v1655905208/Techdots/fonts/Helvetica/Helvetica_quk2eq.woff2') format("woff2");
+  font-display: swap;
 }
 
 *, ::after, ::before {
