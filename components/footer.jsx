@@ -1,5 +1,7 @@
 import Link from "next/link";
-import styles from "../../styles/Footer.module.scss";
+import Image from "next/image";
+import Linkedin from '../public/images/linkedin.svg';
+import styles from "../styles/Footer.module.scss";
 
 const Footer = () => {
   return (
@@ -81,8 +83,7 @@ const Footer = () => {
 					<div className={`${styles.copy_right_text}`}>
 						<p className="mb-0">Copyright © 2022 Techdots™. All Rights Reserved.</p>
 						<div className={`${styles.social_icons}`}>
-							{/* <Link href="#"><a><FontAwesomeIcon icon={faFacebook} /></a></Link>
-							<Link href="#"><a><FontAwesomeIcon icon={faLinkedin} /></a></Link> */}
+							<Link href="#"><a><Image src={Linkedin}width={20} height={20} alt="Linked In"/></a></Link>
 						</div>
 					</div>
         </div>

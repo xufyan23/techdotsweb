@@ -1,2 +1,91 @@
+@import './vaiables.scss';
 
+.services_list {
+	padding-bottom: 2rem;
+	padding-left: 1rem;
+	li {
+		list-style-type:disc;
+		line-height: 2;
+		&::marker {
+			color: $clr-green-400;
+			font-size: 1.2rem;
+		}
+	}
+}
 
+.consultation {
+	overflow: hidden;
+	padding-top: 5rem;
+	overflow: hidden;
+	.consultation_grid {
+		display: grid;
+		grid-template-columns: 0.3fr 0.75fr 1fr;
+	}
+	.consultation_text {
+		grid-column: 2;
+		padding-top: 2rem;
+	}
+	.consultation_img {
+		justify-self: flex-end;
+		margin-right: -4.2rem;
+
+	}
+}
+
+.implementation {
+	.implementation_grid {
+		display: grid;
+		grid-template-columns: 1fr 0.75fr 0.3fr;
+	}
+	.implementation_img {
+		justify-content: flex-end;
+		transform: translateX(-7rem);
+	}
+}
+
+.validation {
+	overflow: hidden;
+	.validation_grid {
+		display: grid;
+		grid-template-columns: 0.3fr 0.75fr 1fr;
+	}
+	.validation_text {
+		grid-column: 2;
+		align-self: center;
+	}
+	.validation_img {
+		justify-self: flex-end;
+		transform: translateX(4rem);
+	}
+}
+
+.design {
+	display: grid;
+	grid-template-columns: 1fr 0.75fr 0.3fr;
+	align-items: center;
+	height: 520px;
+	margin-top: -8rem;
+	position: relative;
+	background: $clr-blue-900;
+	clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 20%);
+	color: #ffffff;
+	z-index: -1;
+	.design_img{
+		align-self: flex-end;
+		transform: translateX(-8rem);
+	}
+}
+
+.development {
+	display: grid;
+	grid-template-columns: 0.3fr 0.75fr 1fr ;
+	align-items: center;
+	overflow: hidden;
+	.development_text {
+		grid-column: 2;
+	}
+	.development_img {
+		justify-self: flex-end;
+		transform: translateX(6rem);
+	}
+}

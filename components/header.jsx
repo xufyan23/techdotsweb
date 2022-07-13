@@ -2,8 +2,9 @@
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Logo from "../../public/images/logo.svg";
-import styles from '../../styles/Header.module.scss';
+import Logo from "../public/images/logo.svg";
+import styles from '../styles/Header.module.scss';
+import Linkedin from "../public/images/linkedin.svg";
 
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
       <div className="container">
         <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
           <div className={`navbar-brand ${styles.navbar_brand}`}>
-            <Link href="#" >
+            <Link href="/">
               <a>
                 <Image src={Logo} width={95} height={26} alt="techdots" />
               </a>
@@ -39,7 +40,7 @@ const Header = () => {
 							<Link className="nav-link" href="/">Home<span className="sr-only">(current)</span></Link>
 						</li> */}
               <li className={`nav-link ${styles.nav_link} ${styles.active}`}>
-                <Link href="/who-we-are">
+                <Link href="/">
                   <a>Who are we</a>
                 </Link>
               </li>
@@ -64,7 +65,7 @@ const Header = () => {
                 <button className="btn btn-outline">Book Appointment</button>
               </li>
               <li className={`${styles.social_icon}`}>
-                {/* <Link href="#"><a><FontAwesomeIcon icon={faLinkedin} /></a></Link> */}
+                <Link href="#"><a><Image src={Linkedin} width={20} height={20} alt="Linked In"/></a></Link>
               </li>
             </ul>
           </div>
