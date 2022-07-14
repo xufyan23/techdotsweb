@@ -16,7 +16,7 @@ const Services = () => {
       <Head>
         <title>Services</title>
       </Head>
-      <main className="services">
+      <div className="services">
         <section className="banner">
           <Header />
           <div className="container-fluid">
@@ -166,7 +166,7 @@ const Services = () => {
             </div>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 };

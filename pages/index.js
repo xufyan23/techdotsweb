@@ -247,7 +247,7 @@ const Home = () => {
                   the more obscure Latin words.
                 </p>
                 <Link href="/learn">
-                  <a className={`${styles.learn_more} clr-green`}>
+                  <a className="learn-more">
                     Learn More <Image src={arrowRight} alt="learn more" loading = "lazy" />
                   </a>
                 </Link>
@@ -265,7 +265,7 @@ const Home = () => {
                   the more obscure Latin words.
                 </p>
                 <Link href="/learn">
-                  <a className={`${styles.learn_more} clr-green`}>
+                  <a className="learn-more">
                     Learn More <Image src={arrowRight} alt="learn more" />
                   </a>
                 </Link>
@@ -289,7 +289,7 @@ const Home = () => {
                   the more obscure Latin words.
                 </p>
                 <Link href="/learn">
-                  <a className={`${styles.learn_more} clr-green`}>
+                  <a className="learn-more">
                     Learn More <Image src={arrowRight} alt="learn more" />
                   </a>
                 </Link>

@@ -62,6 +62,7 @@ h3 {
 
 p {
   line-height: 1.5;
+  // font-size: clamp(1.2vw, 4vw, 0.88vw);
 }
 
 a {
@@ -161,6 +162,17 @@ small {
     outline: 1px solid $clr-blue-500;
     box-shadow: none;
     border-color: transparent;
+  }
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: $clr-green-400;
+  &:hover {
+    color: $clr-green-400;
   }
 }
 
@@ -272,10 +284,43 @@ small {
 .contact-form {
   background-image: url("../public/images/img_side.svg");
   background-repeat: no-repeat;
-  background-size: 18% 78%;
+  background-size: contain;
   margin-bottom: -3rem;
   padding-top: 5rem;
   padding-bottom: 7rem;
+}
+
+.success-wrapper {
+  .banner {
+    .banner_col {
+      grid-template-columns: 0.4fr 0.8fr 1fr;
+      align-items: center;
+      .banner_text-box {
+        height: auto;
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  .link-heading {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .contact-form {
+    position: relative;
+    &:after {
+    content: "Contact Us";
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: -8%;
+    top: 16rem;
+    font-size: 5rem;
+    transform: rotate(90deg);
+    color: #f7f7f7;
+    }
+  }
 }
 
 /*----------  checkbox  ----------*/

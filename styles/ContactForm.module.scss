@@ -7,6 +7,11 @@
 			color: $clr-green-400;
 		}
 	}
+	.action_text {
+		span {
+			color: $clr-grey-300;
+		}
+	}
 	.action_btn {
 		display: flex;
 		justify-content: space-between;
