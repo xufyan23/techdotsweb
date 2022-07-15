@@ -426,7 +426,7 @@ const Home = () => {
               <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy" />
             </div>
             <div className="row">
-              <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+              <div className="col-12 col-sm-12 col-lg-5 col-xl-5 col-xxl-6">
                 <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                   <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -501,7 +501,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+              <div div className="col-12 col-sm-12 col-lg-7 col-xl-7 col-xxl-6">
                 <ContactForm/>
               </div>
             </div>

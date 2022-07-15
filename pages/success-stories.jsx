@@ -67,7 +67,9 @@ const SuccessStories = () => {
                     </div>
                   </div>
 
-                  <div className={`${styles.success_card} ${styles.small_card}`}>
+                  <div
+                    className={`${styles.success_card} ${styles.small_card}`}
+                  >
                     <div className={`${styles.success_card_img}`}>
                       <Image src={CardImg2} alt="card banner" loading="lazy" />
                     </div>
@@ -197,7 +199,7 @@ const SuccessStories = () => {
         <section className="contact-form">
           <div className="container">
             <div className="row">
-              <div className="col-6 m-auto">
+              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6 m-auto">
                 <ContactForm />
               </div>
             </div>
