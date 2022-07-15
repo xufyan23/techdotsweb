@@ -60,7 +60,7 @@ const Services = () => {
         <section className={`${styles.consultation}`}>
           <div className={`${styles.consultation_grid}`}>
             <div className={`${styles.consultation_text}`}>
-              <h3>Consultation</h3>
+              <h3 className="mb-4">Consultation</h3>
               <p>
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
@@ -84,7 +84,7 @@ const Services = () => {
               <Image src={Implementation} alt="Consultation" loading="lazy" />
             </div>
             <div className={`${styles.implementation_text}`}>
-              <h3>Implementation</h3>
+              <h3 className="mb-4">Implementation</h3>
               <p>
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
@@ -102,7 +102,7 @@ const Services = () => {
         <section className={`${styles.validation}`}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
-              <h3>Idea Validation</h3>
+              <h3 className="mb-4">Idea Validation</h3>
               <p>
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
@@ -160,7 +160,7 @@ const Services = () => {
         <section className="contact-form bg-grey-100">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-6">
+              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6">
                 <ContactForm />
               </div>
             </div>

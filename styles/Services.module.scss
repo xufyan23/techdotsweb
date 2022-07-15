@@ -14,7 +14,6 @@
 }
 
 .consultation {
-	overflow: hidden;
 	padding-top: 5rem;
 	overflow: hidden;
 	.consultation_grid {
@@ -64,7 +63,7 @@
 	grid-template-columns: 1fr 0.75fr 0.3fr;
 	align-items: center;
 	height: 520px;
-	margin-top: -8rem;
+	margin-top: -6rem;
 	position: relative;
 	background: $clr-blue-900;
 	clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 20%);
@@ -87,5 +86,121 @@
 	.development_img {
 		justify-self: flex-end;
 		transform: translateX(6rem);
+	}
+}
+
+@media(max-width: 64rem) {
+	.consultation {
+		.consultation_grid {
+			grid-template-columns: 0.08fr 1fr 1fr;
+		}
+	}
+
+	.implementation {
+		.implementation_grid {
+			grid-template-columns: 1fr 1fr 0.06fr;
+		}
+	}
+
+	.validation {
+		.validation_grid {
+			grid-template-columns: 0.08fr 1fr 1fr;
+		}
+	}
+
+	.design {
+		grid-template-columns: 1fr 1fr 0.06fr;
+		height: 470px;
+    margin-top: -4rem;
+	}
+
+	.development {
+		grid-template-columns: 0.08fr 1fr 1fr;
+	}
+}
+
+@media (max-width: 62rem) {
+	.consultation {
+		padding-bottom: 4rem;
+	}
+
+	.implementation {
+		padding-bottom: 4rem;
+		.implementation_img {
+			transform: translateX(-4rem);
+		}
+	}
+
+	.validation {
+		.validation_img {
+			transform: translateX(2rem);
+		}
+	}
+
+	.design {
+    margin-top: 0;
+		margin-bottom: 4rem;
+		.design_img {
+			transform: translateX(-3rem);
+		}
+	}
+
+	.development {
+		.development_img {
+			transform: translateX(2rem);
+		}
+	}
+}
+
+@media(max-width: 767px) {
+	.consultation, .validation {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		.consultation_grid, .validation_grid{
+			grid-template-columns: 1fr;
+		}
+		.consultation_img, .validation_img {
+			margin-right: 0;
+			grid-column: 2;
+			grid-row: 1;
+		}
+	}
+
+	.implementation {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		.implementation_grid {
+			grid-template-columns: 1fr;
+		}
+		.implementation_img {
+			transform: translateX(0);
+		}
+	}
+
+	.validation {
+		padding-bottom: 4rem;
+		.validation_img {
+			transform: translateX(0);
+		}
+	}
+
+	.design {
+		grid-template-columns: 1fr;
+		clip-path: none;
+		height: auto;
+		padding: 4rem 1rem;
+		.design_img {
+			transform: translateX(0);
+		}
+	}
+
+	.development {
+		grid-template-columns: 1fr;
+		padding: 0 1rem 4rem;
+		.development_img {
+			grid-column: 2;
+			grid-row: 1;
+			transform: translateX(0);
+		}
 	}
 }

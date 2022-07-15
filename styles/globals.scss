@@ -284,7 +284,8 @@ small {
 .contact-form {
   background-image: url("../public/images/img_side.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto auto;
+  background-position: top -82px left;
   margin-bottom: -3rem;
   padding-top: 5rem;
   padding-bottom: 7rem;
@@ -429,6 +430,15 @@ input[type="checkbox"]:checked {
       }
     }
   }
+
+  .services {
+    .banner_col {
+      .banner_text {
+        grid-column: 1;
+        padding-left: 1.7rem;
+      }
+    }
+  }
 }
 
 @media(max-width: 767px) {
@@ -487,12 +497,31 @@ input[type="checkbox"]:checked {
   .mt-xs-2 {
     margin-top: 2rem;
   }
+
+  .services {
+    .banner {
+      .banner_col {
+        padding-bottom: 2rem;
+        .banner_text {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
 }
 
 @media(max-width: 480px) {
   .banner {
+    .btn {
+      width: 100%;
+    }
     .primary-btn {
       margin-bottom: 1rem;
     }
+  }
+
+  .contact-form {
+    background-image: none;
   }
 }
