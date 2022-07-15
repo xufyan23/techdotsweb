@@ -63,6 +63,9 @@
       align-items: center;
       gap: 0.5rem;
       font-size: 0.8125rem;
+      color: $clr-green-400;
+      background: transparent;
+      border: 0;
     }
     .card_img {
       object-fit: cover;

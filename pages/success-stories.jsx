@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Router, useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "../components/contactForm";
@@ -11,8 +12,10 @@ import CardImg4 from "../public/images/service-sample.png";
 import styles from "../styles/SuccessStories.module.scss";
 
 const SuccessStories = () => {
+  const router = useRouter();
+
   return (
-    <div>
+    <>
       <Head>
         <title>Services</title>
       </Head>
@@ -94,78 +97,98 @@ const SuccessStories = () => {
           <div className="container">
             <div className={`${styles.col_space} row`}>
               <div className="col-6">
-                <h3>A remade backend supported <span className="d-block">eSky&apos;s global expansion</span></h3>
+                <h3>
+                  A remade backend supported{" "}
+                  <span className="d-block">eSky&apos;s global expansion</span>
+                </h3>
                 <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old.
                 </p>
-                <Link href="/learn">
-                  <a className="learn-more">
-                    Learn More{" "}
-                    <Image src={arrowRight} alt="learn more" loading="lazy" />
-                  </a>
-                </Link>
+                <button className={`${styles.learn_more}`}>
+                  Learn More
+                  <Image src={arrowRight} alt="learn more" loading="lazy" />
+                </button>
               </div>
               <div className="col-6">
-                <Image src={CardImg4} className={`${styles.card_img}`} alt="card img" />
+                <Image
+                  src={CardImg4}
+                  className={`${styles.card_img}`}
+                  alt="card img"
+                />
               </div>
             </div>
             <div className={`${styles.col_space} row`}>
               <div className="col-6">
-                <Image src={CardImg4} className={`${styles.card_img}`} alt="card img" />
+                <Image
+                  src={CardImg4}
+                  className={`${styles.card_img}`}
+                  alt="card img"
+                />
               </div>
               <div className="col-6">
-                <h3>A remade backend supported <span className="d-block">eSky&apos;s global expansion</span></h3>
+                <h3>
+                  A remade backend supported{" "}
+                  <span className="d-block">eSky&apos;s global expansion</span>
+                </h3>
                 <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old.
                 </p>
-                <Link href="/learn">
-                  <a className="learn-more">
-                    Learn More{" "}
-                    <Image src={arrowRight} alt="learn more" loading="lazy" />
-                  </a>
-                </Link>
+                <button className={`${styles.learn_more}`}>
+                  Learn More
+                  <Image src={arrowRight} alt="learn more" loading="lazy" />
+                </button>
               </div>
             </div>
             <div className={`${styles.col_space} row`}>
               <div className="col-6">
-                <h3>A remade backend supported <span className="d-block">eSky&apos;s global expansion</span></h3>
+                <h3>
+                  A remade backend supported{" "}
+                  <span className="d-block">eSky&apos;s global expansion</span>
+                </h3>
                 <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old.
                 </p>
-                <Link href="/learn">
-                  <a className="learn-more">
-                    Learn More{" "}
-                    <Image src={arrowRight} alt="learn more" loading="lazy" />
-                  </a>
-                </Link>
+                <button className={`${styles.learn_more}`}>
+                  Learn More
+                  <Image src={arrowRight} alt="learn more" loading="lazy" />
+                </button>
               </div>
               <div className="col-6">
-                <Image src={CardImg4} className={`${styles.card_img}`} alt="card img" />
+                <Image
+                  src={CardImg4}
+                  className={`${styles.card_img}`}
+                  alt="card img"
+                />
               </div>
             </div>
             <div className={`${styles.col_space} row`}>
               <div className="col-6">
-                <Image src={CardImg4} className={`${styles.card_img}`} alt="card img" />
+                <Image
+                  src={CardImg4}
+                  className={`${styles.card_img}`}
+                  alt="card img"
+                />
               </div>
               <div className="col-6">
-                <h3>A remade backend supported <span className="d-block">eSky&apos;s global expansion</span></h3>
+                <h3>
+                  A remade backend supported{" "}
+                  <span className="d-block">eSky&apos;s global expansion</span>
+                </h3>
                 <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old.
                 </p>
-                <Link href="/learn">
-                  <a className="learn-more">
-                    Learn More{" "}
-                    <Image src={arrowRight} alt="learn more" loading="lazy" />
-                  </a>
-                </Link>
+                <button className={`${styles.learn_more}`}>
+                  Learn More
+                  <Image src={arrowRight} alt="learn more" loading="lazy" />
+                </button>
               </div>
             </div>
           </div>
@@ -181,7 +204,7 @@ const SuccessStories = () => {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 

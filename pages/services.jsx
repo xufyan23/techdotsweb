@@ -12,7 +12,7 @@ import styles from "../styles/Services.module.scss";
 
 const Services = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Services</title>
       </Head>
@@ -167,7 +167,7 @@ const Services = () => {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 
