@@ -9,6 +9,7 @@ import Linkedin from "../public/images/linkedin.svg";
 
 const Header = () => {
 	const router = useRouter()
+
 	return (
     <header className={styles.navheader}>
       <div className="container">
@@ -39,24 +40,24 @@ const Header = () => {
               {/* <li className="nav-item active">
 							<Link className="nav-link" href="/">Home<span className="sr-only">(current)</span></Link>
 						</li> */}
-              <li className={`nav-link ${styles.nav_link} ${styles.active}`}>
-                <Link href="/">
+              <li className={`${styles.nav_link} ${router.pathname === "/" ? styles.active : ""}`}>
+                <Link className="nav-link" href="/" >
                   <a>Who are we</a>
                 </Link>
               </li>
-              <li c className={`nav-link ${styles.nav_link}`}>
+              <li className={`${styles.nav_link} ${router.pathname === "/services" ? styles.active : ""}`}>
                 <Link className="nav-link" href="/services">
-                  Services
+                  <a>Services</a>
                 </Link>
               </li>
-              <li className={`nav-link ${styles.nav_link}`}>
+              <li className={`${styles.nav_link} ${router.pathname === "/success-stories" ? styles.active : ""}`}>
                 <Link className="nav-link" href="/success-stories">
-                  Success Stories
+                  <a>Success Stories</a>
                 </Link>
               </li>
-              <li className={`nav-link ${styles.nav_link}`}>
+              <li className={`${styles.nav_link} ${router.pathname === "/contact" ? styles.active : ""}`}>
                 <Link className="nav-link" href="/contact">
-                  Contact Us
+                  <a>Contact Us</a>
                 </Link>
               </li>
             </ul>
@@ -65,7 +66,7 @@ const Header = () => {
                 <button className="btn btn-outline">Book Appointment</button>
               </li>
               <li className={`${styles.social_icon}`}>
-                <Link href="#"><a><Image src={Linkedin} width={20} height={20} alt="Linked In"/></a></Link>
+                <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/" target="_blank"><a target="_blank"><Image src={Linkedin} width={20} height={20} alt="Linked In"/></a></Link>
               </li>
             </ul>
           </div>

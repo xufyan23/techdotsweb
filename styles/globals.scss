@@ -324,6 +324,15 @@ small {
   }
 }
 
+.contact-wrapper {
+  header {
+    background: $clr-blue-900;
+    .navbar {
+      padding-top: 1rem;
+    }
+  }
+}
+
 /*----------  checkbox  ----------*/
 .checkbox-container {
   display: flex;

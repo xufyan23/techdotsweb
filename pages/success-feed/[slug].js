@@ -12,10 +12,10 @@ const LearnMore = () => {
       <Head>
         <title>Services Learn More</title>
       </Head>
-			<div className={`${styles.content_wrapper}`}>
+      <div className={`${styles.content_wrapper}`}>
         <section className={`${styles.learnmore_banner}`}>
           <Header />
-					<div className="container">
+          <div className="container">
             <div className="row">
               <div className="col-7">
                 <div className={`${styles.banner_text}`}>
@@ -35,7 +35,7 @@ const LearnMore = () => {
               </div>
             </div>
           </div>
-				</section>
+        </section>
 
         <section className={`${styles.about_project}`}>
           <div className="container">
@@ -77,7 +77,7 @@ const LearnMore = () => {
             </div>
           </div>
         </section>
-			</div>
+      </div>
     </>
   );
 };

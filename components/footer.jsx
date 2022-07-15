@@ -80,12 +80,12 @@ const Footer = () => {
       </div>
       <div className={`${styles.copy_right}`}>
         <div className="container">
-					<div className={`${styles.copy_right_text}`}>
-						<p className="mb-0">Copyright © 2022 Techdots™. All Rights Reserved.</p>
-						<div className={`${styles.social_icons}`}>
-							<Link href="#"><a><Image src={Linkedin}width={20} height={20} alt="Linked In"/></a></Link>
-						</div>
-					</div>
+          <div className={`${styles.copy_right_text}`}>
+            <p className="mb-0">Copyright © 2022 Techdots™. All Rights Reserved.</p>
+            <div className={`${styles.social_icons}`}>
+              <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/"><a target="_blank"><Image src={Linkedin}width={20} height={20} alt="Linked In"/></a></Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
