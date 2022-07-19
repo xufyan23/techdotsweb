@@ -97,8 +97,8 @@ const SuccessStories = () => {
 
         <section className={`${styles.card_section}`}>
           <div className="container">
-            <div className={`${styles.col_space} row`}>
-              <div className="col-6">
+            <div className={`${styles.col_space} row col-reverse `}>
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
                 <h3>
                   A remade backend supported{" "}
                   <span className="d-block">eSky&apos;s global expansion</span>
@@ -113,7 +113,7 @@ const SuccessStories = () => {
                   <Image src={arrowRight} alt="learn more" loading="lazy" />
                 </button>
               </div>
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
                 <Image
                   src={CardImg4}
                   className={`${styles.card_img}`}
@@ -122,14 +122,14 @@ const SuccessStories = () => {
               </div>
             </div>
             <div className={`${styles.col_space} row`}>
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
                 <Image
                   src={CardImg4}
                   className={`${styles.card_img}`}
                   alt="card img"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6 ptxs-1">
                 <h3>
                   A remade backend supported{" "}
                   <span className="d-block">eSky&apos;s global expansion</span>
@@ -145,8 +145,8 @@ const SuccessStories = () => {
                 </button>
               </div>
             </div>
-            <div className={`${styles.col_space} row`}>
-              <div className="col-6">
+            <div className={`${styles.col_space} row col-reverse`}>
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6 ptxs-1">
                 <h3>
                   A remade backend supported{" "}
                   <span className="d-block">eSky&apos;s global expansion</span>
@@ -161,7 +161,7 @@ const SuccessStories = () => {
                   <Image src={arrowRight} alt="learn more" loading="lazy" />
                 </button>
               </div>
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
                 <Image
                   src={CardImg4}
                   className={`${styles.card_img}`}
@@ -170,14 +170,14 @@ const SuccessStories = () => {
               </div>
             </div>
             <div className={`${styles.col_space} row`}>
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
                 <Image
                   src={CardImg4}
                   className={`${styles.card_img}`}
                   alt="card img"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6 ptxs-1">
                 <h3>
                   A remade backend supported{" "}
                   <span className="d-block">eSky&apos;s global expansion</span>
