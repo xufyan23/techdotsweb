@@ -81,6 +81,8 @@ const ContactForm = () => {
     // console.log(name, email, subject, message);
   }
 
+  console.log(process.env, process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+
   return (
     <div className={`${styles.contact_form}`}>
       <h2 className="mb-4">What would you like to do?</h2>
