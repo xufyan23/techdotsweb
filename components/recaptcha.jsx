@@ -10,13 +10,13 @@ const Recaptcha = ({ onVerifyCaptcha }) => {
 
   const handleReCaptchaVerify = useCallback(async () => {
     if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
+      // console.log("Execute recaptcha not yet available");
       return;
     }
 
     const token = await executeRecaptcha("contact_form");
 
-    console.log("verify", token);
+    // console.log("verify", token);
 
     onVerifyCaptcha(token);
   }, [executeRecaptcha]);
