@@ -40,22 +40,38 @@ const Header = () => {
               {/* <li className="nav-item active">
 							<Link className="nav-link" href="/">Home<span className="sr-only">(current)</span></Link>
 						</li> */}
-              <li className={`${styles.nav_link} ${router.pathname === "/" ? styles.active : ""}`}>
-                <Link className="nav-link" href="/" >
+              <li
+                className={`${styles.nav_link} ${
+                  router.pathname === "/" ? styles.active : ""
+                }`}
+              >
+                <Link className="nav-link" href="/">
                   <a>Who are we</a>
                 </Link>
               </li>
-              <li className={`${styles.nav_link} ${router.pathname === "/services" ? styles.active : ""}`}>
+              <li
+                className={`${styles.nav_link} ${
+                  router.pathname === "/services" ? styles.active : ""
+                }`}
+              >
                 <Link className="nav-link" href="/services">
                   <a>Services</a>
                 </Link>
               </li>
-              <li className={`${styles.nav_link} ${router.pathname === "/success-stories" ? styles.active : ""}`}>
+              <li
+                className={`${styles.nav_link} ${
+                  router.pathname === "/success-stories" ? styles.active : ""
+                }`}
+              >
                 <Link className="nav-link" href="/success-stories">
                   <a>Success Stories</a>
                 </Link>
               </li>
-              <li className={`${styles.nav_link} ${router.pathname === "/contact" ? styles.active : ""}`}>
+              <li
+                className={`${styles.nav_link} ${
+                  router.pathname === "/contact" ? styles.active : ""
+                }`}
+              >
                 <Link className="nav-link" href="/contact">
                   <a>Contact Us</a>
                 </Link>
@@ -63,10 +79,24 @@ const Header = () => {
             </ul>
             <ul className="navbar-nav align-items-center nav-right">
               <li className={`${styles.header_cta}`}>
-                <button className="btn btn-outline">Book Appointment</button>
+                <button id="book-appointment" className="btn btn-outline">
+                  Book Appointment
+                </button>
               </li>
               <li className={`${styles.social_icon}`}>
-                <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/" target="_blank"><a target="_blank"><Image src={Linkedin} width={20} height={20} alt="Linked In"/></a></Link>
+                <Link
+                  href="https://www.linkedin.com/company/tech-dots-dev/mycompany/"
+                  target="_blank"
+                >
+                  <a target="_blank">
+                    <Image
+                      src={Linkedin}
+                      width={20}
+                      height={20}
+                      alt="Linked In"
+                    />
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

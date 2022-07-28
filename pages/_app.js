@@ -6,18 +6,17 @@ import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-        mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY || '', {
-          ignore_dnt: true,
-        });
-        mixpanel.track_links("nav a", "click nav link", {
-          "referrer": document.referrer
-        });
-        mixpanel.track_links(".services .primary-btn", "click appointment btn", {
-          "referrer": document.referrer
-        });
-        mixpanel.track_links(".success_stories .learn_more", "click learn more btn", {
-          "referrer": document.referrer
-        });
+      mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY || '', {
+        // debug: true,
+        ignore_dnt: true,
+      });
+      mixpanel.track("page_view");
+      mixpanel.track_links("nav a", "click nav link", {
+        "referrer": document.referrer
+      });
+      mixpanel.track_links("#book-appointment", "click book appointment btn", {
+        "referrer": document.referrer
+      });
   }, []);
   return (
     <Layout>

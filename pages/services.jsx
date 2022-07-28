@@ -37,7 +37,7 @@ const Services = () => {
                     <li>Idea Validation</li>
                   </ul>
                   <div className="btn-block">
-                    <button className="btn primary-btn">
+                    <button id="book-appointment" className="btn primary-btn">
                       Book Appointment
                     </button>
                     <button className="btn primary-btn btn-white">
@@ -69,7 +69,9 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <button className="btn primary-btn">Book Appointment</button>
+                <button id="book-appointment" className="btn primary-btn">
+                  Book Appointment
+                </button>
               </div>
             </div>
             <div className={`${styles.consultation_img}`}>
@@ -93,7 +95,9 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <button className="btn primary-btn">Book Appointment</button>
+                <button id="book-appointment" className="btn primary-btn">
+                  Book Appointment
+                </button>
               </div>
             </div>
           </div>
@@ -111,7 +115,9 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <button className="btn primary-btn">Book Appointment</button>
+                <button id="book-appointment" className="btn primary-btn">
+                  Book Appointment
+                </button>
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
@@ -134,7 +140,9 @@ const Services = () => {
               the more obscure Latin words.
             </p>
             <div>
-              <button className="btn primary-btn">Book Appointment</button>
+              <button id="book-appointment" className="btn primary-btn">
+                Book Appointment
+              </button>
             </div>
           </div>
         </section>
@@ -150,7 +158,9 @@ const Services = () => {
               the more obscure Latin words.
             </p>
             <div>
-              <button className="btn primary-btn">Book Appointment</button>
+              <button id="book-appointment" className="btn primary-btn">
+                Book Appointment
+              </button>
             </div>
           </div>
           <div className={`${styles.development_img}`}>
