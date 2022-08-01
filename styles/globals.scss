@@ -332,11 +332,12 @@ small {
   }
 }
 
-.contact-wrapper {
+.contact-wrapper, .blog-wrapper {
   header {
     background: $clr-blue-900;
     .navbar {
       padding-top: 1rem;
+      padding-bottom: 1rem;
     }
   }
 }

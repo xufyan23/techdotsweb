@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Footer from '../components/footer';
 import Header from '../components/header';
 import Image from 'next/image';
 import Link from "next/link";
@@ -16,15 +15,37 @@ import arrowRight from '../public/images/arrow-right.svg';
 import FixedPrice from '../public/images/ic_fixedPrice.svg';
 import Hourly from '../public/images/ic_hourly.svg';
 import Retainer from '../public/images/ic_retainer.svg';
-import CardImg1 from '../public/images/card-img-1.png';
 import CardImg2 from '../public/images/card-img-2.png';
 import CardImg3 from '../public/images/card-img-3.png';
 import Star from '../public/images/star.svg';
 import ContactForm from '../components/contactForm';
-
+import imageUrlBuilder from "@sanity/image-url";
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.scss';
 
-const Home = () => {
+const Home = ({posts}) => {
+  const router = useRouter();
+  const [mappedPosts, setMappedPosts] = useState([]);
+  useEffect(() => {
+    if(posts.length) {
+      const imgBuilder = imageUrlBuilder({
+        projectId: 'p3umg9xf',
+        dataset: 'production'
+      });
+      setMappedPosts(
+        posts.map(post => {
+          return {
+            ...post,
+            mainImage: imgBuilder.image(post.mainImage),
+          }
+        })
+      )
+    }
+    else {
+      setMappedPosts([]);
+    }
+  }, [posts]);
   return (
     <div>
       <Head>
@@ -352,56 +373,29 @@ const Home = () => {
           <div className="container">
             <div className="text-center">
               <h2>Success Stories</h2>
-              <p>The software that we build takes our clients to the next level</p>
+              <p className='mt-4'>The software that we build takes our clients to the next level</p>
             </div>
             <div className={`${styles.success_card_block}`}>
-              <div className={`${styles.success_card}`}>
-                <div className={`${styles.success_card_img}`}>
-                  <Image src={CardImg1} alt="card banner" loading = "lazy" />
-                </div>
-                <div className={`${styles.success_card_des}`}>
-                  <small className="clr-green d-block">Mobile Application</small>
-                  <Link href="#/"><a className="link-heading mb-2 mt-2"> The software that we build
-                    takes our clients to the next level</a>
-                  </Link>
-                  <small className="text-muted d-block">The software that we build takes our clients to the next level
-                    The software that we build
-                  </small>
-                </div>
-              </div>
+              {mappedPosts.length ? mappedPosts.map((item, index) => (
+                <div className={`${styles.success_card}`} onClick={() => router.push(`/posts/${item.slug.current}`)} key={index}>
+                  <div className={`${styles.success_card_img}`}>
+                      <img src={item.mainImage} alt="card banner" loading = "lazy" />
 
-              <div className={`${styles.success_card}`}>
-                <div className={`${styles.success_card_img}`}>
-                  <Image src={CardImg2} alt="card banner" loading = "lazy" />
-                </div>
-                <div className={`${styles.success_card_des}`}>
-                  <small className="clr-green d-block">Mobile Application</small>
-                  <Link href="#/"><a className="link-heading mb-2 mt-2"> The software that we build
-                    takes our clients to the next level</a>
-                  </Link>
-                  <small className="text-muted d-block">The software that we build takes our clients to the next level
-                    The software that we build
-                  </small>
-                </div>
-              </div>
 
-              <div className={`${styles.success_card}`}>
-                <div className={`${styles.success_card_img}`}>
-                  <Image src={CardImg3} alt="card banner" loading = "lazy" />
+                  </div>
+                  <div className={`${styles.success_card_des}`}>
+                    {/* <small className="clr-green d-block">Mobile Application</small> */}
+                    <h3 className="link-heading mb-2 mt-2">{item.title}</h3>
+                    <small className="text-muted d-block">
+                      {item.displayDesicription}
+                    </small>
+                  </div>
                 </div>
-                <div className={`${styles.success_card_des}`}>
-                  <small className="clr-green d-block">Mobile Application</small>
-                  <Link href="#/"><a className="link-heading mb-2 mt-2"> The software that we build
-                    takes our clients to the next level</a>
-                  </Link>
-                  <small className="text-muted d-block">The software that we build takes our clients to the next level
-                    The software that we build
-                  </small>
-                </div>
-              </div>
+              )) : <>No Posts Yet</>}
             </div>
-            <div className="text-center">
-              <button className="btn primary-btn">Show All</button>
+
+            <div className={`text-center m-auto ${mappedPosts.length > 3 ? 'd-block' : 'd-none'}`}>
+                <button className={ `btn primary-btn`}>Show All</button>
             </div>
           </div>
         </section>
@@ -512,3 +506,23 @@ const Home = () => {
 }
 
 export default Home;
+
+export const getServerSideProps= async pageContext => {
+  const query = encodeURIComponent('*[_type == "post"]');
+  const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
+  const result = await fetch(url).then(res => res.json());
+  if(!result.result || !result.result.length) {
+    return {
+      props: {
+        posts: [],
+      }
+    }
+  }
+  else {
+    return {
+      props: {
+        posts: result.result,
+      }
+    }
+  }
+}

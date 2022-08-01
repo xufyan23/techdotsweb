@@ -1,0 +1,33 @@
+@import './vaiables.scss';
+
+.post_wrapper {
+	padding: 0 0 4rem;
+	position: relative;
+	&:before {
+		content: "";
+		width: 100%;
+		background-color: $clr-blue-900;
+		position: absolute;
+	}
+
+	.post_container {
+		max-width: calc(100vw - 50%);
+		margin: auto;
+	}
+	h1 {
+		font-size: 2.2rem;
+		line-height: 1.2;
+		margin-bottom: 2rem;
+		margin-top: 3rem;
+	}
+	h3 {
+		margin-bottom: 1.5rem;
+	}
+	.blog_banner {
+		margin: auto;
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}
