@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import imageUrlBuilder  from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
-import styles from"../../styles/Post.module.scss";
 import Header from "../../components/header";
+import styles from"../../styles/Post.module.scss";
 
 const Post = ({title, body, image}) => {
   const [imageUrl, setImageUrl] = useState('');

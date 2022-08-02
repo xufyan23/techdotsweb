@@ -22,6 +22,7 @@ import ContactForm from '../components/contactForm';
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import BlogCard from '../components/blogCard';
 import styles from '../styles/Home.module.scss';
 
 const Home = ({posts}) => {
@@ -377,25 +378,26 @@ const Home = ({posts}) => {
             </div>
             <div className={`${styles.success_card_block}`}>
               {mappedPosts.length ? mappedPosts.map((item, index) => (
-                <div className={`${styles.success_card}`} onClick={() => router.push(`/posts/${item.slug.current}`)} key={index}>
-                  <div className={`${styles.success_card_img}`}>
-                      <img src={item.mainImage} alt="card banner" loading = "lazy" />
-
-
-                  </div>
-                  <div className={`${styles.success_card_des}`}>
-                    {/* <small className="clr-green d-block">Mobile Application</small> */}
-                    <h3 className="link-heading mb-2 mt-2">{item.title}</h3>
-                    <small className="text-muted d-block">
-                      {item.displayDesicription}
-                    </small>
-                  </div>
-                </div>
+                // <div className={`${styles.success_card}`} onClick={() => router.push(`/posts/${item.slug.current}`)} key={index}>
+                //   <div className={`${styles.success_card_img}`}>
+                //     <img src={item.mainImage} alt="card banner" loading = "lazy" />
+                //   </div>
+                //   <div className={`${styles.success_card_des}`}>
+                //     {/* <small className="clr-green d-block">Mobile Application</small> */}
+                //     <h3 className="link-heading mb-2 mt-2">{item.title}</h3>
+                //     <small className="text-muted d-block">
+                //       {item.displayDesicription}
+                //     </small>
+                //   </div>
+                // </div>
+                <BlogCard onClick={() => router.push(`/posts/${item.slug.current}`)} key={index} title={item.title} blogImage={item.mainImage} description={item.displayDesicription}/>
               )) : <>No Posts Yet</>}
             </div>
 
             <div className={`text-center m-auto ${mappedPosts.length > 3 ? 'd-block' : 'd-none'}`}>
-                <button className={ `btn primary-btn`}>Show All</button>
+              <Link href="/blogs">
+                <a className={`btn primary-btn`}>Show All</a>
+              </Link>
             </div>
           </div>
         </section>
