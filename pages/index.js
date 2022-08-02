@@ -45,6 +45,7 @@ const Home = ({posts}) => {
     else {
       setMappedPosts([]);
     }
+    
   }, [posts]);
   return (
     <div>
