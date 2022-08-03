@@ -6,6 +6,7 @@ import BlogCard from '../components/blogCard';
 import Header from "../components/header";
 import blogImg from "../public/images/validation.svg";
 import styles from "../styles/Blogs.module.scss";
+import getPosts from "../services/post";
 
 const Blogs = ({posts}) => {
 
@@ -13,22 +14,7 @@ const Blogs = ({posts}) => {
   const [mappedPosts, setMappedPosts] = useState([]);
 
   useEffect(() => {
-    if (posts.length) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: "p3umg9xf",
-        dataset: "production",
-      });
-      setMappedPosts(
-        posts.map((post) => {
-          return {
-            ...post,
-            mainImage: imgBuilder.image(post.mainImage),
-          };
-        })
-      );
-    } else {
-      setMappedPosts([]);
-    }
+      setMappedPosts(posts);
   }, [posts]);
 
   return (
@@ -59,9 +45,7 @@ const Blogs = ({posts}) => {
                 <BlogCard
                 onClick={() => router.push(`/posts/${item.slug.current}`)}
                 key={index}
-                title={item.title}
-                blogImage={item.mainImage}
-                description={item.displayDesicription}
+                item={item}
               />
             ))
           ) : (
@@ -76,20 +60,10 @@ const Blogs = ({posts}) => {
 export default Blogs;
 
 export const getServerSideProps = async (pageContext) => {
-  const query = encodeURIComponent('*[_type == "post"]');
-  const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
-  const result = await fetch(url).then((res) => res.json());
-  if (!result.result || !result.result.length) {
-    return {
-      props: {
-        posts: [],
-      },
-    };
-  } else {
-    return {
-      props: {
-        posts: result.result,
-      },
-    };
-  }
+  const posts = await getPosts();
+  return {
+    props: {
+      posts: posts,
+    },
+  };
 };

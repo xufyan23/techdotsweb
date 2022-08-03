@@ -24,29 +24,21 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import BlogCard from '../components/blogCard';
 import styles from '../styles/Home.module.scss';
+import getPosts from '../services/post';
 
 const Home = ({posts}) => {
   const router = useRouter();
   const [mappedPosts, setMappedPosts] = useState([]);
+  const [showMorePostsBtn, setShowMorePostsBtn] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    if(posts.length) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: 'p3umg9xf',
-        dataset: 'production'
-      });
-      setMappedPosts(
-        posts.map(post => {
-          return {
-            ...post,
-            mainImage: imgBuilder.image(post.mainImage),
-          }
-        })
-      )
-    }
-    else {
-      setMappedPosts([]);
-    }
+      if (posts.length > 3) {
+        setShowMorePostsBtn(true);
+      }
+      setMappedPosts(posts.slice(0, 3));
   }, [posts]);
+
   return (
     <div>
       <Head>
@@ -390,11 +382,16 @@ const Home = ({posts}) => {
                 //     </small>
                 //   </div>
                 // </div>
-                <BlogCard onClick={() => router.push(`/posts/${item.slug.current}`)} key={index} title={item.title} blogImage={item.mainImage} description={item.displayDesicription}/>
+                <BlogCard
+                onClick={() => router.push(`/posts/${item.slug.current}`)
+                  
+                }
+                key={index}
+                item={item}/>
               )) : <>No Posts Yet</>}
             </div>
 
-            <div className={`text-center m-auto ${mappedPosts.length > 3 ? 'd-block' : 'd-none'}`}>
+            <div className={`text-center m-auto ${showMorePostsBtn ? 'd-block' : 'd-none'}`}>
               <Link href="/blogs">
                 <a className={`btn primary-btn`}>Show All</a>
               </Link>
@@ -509,22 +506,11 @@ const Home = ({posts}) => {
 
 export default Home;
 
-export const getServerSideProps= async pageContext => {
-  const query = encodeURIComponent('*[_type == "post"]');
-  const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
-  const result = await fetch(url).then(res => res.json());
-  if(!result.result || !result.result.length) {
-    return {
-      props: {
-        posts: [],
-      }
-    }
-  }
-  else {
-    return {
-      props: {
-        posts: result.result,
-      }
+export const getServerSideProps = async pageContext => {
+  const posts = await getPosts();
+  return {
+    props: {
+      posts: posts,
     }
   }
 }
