@@ -4,14 +4,17 @@
   .card_flex {
     display: flex;
     align-items: center;
-    transform: translateY(9rem);
+    transform: translateY(12rem);
   }
   .success_card {
-    width: 21.625rem;
+    width: 18.625rem;
     border: 1px solid $clr-green-400;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    &:nth-child(1) {
+      transform: translateX(7rem);
+    }
     &:hover {
       cursor: pointer;
       z-index: 2;
@@ -21,7 +24,14 @@
       font-size: 0.875rem;
     }
     .success_card_img {
-      display: flex;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    h3 {
+      font-size: 1rem;
+      line-height: 22px;
     }
     .success_card_des {
       background: $clr-white;
@@ -29,20 +39,27 @@
     }
   }
   .small_card {
-    width: 16.5rem;
-    transform: translate(-32%, -2%);
+    width: 14.5rem;
+    transform: translate(-12%, -1%);
     box-shadow: 0 0 25px 0 rgb(0, 0, 0, 0.2);
     small {
       font-size: 11px;
     }
-    .link_heading_sm {
+    h3 {
       display: block;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.2;
+      font-size: 12px;
+      line-height: 1.5;
       color: $clr-black;
+    }
+    .success_card_img {
+      height: 130px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
     .success_card_des {
       padding: 1rem 0.7rem;
@@ -50,7 +67,7 @@
   }
 
   .card_section {
-    padding-top: 9rem;
+    padding-top: 6rem;
     h3 {
       line-height: 1.3;
     }
@@ -74,22 +91,6 @@
       border-radius: 10px;
       z-index: -1;
     }
-  }
-}
-
-.success_stories {
-  .success_card {
-    width: 18.6rem;
-    &:nth-child(1) {
-      transform: translateX(7rem);
-    }
-  }
-  .small_card {
-    width: 14rem;
-    transform: translate(-15%, -2%);
-  }
-  .card_section {
-    padding-top: 4rem;
   }
 }
 

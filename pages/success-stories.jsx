@@ -1,18 +1,21 @@
 import Head from "next/head";
 import { Router, useRouter } from "next/router";
 import Image from "next/image";
-import Link from "next/link";
 import ContactForm from "../components/contactForm";
 import Header from "../components/header";
 import arrowRight from "../public/images/arrow-right.svg";
-import CardImg1 from "../public/images/card-img-1.png";
-import CardImg2 from "../public/images/card-img-2.png";
-import CardImg3 from "../public/images/card-img-3.png";
 import CardImg4 from "../public/images/service-sample.png";
+import getPosts from "../services/post";
+import { useState, useEffect } from "react";
 import styles from "../styles/SuccessStories.module.scss";
 
-const SuccessStories = () => {
+const SuccessStories = ({posts}) => {
   const router = useRouter();
+  const [mappedPosts, setMappedPosts] = useState([]);
+
+  useEffect(() => {
+    setMappedPosts(posts.slice(0, 2));
+  }, [posts]);
 
   return (
     <>
@@ -45,50 +48,40 @@ const SuccessStories = () => {
                 </div>
               </div>
               <div className="banner-cards">
-                <div className={`${styles.card_flex}`}>
-                  <div className={`${styles.success_card}`}>
-                    <div className={`${styles.success_card_img}`}>
-                      <Image src={CardImg1} alt="card banner" loading="lazy" />
-                    </div>
-                    <div className={`${styles.success_card_des}`}>
-                      <small className="clr-green d-block">
-                        Mobile Application
-                      </small>
-                      <Link href="#/">
-                        <a className="link-heading mb-2 mt-2">
-                          The software that we build takes our clients to the
-                          next level
-                        </a>
-                      </Link>
-                      <small className="text-muted d-block">
-                        The software that we build takes our clients to the next
-                        level The software that we build
-                      </small>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`${styles.success_card} ${styles.small_card}`}
-                  >
-                    <div className={`${styles.success_card_img}`}>
-                      <Image src={CardImg2} alt="card banner" loading="lazy" />
-                    </div>
-                    <div className={`${styles.success_card_des}`}>
-                      <small className="clr-green d-block">
-                        Mobile Application
-                      </small>
-                      <Link href="#/">
-                        <a className={`${styles.link_heading_sm}`}>
-                          The software that we build takes our clients to the
-                          next level
-                        </a>
-                      </Link>
-                      <small className="text-muted d-block">
-                        The software that we build takes our clients to the next
-                        level The software that we build
-                      </small>
-                    </div>
-                  </div>
+                <div className={`${styles.card_flex} cards-block`}>
+                  {mappedPosts.length ? (
+                    mappedPosts.map((item, index) => (
+                      <div
+                        key={index} onClick={() =>
+                          router.push(`/posts/${item.slug.current}`)
+                        }
+                        className={`${styles.success_card} ${
+                          index > 0 ? styles.small_card : ""
+                        }`}
+                      >
+                        <div className={`${styles.success_card_img}`}>
+                          <img
+                            src={item.mainImage}
+                            alt="card banner"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className={`${styles.success_card_des}`}>
+                          {/* <small className="clr-green d-block">
+                            Mobile Application
+                          </small> */}
+                          <h3 className="link-heading mb-2 mt-2">
+                            {item.title}
+                          </h3>
+                          <small className="text-muted d-block">
+                            {item.displayDesicription}
+                          </small>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <>No Posts Yet</>
+                  )}
                 </div>
               </div>
             </div>
@@ -211,3 +204,12 @@ const SuccessStories = () => {
 };
 
 export default SuccessStories;
+
+export const getServerSideProps = async (pageContext) => {
+  const posts = await getPosts();
+  return {
+    props: {
+      posts: posts,
+    },
+  };
+};
