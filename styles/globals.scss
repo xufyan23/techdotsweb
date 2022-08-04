@@ -173,8 +173,13 @@ small {
   margin-top: 2rem;
   font-size: 0.8125rem;
   color: $clr-green-400;
+  animation: shine 2s infinite, hover 2s alternate infinite ease-in-out;
   &:hover {
     color: $clr-green-400;
+  }
+  span {
+    transform: translateX(30%);
+    animation: hoverSmall 1s 1s alternate infinite ease-in-out;
   }
 }
 
@@ -416,6 +421,36 @@ input[type="checkbox"]:checked {
   }
 }
 
+
+/*=====  learn more animation  ======*/
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+@-webkit-keyframes hover {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(-75%);
+  }
+}
+
+@-webkit-keyframes hoverSmall {
+  from {
+    transform: translateX(30%);
+  }
+  to {
+    transform: translateX(10%);
+  }
+}
 
 @media (max-width: 1440px) {
   .banner {
