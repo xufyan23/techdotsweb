@@ -87,7 +87,6 @@ const ContactForm = () => {
 
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-        siteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       >
         <form
           onSubmit={(handleSubmit(onSubmit, handleError), handleEmail)}
