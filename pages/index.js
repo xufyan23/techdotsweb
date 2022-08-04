@@ -60,7 +60,10 @@ const Home = ({posts}) => {
                   </h1>
                   <p className="mb-4 mt-3">Our global team develops software that adds value to your small startup, promising SMB, or established enterprise.</p>
                   <div className="btn-block">
-                    <button className="btn primary-btn">Book Appointment</button>
+                    <Link
+                      href = "https://techdots.zohobookings.com/#/customer/custom-software-development" >
+                      <a target="_blank" className="btn primary-btn">Book Appointment</a>
+                    </Link>
                     <button className="btn primary-btn btn-white" onClick={handleScroll}>Contact Us</button>
                   </div>
                 </div>
@@ -374,21 +377,8 @@ const Home = ({posts}) => {
             </div>
             <div className={`${styles.success_card_block}`}>
               {mappedPosts.length ? mappedPosts.map((item, index) => (
-                // <div className={`${styles.success_card}`} onClick={() => router.push(`/posts/${item.slug.current}`)} key={index}>
-                //   <div className={`${styles.success_card_img}`}>
-                //     <img src={item.mainImage} alt="card banner" loading = "lazy" />
-                //   </div>
-                //   <div className={`${styles.success_card_des}`}>
-                //     {/* <small className="clr-green d-block">Mobile Application</small> */}
-                //     <h3 className="link-heading mb-2 mt-2">{item.title}</h3>
-                //     <small className="text-muted d-block">
-                //       {item.displayDesicription}
-                //     </small>
-                //   </div>
-                // </div>
                 <BlogCard
                 onClick={() => router.push(`/posts/${item.slug.current}`)
-
                 }
                 key={index}
                 item={item}/>

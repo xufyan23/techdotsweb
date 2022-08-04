@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../components/header";
 import ServiceBannerImg from "../public/images/validation.svg";
 import Consultation from "../public/images/img1_consultation.png";
@@ -44,10 +45,15 @@ const Services = () => {
                     <li>Idea Validation</li>
                   </ul>
                   <div className="btn-block">
-                    <button id="book-appointment" className="btn primary-btn">
-                      Book Appointment
-                    </button>
-                    <button className="btn primary-btn btn-white" onClick={handleScroll}>
+                    <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
+                      <a target="_blank" className="btn primary-btn">
+                        Book Appointment
+                      </a>
+                    </Link>
+                    <button
+                      className="btn primary-btn btn-white"
+                      onClick={handleScroll}
+                    >
                       Contact Us
                     </button>
                   </div>
@@ -177,7 +183,10 @@ const Services = () => {
         <section className="contact-form bg-grey-100">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6" ref={scrollToContact}>
+              <div
+                className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6"
+                ref={scrollToContact}
+              >
                 <ContactForm />
               </div>
             </div>

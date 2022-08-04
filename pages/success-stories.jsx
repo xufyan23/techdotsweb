@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Router, useRouter } from "next/router";
+import Link from "next/link";
 import ContactForm from "../components/contactForm";
 import Header from "../components/header";
 import getPosts from "../services/post";
@@ -43,9 +44,11 @@ const SuccessStories = ({posts}) => {
                     </span>
                   </p>
                   <div className="btn-block">
-                    <button className="btn primary-btn">
-                      Book Appointment
-                    </button>
+                    <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
+                      <a target="_blank" className="btn primary-btn">
+                        Book Appointment
+                      </a>
+                    </Link>
                     <button
                       className="btn primary-btn btn-white"
                       onClick={handleScroll}
