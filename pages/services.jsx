@@ -8,9 +8,16 @@ import ValidationImg from "../public/images/img1_ideaValidation.png";
 import DesignImg from "../public/images/img1_design.png";
 import DevelopmentImg from "../public/images/img1_softwareDev.png";
 import ContactForm from "../components/contactForm"
+import { useRef } from "react";
 import styles from "../styles/Services.module.scss";
 
 const Services = () => {
+  const scrollToContact = useRef(null);
+
+  const handleScroll = () => {
+    scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <Head>
@@ -40,7 +47,7 @@ const Services = () => {
                     <button id="book-appointment" className="btn primary-btn">
                       Book Appointment
                     </button>
-                    <button className="btn primary-btn btn-white">
+                    <button className="btn primary-btn btn-white" onClick={handleScroll}>
                       Contact Us
                     </button>
                   </div>
@@ -170,7 +177,7 @@ const Services = () => {
         <section className="contact-form bg-grey-100">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6">
+              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6" ref={scrollToContact}>
                 <ContactForm />
               </div>
             </div>
