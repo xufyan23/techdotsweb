@@ -79,15 +79,14 @@ const Header = () => {
             </ul>
             <ul className="navbar-nav align-items-center nav-right">
               <li className={`${styles.header_cta}`}>
-                <button id="book-appointment" className="btn btn-outline">
-                  Book Appointment
-                </button>
+                <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
+                  <a target="_blank" className="btn btn-outline">
+                    Book Appointment
+                  </a>
+                </Link>
               </li>
               <li className={`${styles.social_icon}`}>
-                <Link
-                  href="https://www.linkedin.com/company/tech-dots-dev/mycompany/"
-                  target="_blank"
-                >
+                <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/">
                   <a target="_blank">
                     <Image
                       src={Linkedin}
