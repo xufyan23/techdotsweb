@@ -20,7 +20,7 @@ import CardImg3 from '../public/images/card-img-3.png';
 import Star from '../public/images/star.svg';
 import ContactForm from '../components/contactForm';
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import BlogCard from '../components/blogCard';
 import styles from '../styles/Home.module.scss';
@@ -30,7 +30,11 @@ const Home = ({posts}) => {
   const router = useRouter();
   const [mappedPosts, setMappedPosts] = useState([]);
   const [showMorePostsBtn, setShowMorePostsBtn] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const scrollToContact = useRef(null);
+
+  const handleScroll = () => {
+    scrollToContact.current ?.scrollIntoView({behavior: 'smooth'})
+  }
 
   useEffect(() => {
       if (posts.length > 3) {
@@ -57,7 +61,7 @@ const Home = ({posts}) => {
                   <p className="mb-4 mt-3">Our global team develops software that adds value to your small startup, promising SMB, or established enterprise.</p>
                   <div className="btn-block">
                     <button className="btn primary-btn">Book Appointment</button>
-                    <button className="btn primary-btn btn-white">Contact Us</button>
+                    <button className="btn primary-btn btn-white" onClick={handleScroll}>Contact Us</button>
                   </div>
                 </div>
                 <div className="scroll_down">
@@ -494,7 +498,7 @@ const Home = ({posts}) => {
                   </div>
                 </div>
               </div>
-              <div div className="col-12 col-sm-12 col-lg-7 col-xl-7 col-xxl-6">
+              <div className = "col-12 col-sm-12 col-lg-7 col-xl-7 col-xxl-6" ref={ scrollToContact }>
                 <ContactForm/>
               </div>
             </div>

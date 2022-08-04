@@ -6,13 +6,17 @@ import Header from "../components/header";
 import arrowRight from "../public/images/arrow-right.svg";
 import CardImg4 from "../public/images/service-sample.png";
 import getPosts from "../services/post";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles/SuccessStories.module.scss";
 
 const SuccessStories = ({posts}) => {
   const router = useRouter();
   const [mappedPosts, setMappedPosts] = useState([]);
+  const scrollToContact = useRef(null);
 
+  const handleScroll = () => {
+    scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
+  };
   useEffect(() => {
     setMappedPosts(posts.slice(0, 2));
   }, [posts]);
@@ -41,7 +45,7 @@ const SuccessStories = ({posts}) => {
                     <button className="btn primary-btn">
                       Book Appointment
                     </button>
-                    <button className="btn primary-btn btn-white">
+                    <button className="btn primary-btn btn-white" onClick={handleScroll}>
                       Contact Us
                     </button>
                   </div>
@@ -192,7 +196,7 @@ const SuccessStories = ({posts}) => {
         <section className="contact-form">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6 m-auto">
+              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6 m-auto" ref={scrollToContact}>
                 <ContactForm />
               </div>
             </div>

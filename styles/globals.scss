@@ -342,6 +342,15 @@ small {
   }
 }
 
+.blog-wrapper {
+  h2 {
+    font-size: 1.8rem;
+    &:after {
+      display: none;
+    }
+  }
+}
+
 /*----------  checkbox  ----------*/
 .checkbox-container {
   display: flex;
