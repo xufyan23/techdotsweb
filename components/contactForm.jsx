@@ -1,7 +1,7 @@
 import { useState , useEffect, useCallback} from "react";
 import { useForm } from "react-hook-form";
 import Recaptcha from "./recaptcha";
-import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
 import styles from "../styles/ContactForm.module.scss";
 
 const ContactForm = () => {
@@ -88,6 +88,7 @@ const ContactForm = () => {
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       >
+        <GoogleReCaptcha onVerify={onVerify} />
         <form
           onSubmit={(handleSubmit(onSubmit, handleError), handleEmail)}
           method="post"
