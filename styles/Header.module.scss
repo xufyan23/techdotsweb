@@ -1,36 +1,36 @@
 @import './vaiables.scss';
 
-.navheader {
+.nav_header {
   .navbar {
     padding-top: 2rem;
-  }
-  .navbar_brand {
-    color: $clr-white;
-  }
-  .nav_link {
-    position: relative;
-    padding: 0 1.5rem !important;
-    font-size: 13px !important;
-    color: $clr-white;
-    &:after {
-      content: '';
-      height: 2px;
-      width: 100%;
-      position: absolute;
-      bottom: -7px;
-      left: 0;
-      background-color: $clr-green-400;
-      transform: scaleX(0);
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
+    .navbar_brand {
+      color: $clr-white;
     }
-    &:hover, &.active {
+    .nav_link {
+      position: relative;
+      padding: 0 1.5rem !important;
+      font-size: 13px !important;
+      color: $clr-white;
       &:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        background-color: $clr-green-400;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
       }
-      a {
-        color: $clr-white;
+      &:hover, &.active {
+        &:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+        a {
+          color: $clr-white;
+        }
       }
     }
   }
@@ -41,7 +41,6 @@
     margin-left: 1rem;
     a {
       font-size: 18px;
-
       &:hover {
         color: $clr-white;
       }
@@ -50,7 +49,7 @@
 }
 
 @media (max-width: 1024px) {
-  .navheader {
+  .nav_header {
     .navbar {
       .collapse{
         justify-content: flex-end !important;
@@ -59,4 +58,55 @@
   }
 }
 
+@media(max-width: 991px) {
+  .nav_header {
+    .navbar {
+        .navbar-nav {
+          align-items: flex-start !important;
+          padding-top: 2rem;
+          &:not(:last-child) {
+            li {
+              width: 100%;
+              border-bottom: 1px solid #fff;
+              padding: 1rem !important;
+            }
+          }
+        }
+        .nav_link {
+          &.active {
+            background: $clr-blue-900;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        .nav-right {
+          li {
+            margin-left: 0;
+          }
+        }
+        .navbar-collapse{
+          transition: transform 0.3s ease;
+          -webkit-animation: slide-out-left;
+          animation: slide-out-left;
+          display: block !important;
+          background: rgb(25 55 111);
+          min-height: 100vh;
+          height: 100%;
+          width: 250px;
+          bottom: 0;
+          position: fixed;
+          z-index: 999999;
+          box-shadow: 0 0 11px 0px #002466;
+          left: 0px;
+          transform: translateX(-100%);
+          &.show {
+            display: block !important;
+            transform: translateX(0);
+            // opacity: 1;
+          }
 
+      }
+    }
+  }
+}

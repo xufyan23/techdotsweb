@@ -1,8 +1,9 @@
 import {useEffect} from "react";
 import mixpanel from 'mixpanel-browser';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Layout from '../components/layout'
-import '../styles/globals.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from '../components/layout';
+import Script from "next/script"
+import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
         "referrer": document.referrer
       });
   }, []);
+
   return (
     <Layout>
       <Component {...pageProps} />

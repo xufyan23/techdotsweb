@@ -378,7 +378,7 @@ const Home = ({posts}) => {
             <div className={`${styles.success_card_block}`}>
               {mappedPosts.length ? mappedPosts.map((item, index) => (
                 <BlogCard
-                onClick={() => router.push(`/posts/${item.slug.current}`)
+                  onClick={() => router.push(`/posts/${item.slug.current}`)
                 }
                 key={index}
                 item={item}/>

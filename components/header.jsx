@@ -1,17 +1,24 @@
 // import {useRouter} from "next/router";
 import Link from 'next/link';
+import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import CloseIcon from "../public/images/close.svg";
 import Logo from "../public/images/logo.svg";
-import styles from '../styles/Header.module.scss';
+import MenuIcon from "../public/images/menu-icon.svg";
 import Linkedin from "../public/images/linkedin.svg";
+import styles from '../styles/Header.module.scss';
 
 
 const Header = () => {
-	const router = useRouter()
+  const router = useRouter();
 
-	return (
-    <header className={styles.navheader}>
+  const navBarCollapse = useRef();
+
+  const handleMenuClose = () => navBarCollapse.current.classList.remove("show");
+
+  return (
+    <header className={styles.nav_header}>
       <div className="container">
         <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
           <div className={`navbar-brand ${styles.navbar_brand}`}>
@@ -24,22 +31,27 @@ const Header = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="toggler-icon"><Image src={MenuIcon} alt=""/></span>
           </button>
+
           <div
-            className="collapse navbar-collapse justify-content-center"
-            id="navbarNavAltMarkup"
+            className="navbar-collapse collapse justify-content-center"
+            id="navbarNav"
+            ref={navBarCollapse}
           >
             <ul className="navbar-nav align-items-center">
+              <div className="menu-close" onClick={handleMenuClose}>
+                <Image src={CloseIcon} alt="close menu" />
+              </div>
               {/* <li className="nav-item active">
-							<Link className="nav-link" href="/">Home<span className="sr-only">(current)</span></Link>
-						</li> */}
+              <Link className="nav-link" href="/">Home<span className="sr-only">(current)</span></Link>
+            </li> */}
               <li
                 className={`${styles.nav_link} ${
                   router.pathname === "/" ? styles.active : ""
