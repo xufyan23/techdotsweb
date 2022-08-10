@@ -199,6 +199,10 @@ small {
   color: rgb(197, 3, 3);
 }
 
+.menu-close {
+  display: none;
+}
+
 .banner {
   background: url('../public//images//header_background.png') no-repeat;
   background-size: cover;
@@ -465,12 +469,12 @@ input[type="checkbox"]:checked {
 @-webkit-keyframes slide-out-left {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+    transform: translateX(-1000px);
     opacity: 0;
   }
 }
