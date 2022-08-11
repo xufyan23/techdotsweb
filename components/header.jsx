@@ -1,6 +1,6 @@
 // import {useRouter} from "next/router";
 import Link from 'next/link';
-import { useRef, useState } from "react";
+import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import CloseIcon from "../public/images/close.svg";
@@ -12,10 +12,11 @@ import styles from '../styles/Header.module.scss';
 
 const Header = () => {
   const router = useRouter();
-
   const navBarCollapse = useRef();
 
-  const handleMenuClose = () => navBarCollapse.current.classList.remove("show");
+  const handleMenuClose = () => {
+    navBarCollapse.current.classList.remove("show");
+  }
 
   return (
     <header className={styles.nav_header}>
@@ -37,13 +38,20 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="toggler-icon"><Image src={MenuIcon} alt=""/></span>
+            <span className="toggler-icon"><Image src={MenuIcon} alt=""
+              onClick={()=>{
+                document.body.style.overflow = 'hidden'
+              }}
+            /></span>
           </button>
 
           <div
             className="navbar-collapse collapse justify-content-center"
             id="navbarNav"
             ref={navBarCollapse}
+            onClick={()=>{
+              document.body.style.overflow = 'unset'
+            }}
           >
             <ul className="navbar-nav align-items-center">
               <div className="menu-close" onClick={handleMenuClose}>
