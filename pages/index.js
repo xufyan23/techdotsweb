@@ -23,14 +23,15 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import BlogCard from '../components/blogCard';
-import styles from '../styles/Home.module.scss';
 import getPosts from '../services/post';
+import styles from '../styles/Home.module.scss';
 
 const Home = ({posts}) => {
   const router = useRouter();
   const [mappedPosts, setMappedPosts] = useState([]);
   const [showMorePostsBtn, setShowMorePostsBtn] = useState(false);
   const scrollToContact = useRef(null);
+  const [loading , setLoading] = useState(true);
 
   const handleScroll = () => {
     scrollToContact.current ?.scrollIntoView({behavior: 'smooth'})
@@ -370,19 +371,22 @@ const Home = ({posts}) => {
         </section>
 
         <section className={`${styles.success}`}>
-          <div className="container">
+          <div className="container md-container">
             <div className="text-center">
               <h2>Success Stories</h2>
               <p className='mt-4'>The software that we build takes our clients to the next level</p>
             </div>
             <div className={`${styles.success_card_block}`}>
-              {mappedPosts.length ? mappedPosts.map((item, index) => (
-                <BlogCard
-                  onClick={() => router.push(`/posts/${item.slug.current}`)
-                }
-                key={index}
-                item={item}/>
-              )) : <>No Posts Yet</>}
+              {
+
+                mappedPosts.length ? mappedPosts.map((item, index) => (
+                  <BlogCard
+                    onClick={() => router.push(`/posts/${item.slug.current}`)
+                  }
+                  key={index}
+                  item={item}/>
+                )) : <>No Posts Yet</>
+              }
             </div>
 
             <div className={`text-center m-auto ${showMorePostsBtn ? 'd-block' : 'd-none'}`}>

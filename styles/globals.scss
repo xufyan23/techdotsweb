@@ -363,7 +363,7 @@ small {
 
 .blog-wrapper {
   h2 {
-    font-size: 1.8rem;
+    line-height: 1.2;
     &:after {
       display: none;
     }
@@ -521,12 +521,17 @@ input[type="checkbox"]:checked {
 }
 
 @media(max-width: 991px) {
+  .md-container {
+    max-width: 100% !important;
+  }
   .navbar {
     justify-content: flex-end;
     flex-direction: row-reverse;
     .navbar-toggler {
       flex: 1 auto;
       display: flex;
+      padding-left: 0;
+      padding-right: 0;
       &:focus {
         box-shadow: none;
       }
@@ -636,6 +641,11 @@ input[type="checkbox"]:checked {
 }
 
 @media(max-width: 767px) {
+  h2 {
+    &:after {
+      margin: auto;
+    }
+  }
   .mb-xs-0 {
     margin-bottom: 0;
   }
@@ -714,9 +724,12 @@ input[type="checkbox"]:checked {
 @media(max-width: 480px) {
   .banner {
     .btn {
-      width: 100%;
+      width: 60%;
     }
     .btn-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .primary-btn {
         margin-bottom: 1rem;
         margin-right: 0;
