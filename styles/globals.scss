@@ -93,7 +93,7 @@ a, .btn {
   border-radius: 5px;
   box-shadow: 0 5px 8px 0px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
-  &:hover, &:disabled {
+  &:hover, &:disabled, &:focus {
     transform: translateY(-3px);
     color: $clr-white;
     box-shadow: none;
@@ -112,7 +112,7 @@ a, .btn {
   text-transform: capitalize;
   color: $clr-white;
   font-size: 0.8125rem;
-  &:hover {
+  &:hover, &:focus {
     background: $clr-white;
     color: $clr-black;
     border-color: $clr-white;

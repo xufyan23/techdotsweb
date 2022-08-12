@@ -13,6 +13,14 @@
   }
 }
 
+.back_btn {
+  &:hover, &:focus {
+    color: $clr-green-400;
+    border-color: transparent;
+    background: transparent;
+  }
+}
+
 .consultation {
   padding-top: 5rem;
   overflow: hidden;
@@ -68,7 +76,7 @@
   background: $clr-blue-900;
   clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 20%);
   color: #ffffff;
-  z-index: -1;
+  // z-index: -1;
   .design_img{
     align-self: flex-end;
     transform: translateX(-8rem);
