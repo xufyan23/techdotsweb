@@ -82,9 +82,9 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <button id="book-appointment" className="btn primary-btn">
+                <a href="consultation" id="book-appointment" className="btn primary-btn">
                   Book Appointment
-                </button>
+                </a>
               </div>
             </div>
             <div className={`${styles.consultation_img}`}>
@@ -108,9 +108,9 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <button id="book-appointment" className="btn primary-btn">
+                <a href="implementation" id="book-appointment" className="btn primary-btn">
                   Book Appointment
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -128,9 +128,9 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <button id="book-appointment" className="btn primary-btn">
+                <a href="idea-validation" id="book-appointment" className="btn primary-btn">
                   Book Appointment
-                </button>
+                </a>
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
@@ -153,9 +153,9 @@ const Services = () => {
               the more obscure Latin words.
             </p>
             <div>
-              <button id="book-appointment" className="btn primary-btn">
+              <a href="design" id="book-appointment" className="btn primary-btn">
                 Book Appointment
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -171,15 +171,16 @@ const Services = () => {
               the more obscure Latin words.
             </p>
             <div>
-              <button id="book-appointment" className="btn primary-btn">
+              <a href="software-development" id="book-appointment" className="btn primary-btn">
                 Book Appointment
-              </button>
+              </a>
             </div>
           </div>
           <div className={`${styles.development_img}`}>
             <Image src={DevelopmentImg} alt="development img" loading="lazy" />
           </div>
         </section>
+
         <section className="contact-form bg-grey-100">
           <div className="container">
             <div className="row justify-content-center">

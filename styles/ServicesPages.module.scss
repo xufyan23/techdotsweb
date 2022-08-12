@@ -1,0 +1,72 @@
+@import './vaiables.scss';
+
+.content_wrapper {
+  .content_banner {
+    background: url('../public/images/banner_services.png') no-repeat;
+    background-size: cover;
+    height: 37.5rem;
+    color: $clr-white;
+  }
+  h3 {
+    line-height: 1.3;
+  }
+  .banner_text {
+    padding-top: 5rem;
+    padding-left: 4rem;
+    h1 {
+      font-family: Helvetica;
+    }
+    a {
+      margin-right: 1rem;
+    }
+  }
+  .about_project {
+    padding-top: 4rem;
+    h3 {
+      margin-bottom: 2rem;
+    }
+  }
+  .product_img {
+    display: flex;
+    justify-content: flex-end;
+    img {
+      border-radius: 10px;
+    }
+  }
+  .section_top_pd {
+    padding-top: 5rem;
+  }
+  .design_block {
+    height: auto;
+    margin-top: 0;
+    background: transparent;
+    clip-path: none;
+    color: $clr-black;
+    .section_img {
+      align-self: flex-start;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .content_wrapper {
+    .content_banner {
+      height: 30rem;
+      .banner_text {
+        padding-top: 2rem;
+        padding-left: 0;
+      }
+      .action_btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a {
+          margin: 1rem 0;
+        }
+        button, a {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
