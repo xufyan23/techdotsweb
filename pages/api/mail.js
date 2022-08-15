@@ -16,7 +16,6 @@ async function sendEmail(req, res) {
   mail
     .send(msg)
     .then((data = undefined) => {
-      console.log('Res', data);
       res.status(200).json({success: true})
     })
     .catch((error) => {

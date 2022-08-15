@@ -9,6 +9,11 @@ const ContactForm = () => {
     mode: "onBlur"
   });
 
+  // const checkboxesText = [
+  //   'digital_product',
+  //   'scale_up_team',
+  //   'speed_up'
+  // ];
   const onSubmit = (data) => console.log(data);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -16,6 +21,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
   const [token, setToken] = useState();
   const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
+  const [checkedCheckbox, setCheckedCheckbox] = useState({})
 
   const registerOptions = {
     name: { required: "Name is required" },
@@ -28,9 +34,26 @@ const ContactForm = () => {
     setToken(token);
   };
 
+  const onCheckboxChanged = (event) => {
+    const name = event.target.name;
+    const newValue = {
+      ...checkedCheckbox,
+      [name]: checkboxesText[name]
+    }
+    if (!event.target.checked) {
+      delete newValue[name];
+    }
+    setCheckedCheckbox(newValue);
+  }
+
   const handleEmail = async(event) => {
     event.preventDefault();
 
+    console.log(checkedCheckbox);
+    const checkboxHTML = Object.keys(checkedCheckbox).map((name) => {
+      return `<li>${checkedCheckbox[name]}</li>`;
+    }).join();
+    console.log(checkboxHTML);
     const res = await fetch("/api/mail", {
       body: JSON.stringify({
         email: "accounts@techdots.dev",
@@ -53,6 +76,7 @@ const ContactForm = () => {
             <div style="font-size: 13px;">
               <p style="width: 70%;">${message}</p>
             </div>
+            <ul>${checkboxHTML}</ul>
             <div style="margin-top: 20px;">
               <p style="font-size: 13px; margin-bottom: 0px; margin-top: 0;">Kind Regards:</p>
               <p style="font-size: 13px; margin-bottom: 0px; margin-top: 0;">Techdots | HR Manager</p>
@@ -81,6 +105,14 @@ const ContactForm = () => {
     // console.log(name, email, subject, message);
   }
 
+  const checkboxesText = {
+    digital_product: 'Build a digital product',
+    scale_up_team: 'Scale up a team',
+    speed_up_developement: 'Speed up developement',
+    optimize_product_usability: 'Optimize product usability',
+    other: 'other'
+  }
+
   return (
     <div className={`${styles.contact_form}`}>
       <h2 className="mb-4">What would you like to do?</h2>
@@ -99,7 +131,8 @@ const ContactForm = () => {
                 <input
                   id="checkbox-one"
                   type="checkbox"
-                  name="checkbox-checked"
+                  name="digital_product"
+                  onChange={onCheckboxChanged}
                 />
                 Build a digital product
               </label>
@@ -109,7 +142,8 @@ const ContactForm = () => {
                 <input
                   id="checkbox-two"
                   type="checkbox"
-                  name="checkbox-checked"
+                  name="scale_up_team"
+                  onChange={onCheckboxChanged}
                 />
                 Scale up a team
               </label>
@@ -122,7 +156,8 @@ const ContactForm = () => {
                 <input
                   id="checkbox-three"
                   type="checkbox"
-                  name="checkbox-checked"
+                  name="speed_up_developement"
+                  onChange={onCheckboxChanged}
                 />
                 Speed up developement
               </label>
@@ -132,7 +167,8 @@ const ContactForm = () => {
                 <input
                   id="checkbox-four"
                   type="checkbox"
-                  name="checkbox-checked"
+                  name="optimize_product_usability"
+                  onChange={onCheckboxChanged}
                 />
                 Optimize product usability
               </label>
@@ -145,7 +181,8 @@ const ContactForm = () => {
                 <input
                   id="checkbox-five"
                   type="checkbox"
-                  name="checkbox-checked"
+                  name="other"
+                  onChange={onCheckboxChanged}
                 />
                 Other
               </label>
