@@ -1,4 +1,4 @@
-import { useState , useEffect, useCallback} from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import Recaptcha from "./recaptcha";
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -49,11 +49,11 @@ const ContactForm = () => {
   const handleEmail = async(event) => {
     event.preventDefault();
 
-    console.log(checkedCheckbox);
+    // console.log(checkedCheckbox);
     const checkboxHTML = Object.keys(checkedCheckbox).map((name) => {
       return `<li>${checkedCheckbox[name]}</li>`;
-    }).join();
-    console.log(checkboxHTML);
+    }).join('');
+    // console.log(checkboxHTML);
     const res = await fetch("/api/mail", {
       body: JSON.stringify({
         email: "accounts@techdots.dev",
@@ -66,7 +66,6 @@ const ContactForm = () => {
           <meta name="description" content="The HTML5 Herald">
           <meta name="author" content="SitePoint">
           <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
-          <link rel="stylesheet" href="css/global.css?v=1.0">
         </head>
 
         <body>
@@ -103,6 +102,11 @@ const ContactForm = () => {
       return;
     }
     // console.log(name, email, subject, message);
+    event.target.reset();
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   }
 
   const checkboxesText = {
@@ -110,7 +114,7 @@ const ContactForm = () => {
     scale_up_team: 'Scale up a team',
     speed_up_developement: 'Speed up developement',
     optimize_product_usability: 'Optimize product usability',
-    other: 'other'
+    other: 'Other'
   }
 
   return (
