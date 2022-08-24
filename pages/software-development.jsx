@@ -27,7 +27,7 @@ const SoftwareDevelopment = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-7 col-xxl-7">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back" />
+                    <Image src={arrowRight} alt="back to services" />
                     Services
                   </a>
                   <h1>Software Development</h1>
@@ -89,7 +89,7 @@ const SoftwareDevelopment = () => {
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
-              <Image src={DevelopmentImg} alt="Validation img" loading="lazy" />
+              <Image src={DevelopmentImg} alt="Development" loading="lazy" />
             </div>
           </div>
         </section>

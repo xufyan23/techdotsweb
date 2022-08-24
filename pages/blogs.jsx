@@ -31,7 +31,7 @@ const Blogs = ({posts}) => {
               </p>
             </div>
             <div className={styles.banner_img}>
-              <Image src={blogImg} alt="" />
+              <Image src={blogImg} alt="banner image" />
             </div>
           </div>
         </div>

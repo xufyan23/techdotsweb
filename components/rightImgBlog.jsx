@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import arrowRight from "../public/images/arrow-right.svg";
 import styles from "../styles/SuccessStories.module.scss";
 

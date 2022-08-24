@@ -74,7 +74,7 @@ const SuccessStories = ({posts}) => {
                         <div className={`${styles.success_card_img}`}>
                           <img
                             src={item.mainImage}
-                            alt="card banner"
+                            alt={item.title}
                             loading="lazy"
                           />
                         </div>
@@ -103,7 +103,7 @@ const SuccessStories = ({posts}) => {
               {blogPost.length ? (
                 blogPost.map((item, index) =>
                   index % 2 === 0 ? (
-                    <RightImgBlog item={item} key={index} />
+                    <RightImgBlog item={item} key={index}/>
                   ) : (
                     <LeftImgBlog item={item} key={index} />
                   )
