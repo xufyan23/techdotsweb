@@ -27,8 +27,8 @@ const Implementation = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-7 col-xxl-7">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back" />
-                    Services
+                    <Image src={arrowRight} alt="back to services" />
+                    <span>Services</span>
                   </a>
                   <h1>Implementation</h1>
                   <p>
@@ -59,7 +59,7 @@ const Implementation = () => {
 				<section className={`${styles.implementation} ${style.section_top_pd}`}>
           <div className={`${styles.implementation_grid}`}>
             <div className={`${styles.implementation_img}`}>
-              <Image src={ImplementationImg} alt="Consultation" loading="lazy" />
+              <Image src={ImplementationImg} alt="Implementation" loading="lazy" />
             </div>
             <div className={`${styles.implementation_text}`}>
               <h3 className="mb-4">How much time and money does it cost you to reach your customers?</h3>

@@ -101,7 +101,7 @@ a, .btn {
     border-color: $clr-green-400;
   }
   &:focus {
-    outline: 2px solid $clr-green-300;
+    outline: 2px solid $clr-green-300 !important;
   }
 
 }
@@ -176,7 +176,7 @@ small {
 }
 
 .learn-more {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -186,6 +186,10 @@ small {
   animation: shine 2s infinite, hover 2s alternate infinite ease-in-out;
   &:hover {
     color: $clr-green-400;
+  }
+  &:focus, &:visited {
+    border: 2px dashed;
+    padding: 0.3rem 0.5rem;
   }
   span {
     transform: translateX(30%);
@@ -201,6 +205,19 @@ small {
 
 .menu-close {
   display: none;
+}
+
+.fixed-nav {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  background-color: #0b2566;
+  z-index: 99999;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  .navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .banner {

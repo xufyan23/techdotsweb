@@ -27,8 +27,8 @@ const Consultation = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-7 col-xxl-7">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back" />
-                    Services
+                    <Image src={arrowRight} alt="back to services"/>
+                    <span>Services</span>
                   </a>
                   <h1>Consultation</h1>
                   <p>

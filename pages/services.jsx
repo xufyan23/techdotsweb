@@ -46,9 +46,7 @@ const Services = () => {
                   </ul>
                   <div className="btn-block">
                     <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
-                      <a target="_blank" className="btn primary-btn">
-                        Book Appointment
-                      </a>
+                      <a target="_blank" className="btn primary-btn">Book Appointment</a>
                     </Link>
                     <button
                       className="btn primary-btn btn-white"
@@ -82,9 +80,11 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <a href="consultation" id="book-appointment" className="btn primary-btn">
-                  Book Appointment
-                </a>
+                <Link href="consultation">
+                  <a className="btn primary-btn">
+                    Book Appointment
+                  </a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.consultation_img}`}>
@@ -96,7 +96,7 @@ const Services = () => {
         <section className={`${styles.implementation}`}>
           <div className={`${styles.implementation_grid}`}>
             <div className={`${styles.implementation_img}`}>
-              <Image src={Implementation} alt="Consultation" loading="lazy" />
+              <Image src={Implementation} alt="Implementation" loading="lazy" />
             </div>
             <div className={`${styles.implementation_text}`}>
               <h3 className="mb-4">Implementation</h3>
@@ -108,9 +108,11 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <a href="implementation" id="book-appointment" className="btn primary-btn">
-                  Book Appointment
-                </a>
+                <Link href="implementation">
+                  <a className="btn primary-btn">
+                    Book Appointment
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -128,9 +130,11 @@ const Services = () => {
                 one of the more obscure Latin words.
               </p>
               <div>
-                <a href="idea-validation" id="book-appointment" className="btn primary-btn">
-                  Book Appointment
-                </a>
+                <Link href="idea-validation" >
+                  <a className="btn primary-btn">
+                    Book Appointment
+                  </a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
@@ -152,10 +156,12 @@ const Services = () => {
               professor at Hampden-Sydney College in Virginia, looked up one of
               the more obscure Latin words.
             </p>
-            <div>
-              <a href="design" id="book-appointment" className="btn primary-btn">
-                Book Appointment
-              </a>
+            <div className="mt-4">
+              <Link href="design">
+                <a className="btn primary-btn">
+                  Book Appointment
+                </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -171,9 +177,11 @@ const Services = () => {
               the more obscure Latin words.
             </p>
             <div>
-              <a href="software-development" id="book-appointment" className="btn primary-btn">
-                Book Appointment
-              </a>
+              <Link href="software-development">
+                <a className="btn primary-btn">
+                  Book Appointment
+                </a>
+              </Link>
             </div>
           </div>
           <div className={`${styles.development_img}`}>

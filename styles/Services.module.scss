@@ -14,6 +14,9 @@
 }
 
 .back_btn {
+  span {
+    margin-left: 0.5rem;
+  }
   &:hover, &:focus {
     color: $clr-green-400;
     border-color: transparent;

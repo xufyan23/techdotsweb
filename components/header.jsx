@@ -1,6 +1,5 @@
-// import {useRouter} from "next/router";
 import Link from 'next/link';
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import CloseIcon from "../public/images/close.svg";
@@ -19,7 +18,7 @@ const Header = () => {
   }
 
   return (
-    <header className={styles.nav_header}>
+    <header className={`${styles.nav_header}`}>
       <div className="container">
         <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
           <div className={`navbar-brand ${styles.navbar_brand}`}>
@@ -57,9 +56,6 @@ const Header = () => {
               <div className="menu-close" onClick={handleMenuClose}>
                 <Image src={CloseIcon} alt="close menu" />
               </div>
-              {/* <li className="nav-item active">
-              <Link className="nav-link" href="/">Home<span className="sr-only">(current)</span></Link>
-            </li> */}
               <li
                 className={`${styles.nav_link} ${
                   router.pathname === "/" ? styles.active : ""
