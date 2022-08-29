@@ -1,22 +1,21 @@
-import Header from './header'
 import Footer from './footer'
 import Head from "next/head";
+import "@fontsource/comfortaa";
 import Script from "next/script";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Custom Software Solutions For Global Companies</title>
+        <title>Accelerating your digital transformation</title>
         <meta name="Techdots" content="Techdots" />
-        <meta name="title" content="Custom Software Solutions For Global Companies"></meta>
+        <meta name="title" content="Accelerating your digital transformation"></meta>
         <meta name="description" content="Custom Software Solutions For Global Companies"></meta>
-        <meta name ="keywords" content ="Custom Software Solutions For Global Companies"/>
+        <meta name ="keywords" content ="Accelerating your digital transformation"/>
         <meta name="theme-color" content="#1B63DC"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" href="../public/apple-icon.png"/>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap"
-          rel="stylesheet"/>
+        {/* <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet"/> */}
       </Head>
       <main>{children}</main>
       <Footer />

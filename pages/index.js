@@ -60,7 +60,7 @@ const Home = ({posts}) => {
                 <p className="mb-4 mt-3">Our global team develops software that adds value to your small startup, promising SMB, or established enterprise.</p>
                 <div className="btn-block">
                   <Link
-                    href = "https://techdots.zohobookings.com/#/customer/custom-software-development" >
+                    href = "https://techdots.zohobookings.com/#/customer/custom-software-development">
                     <a target="_blank" className="btn primary-btn">Book Appointment</a>
                   </Link>
                   <button className="btn primary-btn btn-white" onClick={handleScroll}>Contact Us</button>
@@ -82,9 +82,9 @@ const Home = ({posts}) => {
         </div>
       </section>
 
-      <section className={`${styles.whoweare}`}>
+      <section className={styles.whoweare}>
         <div className="container">
-          <div className={`${styles.info}`}>
+          <div className={styles.info}>
             <h2 className="heading-center">Lorem Ispum</h2>
             <p className="mt-4">
               We use smart technologies to solve the toughest business problems,
@@ -92,7 +92,7 @@ const Home = ({posts}) => {
                 enable digital transformation, and deliver ROI.
               </span>
             </p>
-            <div className={`${styles.experience}`}>
+            <div className={styles.experience}>
               <div>
                 <p className="mb-1">
                   <span className="bold-text px-2">5+</span>Years of Experience
@@ -120,7 +120,7 @@ const Home = ({posts}) => {
               </div>
             </div>
           </div>
-          <div className={`${styles.whoweare_des}`}>
+          <div className={styles.whoweare_des}>
             <div className="row justify-content-between">
               <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
                 <div>
@@ -141,10 +141,9 @@ const Home = ({posts}) => {
                   </p>
                 </div>
               </div>
-              <div div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-                <div className={`${styles.img_block}`}>
+              <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+                <div className={styles.img_block}>
                   <Image
-                    className=""
                     src={ProjectSample}
                     width={100}
                     height={100}
@@ -152,7 +151,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample2}
                     width={100}
                     height={100}
@@ -160,7 +158,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample3}
                     width={100}
                     height={100}
@@ -168,7 +165,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample}
                     width={100}
                     height={100}
@@ -176,7 +172,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample}
                     width={100}
                     height={100}
@@ -184,7 +179,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample2}
                     width={100}
                     height={100}
@@ -192,7 +186,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample3}
                     width={100}
                     height={100}
@@ -200,7 +193,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample}
                     width={100}
                     height={100}
@@ -208,7 +200,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample}
                     width={100}
                     height={100}
@@ -216,7 +207,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample2}
                     width={100}
                     height={100}
@@ -224,7 +214,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample3}
                     width={100}
                     height={100}
@@ -232,7 +221,6 @@ const Home = ({posts}) => {
                     loading="lazy"
                   />
                   <Image
-                    className=""
                     src={ProjectSample}
                     width={100}
                     height={100}
@@ -246,18 +234,18 @@ const Home = ({posts}) => {
         </div>
       </section>
 
-      <section className={`${styles.services}`}>
+      <section className={styles.services}>
         <div className="container">
           <h2 className="heading-center">Services</h2>
-          <p className={`${styles.sub_heading}`}>
+          <p className={styles.sub_heading}>
             Contrary to popular belief, Lorem Ipsum is not simply random text. It
             has roots in a piece of classical Latin
           </p>
           <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <Image src={Consultation} alt="consultation" loading = "lazy" />
+              <Image src={Consultation} alt="consultation" loading="lazy" />
             </div>
-            <div className = "col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div className ="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
               <h3>Consultation</h3>
               <p>
                 Contrary to popular belief, Lorem Ipsum is not simply random text.
@@ -268,7 +256,7 @@ const Home = ({posts}) => {
               </p>
               <Link href="consultation">
                 <a className="learn-more" target="_blank">
-                  Learn More <Image src={arrowRight} alt="learn more" loading = "lazy" />
+                  Learn More <Image src={arrowRight} alt="learn more" loading="lazy" />
                 </a>
               </Link>
             </div>
@@ -291,7 +279,7 @@ const Home = ({posts}) => {
               </Link>
             </div>
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <Image src={Implementation} alt="Implementation" loading = "lazy" />
+              <Image src={Implementation} alt="Implementation" loading="lazy" />
             </div>
           </div>
 
@@ -323,19 +311,19 @@ const Home = ({posts}) => {
         </div>
       </section>
 
-      <section className={`${styles.pricing}`}>
+      <section className={styles.pricing}>
         <div className="container">
           <h2>Pricing</h2>
-          <p className={`${styles.sub_heading}`} >
+          <p className={styles.sub_heading}>
             Contrary to popular belief, Lorem Ipsum is not simply random text.It has roots in a piece of classical Latin
           </p>
-          <div className={`${styles.pricing_card_block}`}>
-            <div className={`${styles.pricing_card}`}>
-              <p className={`${styles.pricing_card_heading}`}>Hourly</p>
-              <div className={`${styles.pricing_card_icon}`}>
+          <div className={styles.pricing_card_block}>
+            <div className={styles.pricing_card}>
+              <p className={styles.pricing_card_heading}>Hourly</p>
+              <div className={styles.pricing_card_icon}>
                 <Image src={Hourly} alt="Hourly"/>
               </div>
-              <p className={`${styles.pricing_card_des}`}>
+              <p className={styles.pricing_card_des}>
                 Select how many hours to engage us, and only invest in the time given.
               </p>
               <div className="mt-5">
@@ -343,23 +331,23 @@ const Home = ({posts}) => {
               </div>
             </div>
             <div className = {`${styles.pricing_card} ${styles.active}`}>
-              <p className={`${styles.pricing_card_heading}`}>Retainer</p>
+              <p className={styles.pricing_card_heading}>Retainer</p>
               <div className={`${styles.pricing_card_icon}`}>
                 <Image src={Retainer} alt="Retainer"/>
               </div>
-              <p className={`${styles.pricing_card_des}`}>
+              <p className={styles.pricing_card_des}>
                 Select how many hours to engage us, and only invest in the time given.
               </p>
               <div className="mt-5">
                 <button className="btn primary-btn btn-white">Contact Us</button>
               </div>
             </div>
-            <div className={`${styles.pricing_card}`}>
-              <p className={`${styles.pricing_card_heading}`}>Hourly</p>
-              <div className={`${styles.pricing_card_icon}`}>
+            <div className={styles.pricing_card}>
+              <p className={styles.pricing_card_heading}>Hourly</p>
+              <div className={styles.pricing_card_icon}>
                 <Image src={FixedPrice} alt="Fixed Price"/>
               </div>
-              <p className={`${styles.pricing_card_des}`}>
+              <p className={styles.pricing_card_des}>
                 Select how many hours to engage us, and only invest in the time given.
               </p>
               <div className="mt-5">
@@ -370,15 +358,14 @@ const Home = ({posts}) => {
         </div>
       </section>
 
-      <section className={`${styles.success}`}>
+      <section className={styles.success}>
         <div className="container md-container">
           <div className="text-center">
             <h2>Success Stories</h2>
             <p className='mt-4'>The software that we build takes our clients to the next level</p>
           </div>
-          <div className={`${styles.success_card_block}`}>
+          <div className={styles.success_card_block}>
             {
-
               mappedPosts.length ? mappedPosts.map((item, index) => (
                 <BlogCard
                   onClick={() => router.push(`/posts/${item.slug.current}`)
@@ -391,13 +378,13 @@ const Home = ({posts}) => {
 
           <div className={`text-center m-auto ${showMorePostsBtn ? 'd-block' : 'd-none'}`}>
             <Link href="/blogs">
-              <a className={`btn primary-btn`}>Show All</a>
+              <a className="btn primary-btn">Show All</a>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className={`${styles.technologies}`}>
+      <section className={styles.technologies}>
         <div className="container">
           <h2>Our Technology Stack</h2>
           <p>
@@ -405,16 +392,16 @@ const Home = ({posts}) => {
             literature from 45 BC, making it over 2000 years old.Richard McClintock, a Latin professor at Hampden - Sydney
             College in Virginia, looked up one of the more obscure Latin words,
           </p>
-          <div className={`${styles.technologies_stack}`}>
+          <div className={styles.technologies_stack}>
             <Image src={ProjectSample} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={ProjectSample2} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample2} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample2} alt="" width={100} height={100} loading = "lazy" />
-            <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy" />
+            <Image src={ProjectSample2} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample2} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample2} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={ProjectSample3} alt="" width={100} height={100} loading = "lazy"/>
           </div>
           <div className="row">
             <div className="col-12 col-sm-12 col-lg-5 col-xl-5 col-xxl-6">
