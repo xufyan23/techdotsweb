@@ -8,4 +8,5 @@ module.exports = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  optimizeFonts: false,
 }

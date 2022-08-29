@@ -78,9 +78,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div>
 
-      </div>
       <div className={`${styles.copy_right}`}>
         <div className="container">
           <div className={`${styles.copy_right_text}`}>

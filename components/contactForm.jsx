@@ -9,11 +9,6 @@ const ContactForm = () => {
     mode: "onBlur"
   });
 
-  // const checkboxesText = [
-  //   'digital_product',
-  //   'scale_up_team',
-  //   'speed_up'
-  // ];
   const onSubmit = (data) => console.log(data);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -45,7 +40,9 @@ const ContactForm = () => {
     }
     setCheckedCheckbox(newValue);
   }
-
+  const handleBorderValidation = (error) => {
+    return error ? { border: "1px solid #cc0707" } : {}
+  }
   const handleEmail = async(event) => {
     event.preventDefault();
 
@@ -202,7 +199,7 @@ const ContactForm = () => {
                 id="name"
                 name="name"
                 value={name}
-                style={{ border: errors.name ? "1px solid #cc0707" : "" }}
+                style={handleBorderValidation(errors.name)}
                 {...register("name", registerOptions.name)}
                 onChange={(e) => {
                   setName(e.target.value);
@@ -220,7 +217,7 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 value={email}
-                style={{ border: errors.email ? "1px solid #cc0707" : "" }}
+                style={handleBorderValidation(errors.email)}
                 {...register("email", {
                   required: {
                     value: true,
@@ -251,7 +248,7 @@ const ContactForm = () => {
                 name="subject"
                 id="subject"
                 value={subject}
-                style={{ border: errors.subject ? "1px solid #cc0707" : "" }}
+                style={handleBorderValidation(errors.subject)}
                 {...register("subject", registerOptions.subject)}
                 onChange={(e) => setSubject(e.target.value)}
               />
@@ -269,7 +266,7 @@ const ContactForm = () => {
               placeholder="Message"
               id="message"
               value={message}
-              style={{ border: errors.meessage ? "1px solid #cc0707" : "" }}
+              style={handleBorderValidation(errors.meessage)}
               {...register("meessage", registerOptions.meessage)}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
