@@ -85,11 +85,11 @@ const Home = ({posts}) => {
       <section className={styles.whoweare}>
         <div className="container">
           <div className={styles.info}>
-            <h2 className="heading-center">Lorem Ispum</h2>
+            <h2 className="heading-center">Your Full-Stack Development Partner</h2>
             <p className="mt-4">
-              We use smart technologies to solve the toughest business problems,
+            Techdots help businesses navigate any and all facets of the digital landscape from creating
               <span className="d-block">
-                enable digital transformation, and deliver ROI.
+              strategic software to dynamic mobile solutions that deliver tangible business results.
               </span>
             </p>
             <div className={styles.experience}>
