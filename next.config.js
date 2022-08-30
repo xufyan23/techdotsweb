@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
 }
 
 module.exports = {
@@ -9,4 +9,7 @@ module.exports = {
     defaultLocale: 'en',
   },
   optimizeFonts: false,
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
 }
