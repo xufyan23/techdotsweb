@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { Router, useRouter } from "next/router";
 import Link from "next/link";
 import ContactForm from "../components/contactForm";
@@ -72,11 +73,13 @@ const SuccessStories = ({posts}) => {
                         }`}
                       >
                         <div className={`${styles.success_card_img}`}>
-                          <img
+                          {/* <img
                             src={item.mainImage}
                             alt={item.title}
                             loading="lazy"
-                          />
+                          /> */}
+                        <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
+
                         </div>
                         <div className={`${styles.success_card_des}`}>
                           <h3 className="link-heading mb-2 mt-2">

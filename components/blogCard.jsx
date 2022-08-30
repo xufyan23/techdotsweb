@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from "../styles/Home.module.scss";
 
 export default function BlogCard({ item, onClick }) {
@@ -5,7 +6,7 @@ export default function BlogCard({ item, onClick }) {
   return (
     <div className={`${styles.success_card}`} onClick={onClick}>
       <div className={`${styles.success_card_img}`}>
-        <img src={item.mainImage} alt={item.title} loading="lazy" />
+        <Image src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
       </div>
       <div className={`${styles.success_card_des}`}>
         {/* <small className="clr-green d-block">Mobile Application</small> */}

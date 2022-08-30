@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import imageUrlBuilder  from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
@@ -22,10 +23,10 @@ const Post = ({title, body, image}) => {
       <div className={styles.post_container}>
         <h1>{title}</h1>
         <div className={styles.blog_banner}>
-          {imageUrl && <img src={imageUrl} />}
+          {imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
         </div>
         <div className={styles.description}>
-          <BlockContent blocks={body} />
+          <BlockContent blocks={body}/>
         </div>
       </div>
     </div>
