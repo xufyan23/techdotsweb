@@ -1,5 +1,46 @@
+@import './vaiables.scss';
+
 .contact_form {
-	justify-content: center;
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.contact_banner {
+  background-color: $clr-blue-900;
+  .banner_col {
+    display: grid;
+    grid-template-columns: 0.04fr 1fr 0.9fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 5rem 0;
+  }
+  .banner_text {
+    grid-column: 2;
+    color: $clr-white;
+  }
+}
+
+@media(max-width: 991px) {
+  .contact_banner {
+    .banner_col {
+      grid-template-columns: 1fr;
+    }
+    .banner_text {
+      grid-column: 1;
+      padding-left: 1.7rem;
+    }
+    .banner_img {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .contact_banner {
+    .banner_text {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
 }
