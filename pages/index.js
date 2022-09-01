@@ -45,7 +45,7 @@ const Home = ({posts}) => {
   return (
     <div>
       <Head>
-        <title>Home</title>
+        <title>Techdots - Your Full-Stack Development Partner</title>
       </Head>
       <section className="banner">
         <Header/>
