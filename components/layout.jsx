@@ -7,10 +7,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Accelerating your digital transformation</title>
-        <meta name="Techdots" content="Techdots" />
-        <meta name="title" content="Accelerating your digital transformation"></meta>
-        <meta name="description" content="Custom Software Solutions For Global Companies"></meta>
+        <title>Techdots</title>
+        <meta name="Techdots" content="Techdots"/>
+        <meta name="title" content="Techdots"></meta>
+        <meta name="description" content="Your Full-Stack Development Partner"/>
         <meta name ="keywords" content ="Accelerating your digital transformation"/>
         <meta name="theme-color" content="#1B63DC"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
