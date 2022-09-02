@@ -167,7 +167,7 @@ small {
 
 .form-control {
   font-size: 14px;
-  height: 2.5rem;
+  min-height: 2.5rem;
   &:focus {
     outline: 1px solid $clr-blue-500;
     box-shadow: none;
@@ -201,6 +201,32 @@ small {
   font-size: 12px;
   font-weight: 700;
   color: rgb(197, 3, 3);
+}
+
+.next-btn, .prev-btn {
+  font-size: 0.8rem;
+  padding: 0.3rem ;
+  border-radius: 3px;
+  min-width: 90px;
+  &:hover, &:focus {
+    background: $clr-blue-900;
+    color: $clr-white;
+  }
+}
+
+.next-btn {
+  background: $clr-blue-500;
+  color: $clr-white;
+}
+
+.prev-btn {
+  background: #e4e4e4;
+  color: $clr-black;
+}
+
+hr {
+  border-color: $clr-grey-400;
+  margin: 1.4rem 0;
 }
 
 .menu-close {
@@ -384,6 +410,46 @@ small {
     &:after {
       display: none;
     }
+  }
+}
+
+.quotation-wrapper {
+  .banner {
+    background: $clr-blue-900;
+    min-height: 400px;
+  }
+  .form-group {
+    position: relative;
+  }
+  .heading-text {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  input[type=checkbox]::before {
+    height: 10px;
+    width: 5px;
+    border-width: 2px;
+  }
+
+  .rc-slider-rail, .rc-slider-track {
+    height: 6px;
+    border-radius: 0;
+  }
+  .rc-slider-track {
+    background-color: $clr-blue-500;
+  }
+  .rc-slider-handle {
+    background-color: $clr-white;
+    border-color: $clr-blue-500;
+    opacity: 1;
+  }
+  .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+    border-color: $clr-blue-500;
+    box-shadow: 0 0 0 5px #89ace7;
   }
 }
 

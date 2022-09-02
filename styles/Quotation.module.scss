@@ -1,0 +1,95 @@
+@import './vaiables.scss';
+
+.banner_col {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.8fr;
+  align-items: center;
+  padding-top: 4rem;
+}
+.banner_text {
+  grid-column: 2;
+  h1 {
+    color: $clr-white;
+  }
+}
+
+.steps_container {
+  background: url('../public//images/img_side.svg') no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 0.8rem;
+  .steps_block {
+    box-shadow: 0 0 5px 4px #f7f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    position: relative;
+  }
+  .step_percentage {
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $clr-green-400;
+    margin-bottom: 1rem;
+    transition: width 0.3s ease;
+  }
+
+  .range_value {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    font-family: Helvetica;
+    font-weight: 700;
+    color: $clr-blue-500;
+    &:before {
+      content: "$";
+    }
+  }
+
+  .range_slide {
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+  }
+  .counter {
+    color: $clr-grey-300;
+    font-weight: 700;
+    padding-bottom: 0.3rem;
+  }
+  .action_btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.term_link {
+  padding-left: 0.3rem;
+  background-color: transparent;
+  font-size: 0.8rem;
+  color: $clr-blue-500;
+  border: 0;
+}
+
+.step_text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    margin-bottom: 0;
+    color: $clr-blue-800;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $clr-grey-400;
+    border-radius: 100%;
+    line-height: 6px;
+  }
+}
