@@ -1,8 +1,23 @@
 @import './vaiables.scss';
 
 .sub_heading {
-  width: 28.25rem;
-  margin: 0 auto 2rem auto;
+  width: 38.25rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.powered_by {
+  width: 50%;
+  margin: 1.5rem auto 1rem auto;
+}
+
+.how_we_work {
+  padding-bottom: 4rem;
+  .grid_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding-top: 1rem;
+  }
 }
 
 .whoweare {
@@ -162,13 +177,15 @@
   background: url('../public/images/img_side.svg') no-repeat;
   background-position: bottom 40px left;
   h2 {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
   }
   .technologies_stack {
     display: flex;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     gap: 1rem;
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 5rem;
     img {
       object-fit: contain;
@@ -207,12 +224,22 @@
 
   .technologies {
     background: none;
+    .technologies_stack {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 }
 
 @media(max-width: 767px) {
   .sub_heading {
     width: 100%;
+  }
+
+  .how_we_work {
+    .grid_block {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
   }
 
   .whoweare {
@@ -280,6 +307,9 @@
     h2 {
       padding-bottom: 1.5rem;
       text-align: center;
+    }
+    .technologies_stack {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }

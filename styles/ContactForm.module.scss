@@ -23,14 +23,20 @@
   }
 }
 
+@media(max-width: 1024px) {
+  .contact_form {
+    .action_btn {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+  }
+}
+
 @media(max-width: 767px) {
   .contact_form {
     h2 {
       margin-bottom: 2rem !important;
       padding-bottom: 0;
-    }
-    .action_btn {
-      flex-direction: column-reverse;
     }
     .action_text {
       font-size: 0.9rem;

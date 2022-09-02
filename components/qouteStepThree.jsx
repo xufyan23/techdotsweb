@@ -5,7 +5,7 @@ import styles from  "../styles/Quotation.module.scss";
 
 const  QouteStepThree = ({onStepComplete, onStepBack}) => {
   const [minCounter, setMinCounter] = useState(100);
-  const [maxCounter, setMaxCounter] = useState(10000);
+  // const [maxCounter, setMaxCounter] = useState(10000);
   const [rangeCounter, setRangeCounter] = useState(minCounter);
 
   const handleRangeValue = (e) => {
