@@ -33,7 +33,9 @@ import NextJSIcon from "../public/images/next-icon.png";
 import Go from "../public/images/go-icon.svg";
 import AngularIcon from "../public/images/angularjs-icon.svg";
 import SassIcon from "../public/images/sass-icon.svg";
-
+import DeveloperIcon from "../public/images/developer-icon.svg";
+import TeamIcon from "../public/images/team-icon.svg";
+import ProjectIcon from "../public/images/project-icon.svg";
 import styles from '../styles/Home.module.scss';
 
 const Home = ({posts}) => {
@@ -257,6 +259,9 @@ const Home = ({posts}) => {
           <h2>How We Work </h2>
           <div className={styles.grid_block}>
             <div>
+              <div className={styles.icon}>
+                <Image src={ProjectIcon} alt=""/>
+              </div>
               <p className="bold-text">Project Based</p>
               <p>
                 We oversee all the development efforts for your project. In addition to full-stack developers we have
@@ -264,6 +269,9 @@ const Home = ({posts}) => {
                 </p>
             </div>
             <div>
+            <div className={styles.icon}>
+                <Image src={TeamIcon} alt=""/>
+              </div>
               <p className="bold-text">Team Augmentation</p>
               <p>
                 We offer full-stack development consulting to supplement your team when additional resources are needed
@@ -271,6 +279,9 @@ const Home = ({posts}) => {
               </p>
             </div>
             <div>
+            <div className={styles.icon}>
+                <Image src={DeveloperIcon} alt=""/>
+              </div>
               <p className="bold-text">Retainer</p>
               <p>
                 Monthly time and materials development for your application, product, or service with an 80 hour a month minimum.

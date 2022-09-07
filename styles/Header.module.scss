@@ -61,51 +61,51 @@
 @media(max-width: 991px) {
   .nav_header {
     .navbar {
-        .navbar-nav {
-          align-items: flex-start !important;
-          padding-top: 2rem;
-          &:not(:last-child) {
-            li {
-              width: 100%;
-              border-bottom: 1px solid #fff;
-              padding: 1rem !important;
-            }
-          }
-        }
-        .nav_link {
-          &.active {
-            background: $clr-blue-900;
-          }
-          &:after {
-            display: none;
-          }
-        }
-        .nav-right {
+      .navbar-nav {
+        align-items: flex-start !important;
+        padding-top: 2rem;
+        &:not(:last-child) {
           li {
-            margin-left: 0;
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            padding: 1rem !important;
           }
         }
-        .navbar-collapse{
-          transition: transform 0.3s ease;
-          -webkit-animation: slide-out-left;
-          animation: slide-out-left;
+      }
+      .nav_link {
+        &.active {
+          background: $clr-blue-900;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      .nav-right {
+        li {
+          margin-left: 0;
+        }
+      }
+      .navbar-collapse {
+        display: block !important;
+        height: 100%;
+        width: 250px;
+        min-height: 100vh;
+        position: fixed;
+        bottom: 0;
+        left: 0px;
+        background: rgb(25 55 111);
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+        animation: slide-out-left;
+        -webkit-animation: slide-out-left;
+        z-index: 999999;
+        box-shadow: 0 0 11px 0px #002466;
+        overflow-y: auto;
+        &.show {
           display: block !important;
-          background: rgb(25 55 111);
-          min-height: 100vh;
-          height: 100%;
-          width: 250px;
-          bottom: 0;
-          position: fixed;
-          z-index: 999999;
-          box-shadow: 0 0 11px 0px #002466;
-          left: 0px;
-          transform: translateX(-100%);
-          &.show {
-            display: block !important;
-            transform: translateX(0);
-            // opacity: 1;
-          }
-
+          transform: translateX(0);
+          // opacity: 1;
+        }
       }
     }
   }

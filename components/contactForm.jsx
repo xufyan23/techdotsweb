@@ -59,8 +59,8 @@ const ContactForm = () => {
         <html lang="en">
         <head>
           <meta charset="utf-8">
-          <title>The HTML5 Herald</title>
-          <meta name="description" content="The HTML5 Herald">
+          <title>Contact Form</title>
+          <meta name="description" content="Contact Form">
           <meta name="author" content="SitePoint">
           <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
         </head>
@@ -135,7 +135,7 @@ const ContactForm = () => {
                   name="digital_product"
                   onChange={onCheckboxChanged}
                 />
-                Build a digital product
+                {checkboxesText['digital_product']}
               </label>
             </div>
             <div className="form-group">
@@ -146,7 +146,7 @@ const ContactForm = () => {
                   name="scale_up_team"
                   onChange={onCheckboxChanged}
                 />
-                Scale up a team
+                {checkboxesText['scale_up_team']}
               </label>
             </div>
           </div>
@@ -160,7 +160,7 @@ const ContactForm = () => {
                   name="speed_up_developement"
                   onChange={onCheckboxChanged}
                 />
-                Speed up developement
+                {checkboxesText['speed_up_developement']}
               </label>
             </div>
             <div className="form-group">
@@ -171,7 +171,7 @@ const ContactForm = () => {
                   name="optimize_product_usability"
                   onChange={onCheckboxChanged}
                 />
-                Optimize product usability
+                {checkboxesText['optimize_product_usability']}
               </label>
             </div>
           </div>
@@ -185,7 +185,7 @@ const ContactForm = () => {
                   name="other"
                   onChange={onCheckboxChanged}
                 />
-                Other
+                {checkboxesText['other']}
               </label>
             </div>
           </div>

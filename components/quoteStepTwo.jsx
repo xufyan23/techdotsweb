@@ -1,9 +1,28 @@
-import styles from  "../styles/Quotation.module.scss";
+import {useState} from "react";
+import styles from "../styles/Quotation.module.scss";
 
-const QuoteStepTwo = ({onStepComplete, onStepBack}) => {
+const QuoteStepTwo = ({onStepComplete, onStepBack, stepTwo, setStepTwo}) => {
+  const [error, setError] = useState(false);
+
+  const handleTextArea = (event) => {
+    const textArea = event.target.value
+    console.log(textArea)
+    setStepTwo(textArea);
+  }
 
   const handleNext = () => {
+    if(!validate()) {
+      return setError(true)
+    }
+    setError(false)
     onStepComplete();
+  }
+
+  const validate = () => {
+    if(!stepTwo || stepTwo === '' ) {
+      return false
+    }
+    return true
   }
 
   const handlePrevious = () => {
@@ -21,7 +40,13 @@ const QuoteStepTwo = ({onStepComplete, onStepBack}) => {
           rows="5"
           cols="60"
           placeholder="Type here additional info"
+          value={stepTwo}
+          onChange={handleTextArea}
         ></textarea>
+        {
+          error && <div className={styles.step_error}>Please enter text</div>
+        }
+
       </div>
       <hr/>
       <div className={styles.action_btn}>

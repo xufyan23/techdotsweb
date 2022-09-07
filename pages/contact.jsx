@@ -8,8 +8,8 @@ import styles from "../styles/Contact.module.scss";
 const Contact = () => {
   return (
     <>
-    <Head>
-      <title>Contact</title>
+      <Head>
+        <title>Contact</title>
       </Head>
       <div className="contact-wrapper">
         <Header />

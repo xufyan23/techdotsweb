@@ -20,12 +20,6 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
   font-size: 0.8rem;
-  .steps_block {
-    box-shadow: 0 0 5px 4px #f7f4f4;
-    padding: 1rem;
-    border-radius: 4px;
-    position: relative;
-  }
   .step_percentage {
     height: 3px;
     position: absolute;
@@ -45,6 +39,7 @@
     color: $clr-blue-500;
     &:before {
       content: "$";
+      padding-right: 0.1rem;
     }
   }
 
@@ -63,6 +58,22 @@
     justify-content: flex-end;
     align-items: center;
     gap: 0.5rem;
+  }
+  .step_four {
+    input[type=checkbox] {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+  .step_five {
+    .heading_text {
+      color: $clr-blue-500;
+      font-weight: 700;
+    }
+    .list_block {
+      padding-left: 2.6rem;
+    }
   }
 }
 
@@ -85,11 +96,37 @@
   span {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 28px;
+    line-height: 22px;
     height: 28px;
-    border: 1px solid $clr-grey-400;
+    border: 2px solid #d9d9d9;
     border-radius: 100%;
-    line-height: 6px;
+    font-size: 0.7rem;
+  }
+}
+.step_error {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: #a60d0d;
+}
+
+@media(max-width: 991px) {
+  .banner_col {
+    grid-template-columns: 0.1fr 1fr;
+  }
+}
+
+@media(max-width: 767px) {
+  .banner_col {
+    grid-template-columns: 1fr;
+  }
+  .banner_text {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .steps_container {
+    background: none;
   }
 }
