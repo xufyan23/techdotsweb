@@ -299,24 +299,6 @@ const Home = ({posts}) => {
             ongoing maintenance as part of custom software development services. No hot fixes — only scalable builds with
             technologies that stand the test of time.
           </p>
-          <div className="row align-items-center">
-            <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <Image src={Consultation} alt="consultation" loading="lazy" />
-            </div>
-            <div className ="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <h3>Consultation</h3>
-              <p>
-                We guide organizations to harness technology and innovation for executing their digital transformation journeys,
-                shaping their tech visions, and reinvent their businesses to create sustainable, exceptional value from their
-                technology investments.
-              </p>
-              <Link href="consultation">
-                <a className="learn-more" target="_blank">
-                  Learn More <Image src={arrowRight} alt="learn more" loading="lazy" />
-                </a>
-              </Link>
-            </div>
-          </div>
 
           <div className="row align-items-center col-reverse">
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
@@ -441,16 +423,16 @@ const Home = ({posts}) => {
           <h2>Our Technology Stack</h2>
           <p>Work with future-proof technologies</p>
           <div className={styles.technologies_stack}>
-            <Image src={TypescriptIcon} alt="" width={70} height={70} loading = "lazy"/>
-            <Image src={ReactIcon} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={NodeJsIcon} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={AngularIcon} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={VueIcon} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={RubyIcon} alt="" width={60} height={60} loading = "lazy"/>
-            <Image src={Go} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={NextJSIcon} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={AWSIcon} alt="" width={100} height={100} loading = "lazy"/>
-            <Image src={SassIcon} alt="" width={100} height={100} loading = "lazy"/>
+            <Image src={TypescriptIcon} alt="Typescript" width={100} height={100} loading = "lazy"/>
+            <Image src={ReactIcon} alt="React" width={100} height={100} loading = "lazy"/>
+            <Image src={NodeJsIcon} alt="NodeJs" width={100} height={100} loading = "lazy"/>
+            <Image src={AngularIcon} alt="Angular" width={100} height={100} loading = "lazy"/>
+            <Image src={VueIcon} alt="Vue" width={100} height={100} loading = "lazy"/>
+            <Image src={RubyIcon} alt="Ruby on Rails" width={70} height={70} loading = "lazy"/>
+            <Image src={Go} alt="Go" width={100} height={100} loading = "lazy"/>
+            <Image src={NextJSIcon} alt="NextJs" width={100} height={100} loading = "lazy"/>
+            <Image src={AWSIcon} alt="AWS" width={100} height={100} loading = "lazy"/>
+            <Image src={SassIcon} alt="Sass" width={100} height={100} loading = "lazy"/>
           </div>
           <div className="row">
             <div className="col-12 col-sm-12 col-lg-5 col-xl-5 col-xxl-6">

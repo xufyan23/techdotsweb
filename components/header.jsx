@@ -45,7 +45,7 @@ const Header = () => {
           </button>
 
           <div
-            className="navbar-collapse collapse justify-content-center collapsing"
+            className="navbar-collapse collapse justify-content-center"
             id="navbarNav"
             ref={navBarCollapse}
             onClick={()=>{
