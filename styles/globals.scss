@@ -661,6 +661,9 @@ input[type="checkbox"]:checked {
 }
 
 @media(max-width: 991px) {
+  .col-reverse {
+    flex-direction: column-reverse;
+  }
   .md-container {
     max-width: 100% !important;
   }
@@ -792,10 +795,6 @@ input[type="checkbox"]:checked {
 
   .d-inline-xs {
     display: inline-block !important;
-  }
-
-  .col-reverse {
-    flex-direction: column-reverse;
   }
 
   .pt-xs-1 {

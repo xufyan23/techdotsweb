@@ -105,7 +105,7 @@ const Home = ({posts}) => {
             </p>
             <div className='text-center mb-4'>
               <Link href="quotation">
-                <a className='btn primary-btn'>Get a Quote</a>
+                <a className='btn primary-btn mb-2'>Get a Quote</a>
               </Link>
             </div>
             <div className={styles.sub_heading}>
@@ -262,7 +262,7 @@ const Home = ({posts}) => {
               <div className={styles.icon}>
                 <Image src={ProjectIcon} alt=""/>
               </div>
-              <p className="bold-text">Project Based</p>
+              <h4 className="bold-text mt-1 mb-3">Project Based</h4>
               <p>
                 We oversee all the development efforts for your project. In addition to full-stack developers we have
                 certified scrum masters in-house to handle any agile project management needs.
@@ -272,7 +272,7 @@ const Home = ({posts}) => {
             <div className={styles.icon}>
                 <Image src={TeamIcon} alt=""/>
               </div>
-              <p className="bold-text">Team Augmentation</p>
+              <h4 className="bold-text mt-1 mb-3">Team Augmentation</h4>
               <p>
                 We offer full-stack development consulting to supplement your team when additional resources are needed
                 to speed up your project.
@@ -282,7 +282,7 @@ const Home = ({posts}) => {
             <div className={styles.icon}>
                 <Image src={DeveloperIcon} alt=""/>
               </div>
-              <p className="bold-text">Retainer</p>
+              <h4 className="bold-text mt-1 mb-3">Retainer</h4>
               <p>
                 Monthly time and materials development for your application, product, or service with an 80 hour a month minimum.
               </p>
@@ -336,6 +336,25 @@ const Home = ({posts}) => {
               </Link>
             </div>
           </div>
+
+          <div className="row align-items-center col-reverse">
+            <div className ="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+              <h3>Design</h3>
+              <p>
+                What can grab users’ attention better than an appealing and bright user interface? Create your website or application
+                with the best UI/UX designers to outpace your competitors.
+              </p>
+              <Link href="design">
+                <a className="learn-more" target="_blank">
+                  Learn More <Image src={arrowRight} alt="learn more" loading="lazy" />
+                </a>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+              <Image src={Consultation} alt="consultation" loading="lazy" />
+            </div>
+          </div>
+
           <div className="mt-xs-2">
             <Link href="services">
               <a className="btn primary-btn">See all Services</a>
