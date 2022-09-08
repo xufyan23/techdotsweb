@@ -14,9 +14,8 @@
 }
 
 .back_btn {
-  span {
-    margin-left: 0.5rem;
-  }
+  display: flex;
+  gap: 0.3rem;
   &:hover, &:focus {
     color: $clr-green-400;
     border-color: transparent;
@@ -55,6 +54,7 @@
 
 .validation {
   overflow: hidden;
+  padding-top: 6rem;
   .validation_grid {
     display: grid;
     grid-template-columns: 0.3fr 0.75fr 1fr;

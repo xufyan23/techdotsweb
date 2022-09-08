@@ -12,13 +12,6 @@
   box-sizing: border-box;
 }
 
-ul, ol, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -28,6 +21,13 @@ body {
   font-family: $font-comfortaa;
   color: $clr-black;
 }
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 h1 {
   font-size: clamp(2rem, calc( 12px + 3.300vw ), 2.6875rem);
@@ -292,9 +292,13 @@ hr {
 	margin-bottom: 2rem;
 	.banner {
     padding-bottom: 0;
-		min-height: 300px;
+		// min-height: 300px;
+    .banner_col {
+      // grid-template-columns: 0.4fr 1fr 0.6fr;
+      gap: 4rem;
+    }
 		.banner-img {
-			margin-bottom: -3.2rem;
+      transform: translateY(43%);
 		}
 	}
 }

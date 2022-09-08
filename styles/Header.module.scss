@@ -60,6 +60,16 @@
 
 @media(max-width: 991px) {
   .nav_header {
+    position: relative;
+    // &:before {
+    //   content: "";
+    //   width: 100vw;
+    //   height: 100vh;
+    //   background: rgb(21 21 21 / 50%);
+    //   position: absolute;
+    //   top: 0;
+    //   left: 100%;
+    // }
     .navbar {
       .navbar-nav {
         align-items: flex-start !important;
@@ -96,13 +106,11 @@
         background: rgb(25 55 111);
         transition: transform 0.3s ease;
         transform: translateX(-100%);
-        animation: slide-out-left;
-        -webkit-animation: slide-out-left;
         z-index: 999999;
         box-shadow: 0 0 11px 0px #002466;
         overflow-y: auto;
         &.show {
-          display: block !important;
+          // display: block !important;
           transform: translateX(0);
           // opacity: 1;
         }

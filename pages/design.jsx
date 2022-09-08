@@ -4,13 +4,12 @@ import Image from "next/image";
 import Header from "../components/header";
 import arrowRight from "../public/images/ic_backArrow.svg";
 import DesignImg from "../public/images/img1_design.png";
-import ContactForm from "../components/contactForm";
 import { useRef } from "react";
 import styles from "../styles/Services.module.scss";
 import style from "../styles/ServicesPages.module.scss";
 
 const Design = () => {
-	const scrollToContact = useRef(null);
+  const scrollToContact = useRef(null);
   const handleScroll = () => {
     scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -24,17 +23,23 @@ const Design = () => {
           <Header />
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-7 col-xxl-7">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back to services" />
+                    <Image src={arrowRight} alt="back to services"/>
                     <span>Services</span>
                   </a>
-                  <h1>Design</h1>
+                  <h1>Embrace the Visual Appeal of your MVP </h1>
                   <p>
-                    Techdots is a product - focused software development
-                    <span className="d-block">agency for enterprise & high - growth companies.</span>
+                    Your MVP should be well-balanced so you can explore the potential of your idea effectively and affordably.
+                    In order for your product to stand out among its competitors, it must have the right balance of basic
+                    functionality and unique features.
                   </p>
+                  <ul className={`${styles.services_list}`}>
+                    <li>Creating functional pattern to process</li>
+                    <li>Keeping the visual element intact</li>
+                    <li>Managing the balance of measured result and usability</li>
+                  </ul>
                   <div className={`btn-block ${style.action_btn}`}>
                     <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
                       <a target="_blank" className="btn primary-btn">
@@ -54,54 +59,24 @@ const Design = () => {
           </div>
         </section>
 
-
-
-				<section className={`${styles.design} ${style.section_top_pd} ${style.design_block}`}>
+        <section className={`${styles.design} ${style.section_top_pd} ${style.section_bottom_pd} ${style.design_block}`}>
           <div className={`${styles.design_img} ${style.section_img}`}>
             <Image src={DesignImg} alt="design img" />
           </div>
           <div className={`${styles.design_text}`}>
-              <h3 className="mb-4">How much time and money does it cost you to reach your customers?</h3>
+              <h3 className="mb-4">How We Design</h3>
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words.
+                Developing the MVP is not a usual task when you precisely target market potential and goals. Our team of
+                experts work simultaneously with business analysts for margin potential by running price tests.
+                We assist you in locating values that matter to your customers and what the gap in the market is with value
+                proposition tests.
               </p>
-              <div className="mt-5">
-                <h3 className="mb-4">Are you still spending tons of money using multiple tools?</h3>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over 2000 years old. Richard McClintock, a
-                  Latin professor at Hampden-Sydney College in Virginia, looked up
-                  one of the more obscure Latin words.
-                </p>
-              </div>
-              <div className="mt-5">
-                <h3 className="mb-4">Here are some of the features you get when you choose TechDots.</h3>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over 2000 years old. Richard McClintock, a
-                  Latin professor at Hampden-Sydney College in Virginia, looked up
-                  one of the more obscure Latin words.
-                </p>
+              <div className="mt-4">
+                <Link href="contact">
+                  <a className="btn primary-btn">Start Now</a>
+                </Link>
               </div>
             </div>
-        </section>
-
-        <section className="contact-form">
-          <div className="container">
-            <div className="row">
-							<div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6 m-auto"
-                ref={scrollToContact}
-              >
-                <ContactForm />
-              </div>
-            </div>
-          </div>
         </section>
       </div>
     </>

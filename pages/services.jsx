@@ -68,7 +68,7 @@ const Services = () => {
           </div>
         </section>
 
-        <section className={`${styles.consultation}`}>
+        {/* <section className={`${styles.consultation}`}>
           <div className={`${styles.consultation_grid}`}>
             <div className={`${styles.consultation_text}`}>
               <h3 className="mb-4">Consultation</h3>
@@ -91,9 +91,9 @@ const Services = () => {
               <Image src={Consultation} alt="Consultation" loading="lazy" />
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className={`${styles.implementation}`}>
+        {/* <section className={`${styles.implementation}`}>
           <div className={`${styles.implementation_grid}`}>
             <div className={`${styles.implementation_img}`}>
               <Image src={Implementation} alt="Implementation" loading="lazy" />
@@ -116,7 +116,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className={`${styles.validation}`}>
           <div className={`${styles.validation_grid}`}>

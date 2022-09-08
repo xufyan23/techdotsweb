@@ -24,17 +24,23 @@ const SoftwareDevelopment = () => {
           <Header />
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-7 col-xxl-7">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-9">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
                     <Image src={arrowRight} alt="back to services" />
                     Services
                   </a>
-                  <h1>Software Development</h1>
+                  <h1>Cutting- Edge Software Development Solutions</h1>
                   <p>
-                    Techdots is a product - focused software development
-                    <span className="d-block">agency for enterprise & high - growth companies.</span>
+                    The quality of our web or software development services set us apart from the laggards. The Tech teams
+                    at Techdots will help you design and build digital products and services people love to use. You’ll be
+                    tapping into the knowledge and experience of the entire development community at Techdots
                   </p>
+                  <ul className={`${styles.services_list}`}>
+                    <li>We’ll help you bridge your internal digital skills gaps.</li>
+                    <li>We’ll instill a culture that accelerates your digital transformation.</li>
+                    <li>Empower continuous development with holistic DevOps</li>
+                  </ul>
                   <div className={`btn-block ${style.action_btn}`}>
                     <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
                       <a target="_blank" className="btn primary-btn">
@@ -54,54 +60,42 @@ const SoftwareDevelopment = () => {
           </div>
         </section>
 
-
-
-        <section className={`${styles.validation} ${style.section_top_pd}`}>
+        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd}`}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
-              <h3 className="mb-4">How much time and money does it cost you to reach your customers?</h3>
+              <h3 className="mb-4">Software Development as a Digital Asset</h3>
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words.
+                A company’s tech strategy determines its ability to compete in a rapidly changing business and technological environment.
+                The impact of technological change on companies and society is far-reaching. A resilient tech strategy is a
+                core component of our multidisciplinary software development approach, designed to shield your business
+                from future shock.
               </p>
               <div className="mt-5">
-                <h3 className="mb-4">Are you still spending tons of money using multiple tools?</h3>
+                <h3 className="mb-4">We Develop it Your Way</h3>
                 <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over 2000 years old. Richard McClintock, a
-                  Latin professor at Hampden-Sydney College in Virginia, looked up
-                  one of the more obscure Latin words.
+                  We provide custom software services that will create and execute a tech strategy. Our approach steers and
+                  supports your technological choices, from architectures to frameworks and languages to CI/CD pipelines.
+                  Our modern approach is complemented by our IoT services, and our software development services enable
+                  you to adapt to and embrace a rapidly changing technological landscape.
                 </p>
               </div>
               <div className="mt-5">
-                <h3 className="mb-4">Here are some of the features you get when you choose TechDots.</h3>
+                <h3 className="mb-4">Continuous Process Improvement .</h3>
                 <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over 2000 years old. Richard McClintock, a
-                  Latin professor at Hampden-Sydney College in Virginia, looked up
-                  one of the more obscure Latin words.
+                  We’ll help unlock the potential of software in your organization by looking holistically at the people,
+                  processes and technology in your IT organization. For those starting a new DevOps initiative, we run a
+                  digital readiness and capability evaluation to determine the most effective roadmap for change and select
+                  the best enterprise metrics to facilitate continuous improvement.
                 </p>
+              </div>
+              <div className="mt-4">
+                <Link href="contact">
+                  <a className="btn primary-btn">Start Now</a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
               <Image src={DevelopmentImg} alt="Development" loading="lazy" />
-            </div>
-          </div>
-        </section>
-
-        <section className="contact-form">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6 m-auto"
-                ref={scrollToContact}
-              >
-                <ContactForm />
-              </div>
             </div>
           </div>
         </section>

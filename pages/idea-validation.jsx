@@ -24,17 +24,23 @@ const IdeaValidation = () => {
           <Header />
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-7 col-xxl-7">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
                     <Image src={arrowRight} alt="back to services" />
                     <span>Services</span>
                   </a>
-                  <h1>Idea Validation</h1>
+                  <h1>Get the Affirmation for Your Prototype</h1>
                   <p>
-                    Techdots is a product - focused software development
-                    <span className="d-block">agency for enterprise & high - growth companies.</span>
+                    An important aspect of startup validation is to interview consumers in your target market and find out
+                    what they think of your concept or product before you invest too much time and money into it. Techdots,
+                    help you navigate these complexities on each step.
                   </p>
+                  <ul className={`${styles.services_list}`}>
+                    <li>Analyses of unbiased consumer data</li>
+                    <li>Identify market needs</li>
+                    <li>Launching the right products to the market</li>
+                  </ul>
                   <div className={`btn-block ${style.action_btn}`}>
                     <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
                       <a target="_blank" className="btn primary-btn">
@@ -54,54 +60,50 @@ const IdeaValidation = () => {
           </div>
         </section>
 
-
-
-        <section className={`${styles.validation} ${style.section_top_pd}`}>
+        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} `}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
-              <h3 className="mb-4">How much time and money does it cost you to reach your customers?</h3>
+              <h3 className="mb-3">What we Do For Idea Validations</h3>
               <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words.
+                We have built a strong connection across the community by consuming and collecting a wide range of data.
+                This assists us in mapping out the untapped market and target niche for multiple start-ups. By pinning out
+                the required market, our team investigates the key benefits of launching your particular product, thus
+                creating an ecosystem for the perfect launch.
               </p>
               <div className="mt-5">
-                <h3 className="mb-4">Are you still spending tons of money using multiple tools?</h3>
+                <h3 className="mb-3">Design, Test & Validate New Ideas</h3>
+                <h4 className="mb-1 d-block">Innovation Accelerator</h4>
                 <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over 2000 years old. Richard McClintock, a
-                  Latin professor at Hampden-Sydney College in Virginia, looked up
-                  one of the more obscure Latin words.
+                  Our experts coach the teams in developing the ideas into concepts. At the end of the accelerator your
+                  decision-making board can decide which ideas to take forward. For one, building a resilient future could
+                  mean creating a new, disruptive digital product. For another, it could be a radical rethink of the way
+                  they work. Rather than trying to fix everything at once, we’ll help you focus on the changes that will
+                  have the biggest impact for your business.
+                </p>
+
+                <h4>Innovation Island</h4>
+                <p>
+                  Bring your idea&apos;s and idea owner&apos;s to our online premises to be rapidly developed into a validated business
+                  concept, pivoted or killed. Techdots multi-disciplinary team with design, business design and development
+                  competences will be creating new business for you. After validation or implementation, the new business
+                  will be integrated back.
                 </p>
               </div>
               <div className="mt-5">
-                <h3 className="mb-4">Here are some of the features you get when you choose TechDots.</h3>
+                <h3 className="mb-4">Let&apos;s Co-Create the Future</h3>
                 <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over 2000 years old. Richard McClintock, a
-                  Latin professor at Hampden-Sydney College in Virginia, looked up
-                  one of the more obscure Latin words.
+                  Join a long list of satisfied clients, partners, and successful businesses that we have had the pleasure
+                  of working with.
                 </p>
+              </div>
+              <div className="mt-4">
+                <Link href="contact">
+                  <a className="btn primary-btn">Start Now</a>
+                </Link>
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
               <Image src={ValidationImg} alt="Validation img" loading="lazy" />
-            </div>
-          </div>
-        </section>
-
-        <section className="contact-form">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6 m-auto"
-                ref={scrollToContact}
-              >
-                <ContactForm />
-              </div>
             </div>
           </div>
         </section>

@@ -1,6 +1,10 @@
 @import './vaiables.scss';
 
 .content_wrapper {
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
   .content_banner {
     background: url('../public/images/banner_services.png') no-repeat;
     background-size: cover;
@@ -35,6 +39,9 @@
   }
   .section_top_pd {
     padding-top: 5rem;
+  }
+  .section_bottom_pd {
+    padding-bottom: 5rem;
   }
   .design_block {
     height: auto;
