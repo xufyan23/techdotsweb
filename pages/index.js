@@ -109,7 +109,7 @@ const Home = ({posts}) => {
               </Link>
             </div>
             <div className={styles.sub_heading}>
-              <h4 className="text-right">Keep The Ball Rolling</h4>
+              <h3 className="text-right mb-3">Keep The Ball Rolling</h3>
               <p>
                 Powered by a team of executive developers and designers, Techdots add value to startup, SMB, or established
                 enterprises to scale in no time.
@@ -262,7 +262,7 @@ const Home = ({posts}) => {
               <div className={styles.icon}>
                 <Image src={ProjectIcon} alt=""/>
               </div>
-              <h4 className="bold-text mt-1 mb-3">Project Based</h4>
+              <p className="bold-text mt-1 mb-2">Project Based</p>
               <p>
                 We oversee all the development efforts for your project. In addition to full-stack developers we have
                 certified scrum masters in-house to handle any agile project management needs.
@@ -272,7 +272,7 @@ const Home = ({posts}) => {
             <div className={styles.icon}>
                 <Image src={TeamIcon} alt=""/>
               </div>
-              <h4 className="bold-text mt-1 mb-3">Team Augmentation</h4>
+              <p className="bold-text mt-1 mb-2">Team Augmentation</p>
               <p>
                 We offer full-stack development consulting to supplement your team when additional resources are needed
                 to speed up your project.
@@ -282,7 +282,7 @@ const Home = ({posts}) => {
             <div className={styles.icon}>
                 <Image src={DeveloperIcon} alt=""/>
               </div>
-              <h4 className="bold-text mt-1 mb-3">Retainer</h4>
+              <p className="bold-text mt-1 mb-2">Retainer</p>
               <p>
                 Monthly time and materials development for your application, product, or service with an 80 hour a month minimum.
               </p>
