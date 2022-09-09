@@ -61,7 +61,6 @@ const Services = () => {
                 <Image
                   src={ServiceBannerImg}
                   alt="work station"
-                  loading="lazy"
                 />
               </div>
             </div>

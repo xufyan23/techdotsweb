@@ -5,9 +5,6 @@
     padding-top: 2rem;
     .navbar_brand {
       color: $clr-white;
-      img {
-        width: 50px;
-      }
     }
     .nav_link {
       position: relative;
@@ -42,9 +39,6 @@
   }
   .social_icon {
     margin-left: 1rem;
-    img {
-      width: 20px;
-    }
     a {
       font-size: 18px;
       &:hover {

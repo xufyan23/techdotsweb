@@ -89,7 +89,7 @@ const Home = ({posts}) => {
               </div>
             </div>
             <div className="banner-img">
-              <Image src={workStation} alt="work station" loading = "lazy" />
+              <Image src={workStation} alt="work station" />
             </div>
           </div>
         </div>
