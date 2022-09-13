@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  padding-left: 0;
   &:hover, &:focus {
     color: $clr-green-400;
     border-color: transparent;
@@ -89,7 +90,7 @@
   clip-path: polygon(100% 0, 100% 75%, 0 100%, 0 20%);
   color: #ffffff;
   // z-index: -1;
-  .design_img{
+  .design_img {
     align-self: flex-end;
     transform: translate(-8rem, -1rem);
     width: 43.75rem;
@@ -222,6 +223,8 @@
     padding: 4rem 1rem;
     .design_img {
       transform: translateX(0);
+      width: 21.5rem;
+      height: 10rem;
       span {
         aspect-ratio: 4/2;
       }

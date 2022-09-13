@@ -25,9 +25,9 @@ const IdeaValidation = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                  <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/ic_backArrow_cbdser.svg"
-                    width={20} height={14} alt="back to services"
-                  />
+                    <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/ic_backArrow_cbdser.svg"
+                      width={20} height={14} alt="back to services"
+                    />
                     <span>Services</span>
                   </a>
                   <h1>Get the Affirmation for Your Prototype</h1>
@@ -60,7 +60,7 @@ const IdeaValidation = () => {
           </div>
         </section>
 
-        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} `}>
+        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} ${style.validation_block}`}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
               <h3 className="mb-3">What we Do For Idea Validations</h3>
@@ -102,7 +102,7 @@ const IdeaValidation = () => {
                 </Link>
               </div>
             </div>
-            <div className={`${styles.validation_img}`}>
+            <div className={`${styles.validation_img} ${style.block_img}`}>
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729601/Techdots/images/img1_ideaValidation_jgpeuf.png"
                 alt="Validation img" width="100%" height="100%" layout="responsive" loading="lazy"
               />

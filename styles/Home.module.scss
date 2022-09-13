@@ -206,10 +206,6 @@
     gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 5rem;
-    img {
-      object-fit: contain;
-      aspect-ratio: 3/1;
-    }
   }
 }
 
@@ -279,6 +275,13 @@
     }
   }
 
+  .how_we_work {
+    text-align: center;
+    .grid_block {
+      padding-top: 0;
+    }
+  }
+
   .services {
     h2 {
       margin-bottom: 2rem;
@@ -330,6 +333,10 @@
     }
     .technologies_stack {
       grid-template-columns: repeat(4, 1fr);
+      img {
+        width: 70px !important;
+        height: 70px !important;
+      }
     }
   }
 }

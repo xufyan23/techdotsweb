@@ -278,13 +278,13 @@ const Home = ({posts}) => {
 
           <div className="row align-items-center col-reverse-md">
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <h3>Implementation</h3>
+              <h3>Software Development</h3>
               <p>
-                Implement software without consuming a large share of your organization’s technical resources Our global
-                team of enterprise architects, technology strategists, and transformation experts help you respond to changing
-                market demands.
+                Our technology innovation capabilities can help you craft a long-term vision, architect the right solutions
+                for the journey. We make sure that your investments for today’s &quot;life raft&quot; are part of building tomorrow’s
+                competitive advantage.
               </p>
-              <Link href="implementation">
+              <Link href="software-development">
                 <a className="learn-more" target="_blank">
                   Learn More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
                     width={20} height={14} alt="learn more"/>
@@ -293,14 +293,14 @@ const Home = ({posts}) => {
             </div>
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729610/Techdots/images/implementation_fglhgw.svg"
-                width={400} height={400} layout="fixed" alt="Implement software without consuming a large share of your organization" loading="lazy"/>
+                width={400} height={400} alt="Implement software without consuming a large share of your organization" loading="lazy"/>
             </div>
           </div>
 
           <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
-                width={486} height={324} layout="fixed" alt="reduce operational risk with precise idea validations from our experts"/>
+                width={486} height={324}alt="reduce operational risk with precise idea validations from our experts"/>
             </div>
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
               <h3>Idea Validation</h3>
@@ -332,7 +332,7 @@ const Home = ({posts}) => {
             </div>
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/consultation_tuhnem.svg"
-              width={324} height={324} layout="fixed" alt="What can grab users’ attention" loading="lazy" />
+              width={324} height={324} alt="What can grab users’ attention" loading="lazy" />
             </div>
           </div>
 
@@ -425,25 +425,25 @@ const Home = ({posts}) => {
           <p>Work with future-proof technologies</p>
           <div className={styles.technologies_stack}>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729608/Techdots/images/typescript-icon_a4imki.svg"
-              alt="Typescript" width={100} height={100} layout="fixed" loading="lazy"/>
+              alt="Typescript" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/react-icon_mpaayi.svg"
-              alt="React" width={100} height={100} layout="fixed" loading="lazy"/>
+              alt="React" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729610/Techdots/images/nodejs-icon_qsj8kv.png"
-              alt="NodeJs" width={100} height={100} layout="fixed" loading="lazy"/>
+              alt="NodeJs" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729600/Techdots/images/angularjs-icon_vlvfhn.svg"
-              alt="Angular" width={100} height={100} layout="fixed" loading="lazy"/>
+              alt="Angular" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/icon-vue_ymv5it.svg"
-              alt="Vue" width={100} height={100} layout="fixed" loading="lazy"/>
+              alt="Vue" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/ruby-on-rails_v5yhxl.svg"
-              alt="Ruby on Rails" width={100} height={100} layout="fixed" loading="lazy"/>
+              alt="Ruby on Rails" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/go-icon_ymmjdo.svg"
-              alt="Go" width={100} height={100} layout="fixed" loading = "lazy"/>
+              alt="Go" width={100} height={100} loading = "lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/next-icon_x1z1eo.png"
-              alt="NextJs" width={100} height={100} layout="fixed" loading = "lazy"/>
+              alt="NextJs" width={100} height={100} loading = "lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/amazon-icon_nyce28.svg"
-              alt="AWS" width={100} height={100} layout="fixed" loading = "lazy"/>
+              alt="AWS" width={100} height={100} loading = "lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/sass-icon_npon7f.svg"
-              alt="Sass" width={100} height={100} layout="fixed" loading = "lazy"/>
+              alt="Sass" width={100} height={100} loading = "lazy"/>
           </div>
           <div className="row">
             <div className="col-12 col-sm-12 col-lg-5 col-xl-5 col-xxl-6">

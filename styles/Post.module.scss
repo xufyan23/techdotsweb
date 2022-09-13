@@ -11,7 +11,7 @@
   }
 
   .post_container {
-    max-width: calc(100vw - 50%);
+    max-width: calc(100vw - 48%);
     margin: auto;
   }
   h1 {
@@ -25,6 +25,10 @@
   }
   .blog_banner {
     margin: 0 auto 1rem auto;
+    span {
+      padding: 0 !important;
+      aspect-ratio: 3/2;
+    }
     img {
       width: 100%;
       object-fit: contain;

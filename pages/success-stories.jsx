@@ -78,8 +78,7 @@ const SuccessStories = ({posts}) => {
                             alt={item.title}
                             loading="lazy"
                           /> */}
-                        <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
-
+                        <Image className={styles.card_img} src={item.mainImage} alt={item.title} width={"100%"} height={"100%"} layout="responsive" loading="lazy"/>
                         </div>
                         <div className={`${styles.success_card_des}`}>
                           <h3 className="link-heading mb-2 mt-2">

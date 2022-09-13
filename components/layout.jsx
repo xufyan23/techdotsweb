@@ -12,8 +12,8 @@ const Layout = ({ children }) => {
         <meta name="title" content="Techdots"></meta>
         <meta name="description" content="Your Full-Stack Development Partner"/>
         <meta name ="keywords" content ="Accelerating your digital transformation"/>
-        <meta name="theme-color" content="#1B63DC"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#283552"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <link rel="apple-touch-icon" href="../public/apple-icon.png"/>
         {/* <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet"/> */}
       </Head>
