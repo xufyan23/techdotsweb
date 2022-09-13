@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
-import arrowRight from "../public/images/ic_backArrow.svg";
-import DesignImg from "../public/images/img1_design.png";
 import { useRef } from "react";
 import styles from "../styles/Services.module.scss";
 import style from "../styles/ServicesPages.module.scss";
@@ -26,7 +24,9 @@ const Design = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back to services"/>
+                  <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/ic_backArrow_cbdser.svg"
+                    width={20} height={14} alt="back to services"
+                  />
                     <span>Services</span>
                   </a>
                   <h1>Embrace the Visual Appeal of your MVP </h1>
@@ -61,7 +61,8 @@ const Design = () => {
 
         <section className={`${styles.design} ${style.section_top_pd} ${style.section_bottom_pd} ${style.design_block}`}>
           <div className={`${styles.design_img} ${style.section_img}`}>
-            <Image src={DesignImg} alt="design img" />
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/img1_design_jtbbie.png"
+              width={755} height={405} alt="design img" />
           </div>
           <div className={`${styles.design_text}`}>
               <h3 className="mb-4">How We Design</h3>
@@ -71,7 +72,7 @@ const Design = () => {
                 We assist you in locating values that matter to your customers and what the gap in the market is with value
                 proposition tests.
               </p>
-              <div className="mt-4">
+              <div className="mt-4 text-center-xs">
                 <Link href="contact">
                   <a className="btn primary-btn">Start Now</a>
                 </Link>

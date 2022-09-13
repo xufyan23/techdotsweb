@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Linkedin from '../public/images/linkedin.svg';
 import styles from "../styles/Footer.module.scss";
 
 const Footer = () => {
@@ -85,7 +84,8 @@ const Footer = () => {
             <p className="mb-0">Copyright © 2022 Techdots™. All Rights Reserved.</p>
             <div className={`${styles.social_icons}`}>
               <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/">
-                <a target="_blank"><Image src={Linkedin}width={20} height={20} alt="Linked In"/></a>
+                <a target="_blank"><Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/linkedin_rqxjhc.svg"
+                  width={20} height={20} alt="Linked In"/></a>
             </Link>
             </div>
           </div>

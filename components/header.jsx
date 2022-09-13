@@ -2,12 +2,7 @@ import Link from 'next/link';
 import { useRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import CloseIcon from "../public/images/close.svg";
-import Logo from "../public/images/logo.svg";
-import MenuIcon from "../public/images/menu-icon.svg";
-import Linkedin from "../public/images/linkedin.svg";
 import styles from '../styles/Header.module.scss';
-
 
 const Header = () => {
   const router = useRouter();
@@ -24,7 +19,8 @@ const Header = () => {
           <div className={`navbar-brand ${styles.navbar_brand}`}>
             <Link href="/">
               <a>
-                <Image src={Logo} width={95} height={26} alt="techdots" />
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/logo_nrmjxm.svg"
+                  width={95} height={26} alt="techdots"/>
               </a>
             </Link>
           </div>
@@ -37,7 +33,8 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="toggler-icon"><Image src={MenuIcon} alt=""
+            <span className="toggler-icon"><Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729610/Techdots/images/menu-icon_fbxuyr.svg"
+              width={30} height={30} alt=""
               onClick={()=>{
                 document.body.style.overflow = 'hidden'
               }}
@@ -54,7 +51,8 @@ const Header = () => {
           >
             <ul className="navbar-nav align-items-center">
               <div className="menu-close" onClick={handleMenuClose}>
-                <Image src={CloseIcon} alt="close menu" />
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729605/Techdots/images/close_ybweq9.svg"
+                  width={24} height={24} alt="close menu"/>
               </div>
               <li
                 className={`${styles.nav_link} ${
@@ -105,7 +103,7 @@ const Header = () => {
                 <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/">
                   <a target="_blank">
                     <Image
-                      src={Linkedin}
+                      src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/linkedin_rqxjhc.svg"
                       width={20}
                       height={20}
                       alt="Linked In"

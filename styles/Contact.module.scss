@@ -19,6 +19,17 @@
     grid-column: 2;
     color: $clr-white;
   }
+  .banner_img {
+    span {
+      padding-top: 0 !important;
+      aspect-ratio: 3/2;
+    }
+  }
+}
+
+.contact_block {
+  background: url(/_next/static/media/img_side.f2a3a5e0.svg) no-repeat;
+  background-position: bottom 40px left;
 }
 
 @media(max-width: 991px) {

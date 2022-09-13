@@ -38,13 +38,6 @@ h2 {
   position: relative;
   font-size: clamp(1.5rem, calc( 12px + 2.400vw ), 2.2rem);
   line-height: 1.8;
-  // &:before {
-  //   content: ".";
-  //   position: absolute;
-  //   left: 8.2rem;
-  //   bottom: -21px;
-  //   color: $clr-green-400;
-  // }
   &:after {
     content: "";
     background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1655906826/Techdots/images/line_nltoym.svg') no-repeat;
@@ -247,7 +240,7 @@ hr {
 }
 
 .banner {
-  background: url('../public/images/header_background2.png') no-repeat;
+  background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729600/Techdots/images/header_background_tig52w.png') no-repeat;
   background-size: cover;
   min-height: 600px;
   padding-bottom: 3rem;
@@ -279,6 +272,15 @@ hr {
     }
     .banner_img {
       justify-self: center;
+    }
+    .banner-img {
+      span {
+        padding-top: 0 !important;
+        aspect-ratio: 3/2;
+      }
+      img {
+        object-fit: contain;
+      }
     }
   }
   .btn-block {
@@ -356,7 +358,7 @@ hr {
 }
 
 .contact-form {
-  background-image: url("../public/images/img_side.svg");
+  background-image: url("https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729602/Techdots/images/img_side_am64jg.svg");
   background-repeat: no-repeat;
   background-size: auto auto;
   background-position: top -82px left;
@@ -638,6 +640,13 @@ input[type="checkbox"]:checked {
   .banner {
     .banner_col {
       grid-template-columns: 1fr 0.8fr;
+      .banner_text {
+        grid-column: 1;
+        padding-left: 2.5rem;
+        .scroll_down {
+          margin-left: 0;
+        }
+      }
     }
   }
 
@@ -661,7 +670,7 @@ input[type="checkbox"]:checked {
 }
 
 @media(max-width: 991px) {
-  .col-reverse {
+  .col-reverse-md {
     flex-direction: column-reverse;
   }
   .md-container {
@@ -740,6 +749,9 @@ input[type="checkbox"]:checked {
   .banner {
     .banner_col {
       grid-template-columns: 1fr;
+      .banner_text {
+        padding-left: 1.5rem;
+      }
     }
     .banner-img {
       display: none;
@@ -790,7 +802,7 @@ input[type="checkbox"]:checked {
     }
   }
   .mb-xs-0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
   .d-inline-xs {
@@ -799,6 +811,10 @@ input[type="checkbox"]:checked {
 
   .pt-xs-1 {
     padding-top: 1rem;
+  }
+
+  .col-reverse {
+    flex-direction: column-reverse;
   }
 
   .form-inline {
@@ -845,6 +861,10 @@ input[type="checkbox"]:checked {
 
   .mt-xs-2 {
     margin-top: 2rem;
+  }
+
+  .text-center-xs {
+    text-align: center;
   }
 
   .services {

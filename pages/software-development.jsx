@@ -2,9 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
-import arrowRight from "../public/images/ic_backArrow.svg";
-import DevelopmentImg from "../public/images/img1_softwareDev.png";
-import ContactForm from "../components/contactForm";
 import { useRef } from "react";
 import styles from "../styles/Services.module.scss";
 import style from "../styles/ServicesPages.module.scss";
@@ -27,10 +24,12 @@ const SoftwareDevelopment = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-9">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back to services" />
+                  <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/ic_backArrow_cbdser.svg"
+                    width={20} height={14} alt="back to services"
+                  />
                     Services
                   </a>
-                  <h1>Cutting- Edge Software Development Solutions</h1>
+                  <h1>Cutting-Edge Software Development Solutions</h1>
                   <p>
                     The quality of our web or software development services set us apart from the laggards. The Tech teams
                     at Techdots will help you design and build digital products and services people love to use. You’ll be
@@ -60,7 +59,7 @@ const SoftwareDevelopment = () => {
           </div>
         </section>
 
-        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd}`}>
+        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} ${style.section_development}`}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
               <h3 className="mb-4">Software Development as a Digital Asset</h3>
@@ -80,7 +79,7 @@ const SoftwareDevelopment = () => {
                 </p>
               </div>
               <div className="mt-5">
-                <h3 className="mb-4">Continuous Process Improvement .</h3>
+                <h3 className="mb-4 mb-xs-0">Continuous Process Improvement .</h3>
                 <p>
                   We’ll help unlock the potential of software in your organization by looking holistically at the people,
                   processes and technology in your IT organization. For those starting a new DevOps initiative, we run a
@@ -88,14 +87,15 @@ const SoftwareDevelopment = () => {
                   the best enterprise metrics to facilitate continuous improvement.
                 </p>
               </div>
-              <div className="mt-4">
+              <div className="mt-4 text-center-xs">
                 <Link href="contact">
                   <a className="btn primary-btn">Start Now</a>
                 </Link>
               </div>
             </div>
-            <div className={`${styles.validation_img}`}>
-              <Image src={DevelopmentImg} alt="Development" loading="lazy" />
+            <div className={`${styles.validation_img} ${style.development_inner_img}`}>
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/img1_softwareDev_fbjej2.png"
+                width={"100%"} height={"100%"} layout="responsive" alt="development img" loading="lazy" />
             </div>
           </div>
         </section>

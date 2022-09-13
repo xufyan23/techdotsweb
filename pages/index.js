@@ -2,40 +2,15 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Image from 'next/image';
 import Link from "next/link";
-import arrowDown from '../public/images/d-arrow-down.svg';
-import borderBottom from '../public/images/banner-line.svg';
-import workStation from '../public/images/work-station.svg';
 import ProjectSample from '../public/images/sample-img.png';
 import ProjectSample2 from '../public/images/sample-2.png';
 import ProjectSample3 from '../public/images/sample-3.png';
-import Consultation from "../public/images/consultation.svg";
-import Validation from "../public/images/validation.svg";
-import Implementation from "../public/images/implementation.svg";
-import arrowRight from '../public/images/arrow-right.svg';
-import FixedPrice from '../public/images/ic_fixedPrice.svg';
-import Hourly from '../public/images/ic_hourly.svg';
-import Retainer from '../public/images/ic_retainer.svg';
-import CardImg2 from '../public/images/card-img-2.png';
-import CardImg3 from '../public/images/card-img-3.png';
 import Star from '../public/images/star.svg';
 import ContactForm from '../components/contactForm';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import BlogCard from '../components/blogCard';
 import getPosts from '../services/post';
-import TypescriptIcon from "../public/images/typescript-icon.svg";
-import ReactIcon from "../public/images/react-icon.svg";
-import NodeJsIcon from "../public/images/nodejs-icon.png";
-import AWSIcon from "../public/images/amazon-icon.svg";
-import RubyIcon from "../public/images/ruby-on-rails.svg";
-import VueIcon from "../public/images/icon-vue.svg";
-import NextJSIcon from "../public/images/next-icon.png";
-import Go from "../public/images/go-icon.svg";
-import AngularIcon from "../public/images/angularjs-icon.svg";
-import SassIcon from "../public/images/sass-icon.svg";
-import DeveloperIcon from "../public/images/developer-icon.svg";
-import TeamIcon from "../public/images/team-icon.svg";
-import ProjectIcon from "../public/images/project-icon.svg";
 import styles from '../styles/Home.module.scss';
 
 const Home = ({posts}) => {
@@ -80,16 +55,17 @@ const Home = ({posts}) => {
                 </div>
               </div>
               <div className="scroll_down">
-                <Image src={borderBottom}
-                alt=""
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729601/Techdots/images/banner-line_ggnjjq.svg"
+                  width="512px" height="9px" alt=""
                 />
-                <Image className="" src={arrowDown}
-                alt="arrow-down" width={14} height={14}
+                <Image className="" src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/d-arrow-down_ld5zfx.svg"
+                alt="scroll down" width={14} height={14}
                 />
               </div>
             </div>
             <div className="banner-img">
-              <Image src={workStation} alt="work station" />
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729599/Techdots/images/work-station_fjaqoc.svg"
+              width={"100%"} height={"100%"} layout='responsive' alt="work station" />
             </div>
           </div>
         </div>
@@ -260,7 +236,7 @@ const Home = ({posts}) => {
           <div className={styles.grid_block}>
             <div>
               <div className={styles.icon}>
-                <Image src={ProjectIcon} alt=""/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729600/Techdots/images/project-icon_hjgqzw.svg" width="25" height="25" alt=""/>
               </div>
               <p className="bold-text mt-1 mb-2">Project Based</p>
               <p>
@@ -270,7 +246,7 @@ const Home = ({posts}) => {
             </div>
             <div>
             <div className={styles.icon}>
-                <Image src={TeamIcon} alt=""/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729602/Techdots/images/team-icon_vc0rui.svg" width={48} height={48} alt=""/>
               </div>
               <p className="bold-text mt-1 mb-2">Team Augmentation</p>
               <p>
@@ -280,7 +256,7 @@ const Home = ({posts}) => {
             </div>
             <div>
             <div className={styles.icon}>
-                <Image src={DeveloperIcon} alt=""/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/developer-icon_mxa8px.svg" width={48} height={48} alt=""/>
               </div>
               <p className="bold-text mt-1 mb-2">Retainer</p>
               <p>
@@ -300,7 +276,7 @@ const Home = ({posts}) => {
             technologies that stand the test of time.
           </p>
 
-          <div className="row align-items-center col-reverse">
+          <div className="row align-items-center col-reverse-md">
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
               <h3>Implementation</h3>
               <p>
@@ -310,18 +286,21 @@ const Home = ({posts}) => {
               </p>
               <Link href="implementation">
                 <a className="learn-more" target="_blank">
-                  Learn More <Image src={arrowRight} alt="learn more" />
+                  Learn More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
+                    width={20} height={14} alt="learn more"/>
                 </a>
               </Link>
             </div>
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <Image src={Implementation} alt="Implementation" loading="lazy" />
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729610/Techdots/images/implementation_fglhgw.svg"
+                width={400} height={400} layout="fixed" alt="Implement software without consuming a large share of your organization" loading="lazy"/>
             </div>
           </div>
 
           <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <Image src={Validation} alt="Validation" />
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
+                width={486} height={324} layout="fixed" alt="reduce operational risk with precise idea validations from our experts"/>
             </div>
             <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
               <h3>Idea Validation</h3>
@@ -331,14 +310,14 @@ const Home = ({posts}) => {
               </p>
               <Link href="idea-validation">
                 <a className="learn-more" target="_blank">
-                  Learn More <Image src={arrowRight} alt="learn more" />
+                  Learn More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg" width={20} height={14} alt="learn more" />
                 </a>
               </Link>
             </div>
           </div>
 
-          <div className="row align-items-center col-reverse">
-            <div className ="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="row align-items-center col-reverse-md">
+            <div className ="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
               <h3>Design</h3>
               <p>
                 What can grab users’ attention better than an appealing and bright user interface? Create your website or application
@@ -346,12 +325,14 @@ const Home = ({posts}) => {
               </p>
               <Link href="design">
                 <a className="learn-more" target="_blank">
-                  Learn More <Image src={arrowRight} alt="learn more" loading="lazy" />
+                  Learn More  <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
+                    width={20} height={14} alt='learn more' />
                 </a>
               </Link>
             </div>
-            <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
-              <Image src={Consultation} alt="consultation" loading="lazy" />
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/consultation_tuhnem.svg"
+              width={324} height={324} layout="fixed" alt="What can grab users’ attention" loading="lazy" />
             </div>
           </div>
 
@@ -373,7 +354,8 @@ const Home = ({posts}) => {
             <div className={styles.pricing_card}>
               <p className={styles.pricing_card_heading}>Hourly</p>
               <div className={styles.pricing_card_icon}>
-                <Image src={Hourly} alt="Hourly"/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729609/Techdots/images/ic_hourly_hvxnga.svg"
+                width={43} height={43} layout='fixed' alt="Hourly"/>
               </div>
               <p className={styles.pricing_card_des}>
                 Select how many hours to engage us, and only invest in the time given.
@@ -385,7 +367,7 @@ const Home = ({posts}) => {
             <div className = {`${styles.pricing_card} ${styles.active}`}>
               <p className={styles.pricing_card_heading}>Retainer</p>
               <div className={`${styles.pricing_card_icon}`}>
-                <Image src={Retainer} alt="Retainer"/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729609/Techdots/images/ic_retainer_nuleb3.svg" width={40} height={35} layout="fixed" alt="Retainer"/>
               </div>
               <p className={styles.pricing_card_des}>
                 We focus on your technical and business requirements and give a specific budget with no hidden costs.
@@ -397,7 +379,7 @@ const Home = ({posts}) => {
             <div className={styles.pricing_card}>
               <p className={styles.pricing_card_heading}>Hourly</p>
               <div className={styles.pricing_card_icon}>
-                <Image src={FixedPrice} alt="Fixed Price"/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/ic_fixedPrice_srmff3.svg" width={18} height={35} layout="fixed" alt="Fixed Price"/>
               </div>
               <p className={styles.pricing_card_des}>
                 Our team enters into a partnership with you in the long-term, and you pay a set amount each month.
@@ -442,16 +424,26 @@ const Home = ({posts}) => {
           <h2>Our Technology Stack</h2>
           <p>Work with future-proof technologies</p>
           <div className={styles.technologies_stack}>
-            <Image src={TypescriptIcon} alt="Typescript" width={100} height={100} loading = "lazy"/>
-            <Image src={ReactIcon} alt="React" width={100} height={100} loading = "lazy"/>
-            <Image src={NodeJsIcon} alt="NodeJs" width={100} height={100} loading = "lazy"/>
-            <Image src={AngularIcon} alt="Angular" width={100} height={100} loading = "lazy"/>
-            <Image src={VueIcon} alt="Vue" width={100} height={100} loading = "lazy"/>
-            <Image src={RubyIcon} alt="Ruby on Rails" width={70} height={70} loading = "lazy"/>
-            <Image src={Go} alt="Go" width={100} height={100} loading = "lazy"/>
-            <Image src={NextJSIcon} alt="NextJs" width={100} height={100} loading = "lazy"/>
-            <Image src={AWSIcon} alt="AWS" width={100} height={100} loading = "lazy"/>
-            <Image src={SassIcon} alt="Sass" width={100} height={100} loading = "lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729608/Techdots/images/typescript-icon_a4imki.svg"
+              alt="Typescript" width={100} height={100} layout="fixed" loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/react-icon_mpaayi.svg"
+              alt="React" width={100} height={100} layout="fixed" loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729610/Techdots/images/nodejs-icon_qsj8kv.png"
+              alt="NodeJs" width={100} height={100} layout="fixed" loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729600/Techdots/images/angularjs-icon_vlvfhn.svg"
+              alt="Angular" width={100} height={100} layout="fixed" loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/icon-vue_ymv5it.svg"
+              alt="Vue" width={100} height={100} layout="fixed" loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/ruby-on-rails_v5yhxl.svg"
+              alt="Ruby on Rails" width={100} height={100} layout="fixed" loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/go-icon_ymmjdo.svg"
+              alt="Go" width={100} height={100} layout="fixed" loading = "lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/next-icon_x1z1eo.png"
+              alt="NextJs" width={100} height={100} layout="fixed" loading = "lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/amazon-icon_nyce28.svg"
+              alt="AWS" width={100} height={100} layout="fixed" loading = "lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/sass-icon_npon7f.svg"
+              alt="Sass" width={100} height={100} layout="fixed" loading = "lazy"/>
           </div>
           <div className="row">
             <div className="col-12 col-sm-12 col-lg-5 col-xl-5 col-xxl-6">
@@ -459,7 +451,8 @@ const Home = ({posts}) => {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <div className="carousel-img">
-                      <Image src={ProjectSample3} alt="user" loading = "lazy" />
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729613/Techdots/images/sample-3_mvbkd8.png"
+                        alt="user" width={100} height={100} layout="fixed" loading="lazy" />
                     </div>
                     <p className="carousel-description">
                       I appreciate the proactive approach and their ability to suggest and implement improvements to a
@@ -479,7 +472,8 @@ const Home = ({posts}) => {
                   </div>
                   <div className="carousel-item">
                     <div className="carousel-img">
-                      <Image src={CardImg2} alt="user"/>
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729613/Techdots/images/sample-2_dkhyzh.png"
+                        width={100} height={100} layout="fixed" alt="user"/>
                     </div>
                     <p className="carousel-description">
                       No doubt, Techdots is a reliable and agile technology partner. We appraise their dedicated work ethic
@@ -499,7 +493,8 @@ const Home = ({posts}) => {
                   </div>
                   <div className="carousel-item">
                     <div className="carousel-img">
-                      <Image src={CardImg3} alt="user"/>
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729606/Techdots/images/card-img-3_qnhjcv.png"
+                        width={100} height={100} layout="fixed" alt="user"/>
                     </div>
                     <p className="carousel-description">
                       I would definitely recommend Techdots for your projects. It’s amazing to see the team work perfectly

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import arrowRight from "../public/images/arrow-right.svg";
 import styles from "../styles/SuccessStories.module.scss";
 
 export default function RightImgBlog({ item }) {
@@ -8,7 +7,7 @@ export default function RightImgBlog({ item }) {
 
   return (
     <div className={`${styles.col_space} row col-reverse`}>
-      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
+      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <h3 className={styles.right_heading}>{item.title}</h3>
         <p>{item.displayDesicription}</p>
         <button
@@ -16,17 +15,12 @@ export default function RightImgBlog({ item }) {
           onClick={() => router.push(`/posts/${item.slug.current}`)}
         >
           Learn More
-          <Image src={arrowRight} alt="learn more" />
+          <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
+            width={20} height={14} alt='learn more'/>
         </button>
       </div>
-      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xx-6">
+      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <div className={styles.col_blog_img}>
-          {/* <img
-            className={styles.card_img}
-            src={item.mainImage}
-            alt="card banner"
-            loading="lazy"
-          /> */}
           <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
         </div>
       </div>

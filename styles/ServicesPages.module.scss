@@ -6,9 +6,9 @@
     font-weight: 700;
   }
   .content_banner {
-    background: url('../public/images/banner_services.png') no-repeat;
+    background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729605/Techdots/images/banner_services_ky8tkp.png') no-repeat;
     background-size: cover;
-    height: 37.5rem;
+    min-height: 37.5rem;
     color: $clr-white;
   }
   h3 {
@@ -55,13 +55,47 @@
   }
 }
 
+// .validation_inner {
+//   transform: translateX(17rem);
+// }
+
+@media(max-width: 1366px) {
+  .content_wrapper {
+    .content_banner {
+      min-height: 42rem;
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  .content_wrapper {
+    .design_block {
+      .section_img {
+        transform: translate(-4rem, 0);
+      }
+    }
+    .section_development {
+      .development_inner_img {
+        transform: translateX(3rem);
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+  .content_wrapper {
+    .design_block {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
 @media(max-width: 767px) {
   .content_wrapper {
     .content_banner {
-      height: 30rem;
+      min-height: 33rem;
       .banner_text {
-        padding-top: 2rem;
-        padding-left: 0;
+        padding: 2rem 0.4rem 3rem;
       }
       .action_btn {
         display: flex;
@@ -70,8 +104,28 @@
         a {
           margin: 1rem 0;
         }
+      }
+    }
+    .section_development {
+      .development_inner_img {
+        transform: translateX(0);
+        margin-bottom: 1.5rem;
+      }
+    }
+    .design_block {
+      .section_img {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .content_wrapper {
+    .content_banner {
+      .action_btn {
         button, a {
-          width: 70%;
+          width: 60%;
         }
       }
     }

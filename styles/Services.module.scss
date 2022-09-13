@@ -15,6 +15,7 @@
 
 .back_btn {
   display: flex;
+  align-items: center;
   gap: 0.3rem;
   &:hover, &:focus {
     color: $clr-green-400;
@@ -65,7 +66,15 @@
   }
   .validation_img {
     justify-self: flex-end;
-    transform: translateX(4rem);
+    transform: translateX(7rem);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    span {
+      padding-top: 0 !important;
+      aspect-ratio: 4/2;
+      object-fit: contain;
+    }
   }
 }
 
@@ -73,7 +82,7 @@
   display: grid;
   grid-template-columns: 1fr 0.75fr 0.3fr;
   align-items: center;
-  height: 520px;
+  min-height: 490px;
   margin-top: -6rem;
   position: relative;
   background: $clr-blue-900;
@@ -82,7 +91,12 @@
   // z-index: -1;
   .design_img{
     align-self: flex-end;
-    transform: translateX(-8rem);
+    transform: translate(-8rem, -1rem);
+    width: 43.75rem;
+    height: 25rem;
+    img {
+      object-fit: contain;
+    }
   }
 }
 
@@ -100,7 +114,7 @@
   }
 }
 
-@media(max-width: 64rem) {
+@media(max-width: 1024px) {
   .consultation {
     .consultation_grid {
       grid-template-columns: 0.08fr 1fr 1fr;
@@ -123,14 +137,19 @@
     grid-template-columns: 1fr 1fr 0.06fr;
     height: 470px;
     margin-top: -4rem;
+    .design_img {
+      transform: translate(-4rem, -2rem);
+      width: 28.75rem;
+    }
   }
 
   .development {
     grid-template-columns: 0.08fr 1fr 1fr;
+    padding-bottom: 4rem;
   }
 }
 
-@media (max-width: 62rem) {
+@media (max-width: 991px) {
   .consultation {
     padding-bottom: 4rem;
   }
@@ -152,7 +171,8 @@
     margin-top: 0;
     margin-bottom: 4rem;
     .design_img {
-      transform: translateX(-3rem);
+      transform: translate(-4rem, 0);
+      width: 22.75rem;
     }
   }
 
@@ -202,12 +222,15 @@
     padding: 4rem 1rem;
     .design_img {
       transform: translateX(0);
+      span {
+        aspect-ratio: 4/2;
+      }
     }
   }
 
   .development {
     grid-template-columns: 1fr;
-    padding: 0 1rem 4rem;
+    padding: 0 1rem 5rem;
     .development_img {
       grid-column: 2;
       grid-row: 1;

@@ -7,7 +7,6 @@ import QuotestepFive from "../components/quoteStepFive";
 import QuoteStepFour from "../components/quoteStepFour";
 import QuoteStepOne from "../components/quoteStepOne";
 import QuoteStepTwo from "../components/quoteStepTwo";
-import CheckCirlce from "../public/images/check-circle.svg";
 import styles from "../styles/Quotation.module.scss";
 
 const Quotation = () => {
@@ -184,8 +183,9 @@ const Quotation = () => {
                 {
                   requestSend ?
                     <div className="email-sent-block steps-block">
-                    <div className="loader">
-                      <Image src={CheckCirlce} alt="" width={50} height={50} />
+                    <div className="loader mb-1">
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729606/Techdots/images/check-circle_eaqoul.svg"
+                        alt="" width={50} height={50}/>
                     </div>
                     <p>Request successfully send</p>
                     <button className="btn primary-btn" onClick={resetSteps}>Get a Quote</button>

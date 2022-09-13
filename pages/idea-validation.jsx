@@ -2,9 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
-import arrowRight from "../public/images/ic_backArrow.svg";
-import ValidationImg from "../public/images/img1_ideaValidation.png";
-import ContactForm from "../components/contactForm";
+// import ContactForm from "../components/contactForm";
 import { useRef } from "react";
 import styles from "../styles/Services.module.scss";
 import style from "../styles/ServicesPages.module.scss";
@@ -27,7 +25,9 @@ const IdeaValidation = () => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-8">
                 <div className={`${style.banner_text}`}>
                   <a href="services" className={`btn clr-green ${styles.back_btn}`}>
-                    <Image src={arrowRight} alt="back to services" />
+                  <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729598/Techdots/images/ic_backArrow_cbdser.svg"
+                    width={20} height={14} alt="back to services"
+                  />
                     <span>Services</span>
                   </a>
                   <h1>Get the Affirmation for Your Prototype</h1>
@@ -96,14 +96,16 @@ const IdeaValidation = () => {
                   of working with.
                 </p>
               </div>
-              <div className="mt-4">
+              <div className="mt-4 text-center-xs">
                 <Link href="contact">
                   <a className="btn primary-btn">Start Now</a>
                 </Link>
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
-              <Image src={ValidationImg} alt="Validation img" loading="lazy" />
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729601/Techdots/images/img1_ideaValidation_jgpeuf.png"
+                alt="Validation img" width="100%" height="100%" layout="responsive" loading="lazy"
+              />
             </div>
           </div>
         </section>

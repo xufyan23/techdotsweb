@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import ContactForm from "../components/contactForm";
 import Header from "../components/header";
-import ContactBanner from "../public/images/contatc-us.svg";
 import styles from "../styles/Contact.module.scss";
 
 const Contact = () => {
@@ -25,18 +24,21 @@ const Contact = () => {
                 </p>
               </div>
               <div className={styles.banner_img}>
-                <Image src={ContactBanner} alt="banner image" />
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729609/Techdots/images/contatc-us_txmweg.svg"
+                  width={"100%"} height={"100%"} layout='responsive' alt="banner image" />
               </div>
             </div>
           </div>
         </section>
-        <div className="container">
-          <div className={`row ${styles.contact_form}`}>
-            <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6">
-              <ContactForm />
+        <section className={styles.contact_block}>
+          <div className="container">
+            <div className={`row ${styles.contact_form}`}>
+              <div className="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-6">
+                <ContactForm />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

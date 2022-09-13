@@ -123,6 +123,7 @@
     .pricing_card_icon{
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 55px;
       height: 55px;
       margin: 0 auto 1rem auto;
@@ -192,7 +193,7 @@
 .technologies {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background: url('../public/images/img_side.svg') no-repeat;
+  background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729602/Techdots/images/img_side_am64jg.svg') no-repeat;
   background-position: bottom 40px left;
   h2 {
     padding-bottom: 1rem;
