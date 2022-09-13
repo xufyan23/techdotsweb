@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import BlogCard from '../components/blogCard';
 import Header from "../components/header";
-import blogImg from "../public/images/validation.svg";
 import styles from "../styles/Blogs.module.scss";
 import getPosts from "../services/post";
 
@@ -36,7 +35,8 @@ const Blogs = ({posts}) => {
                 </p>
               </div>
               <div className={styles.banner_img}>
-                <Image src={blogImg} alt="banner image" />
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
+                  width={486} height={324} alt="banner image"/>
               </div>
             </div>
           </div>

@@ -36,3 +36,21 @@
     box-shadow: 0 0 13px 2px #eee !important;
   }
 }
+
+@media (max-width: 991px) {
+  .blog_wrapper {
+    .banner_col {
+      display: grid;
+      grid-template-columns: 1fr;
+      .banner_text {
+        grid-column: 1;
+      }
+      .banner_img {
+        display: none;
+      }
+    }
+    .blog_cardgrid {
+      padding-top: 4rem;
+    }
+  }
+}
