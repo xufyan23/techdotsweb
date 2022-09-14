@@ -428,8 +428,8 @@ const Home = ({posts}) => {
               alt="Typescript" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/react-icon_mpaayi.svg"
               alt="React" width={100} height={100} loading="lazy"/>
-            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729610/Techdots/images/nodejs-icon_qsj8kv.png"
-              alt="NodeJs" width={100} height={100} loading="lazy"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663156404/Techdots/images/nodejs-icon_hmte0z.svg"
+              alt="NodeJs" width={80} height={80} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729600/Techdots/images/angularjs-icon_vlvfhn.svg"
               alt="Angular" width={100} height={100} loading="lazy"/>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/icon-vue_ymv5it.svg"

@@ -19,20 +19,20 @@ const Footer = () => {
             <p>Company</p>
             <ul>
               <li>
-                <Link href="/who-we-are">
-                  <a>Who are we</a>
+                <Link href="success-stories">
+                  <a>Success Stories</a>
                 </Link>
               </li>
               <li>
-                <Link href="#/">
-                  <a>Case Studies</a>
+                <Link href="services">
+                  <a>Services</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#/">
                   <a>Industries we’ve worked in</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -40,17 +40,17 @@ const Footer = () => {
             <p>Services</p>
             <ul className="">
               <li>
-                <Link href="/who-we-are">
+                <Link href="idea-validation">
                   <a>Idea Validation Service</a>
                 </Link>
               </li>
               <li>
-                <Link href="#/">
+                <Link href="design">
                   <a>Design Services</a>
                 </Link>
               </li>
               <li>
-                <Link href="#/">
+                <Link href="software-development">
                   <a>Software Development</a>
                 </Link>
               </li>
@@ -61,20 +61,14 @@ const Footer = () => {
             <p>Address</p>
             <ul>
               <li>
-                <Link href="/who-we-are">
-                  <a>3 Place Ville Marie</a>
-                </Link>
+                <address className="mb-0">
+                  Al Hafeez Executive,
+                  <span className="d-block">6th floor Office 601- 603 C3,</span>
+                  <span className="d-block">Gulberg III, Lahore</span>
+                </address>
+                <a href="tel:+92 9587738861">+47 333 78 901</a>
               </li>
-              <li>
-                <Link href="#/">
-                  <a>Montreal, QC</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="#/">
-                  <a>H3B 2E3 Canada</a>
-                </Link>
-              </li>
+
             </ul>
           </div>
         </div>
