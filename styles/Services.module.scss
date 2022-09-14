@@ -186,10 +186,10 @@
 
 @media(max-width: 767px) {
   .consultation, .validation {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    .consultation_grid, .validation_grid{
+    padding: 4.5rem 1rem 0;
+    .consultation_grid, .validation_grid {
       grid-template-columns: 1fr;
+      row-gap: 1.5rem;
     }
     .consultation_img, .validation_img {
       margin-right: 0;
@@ -210,7 +210,6 @@
   }
 
   .validation {
-    padding-bottom: 4rem;
     .validation_img {
       transform: translateX(0);
     }
@@ -218,6 +217,7 @@
 
   .design {
     grid-template-columns: 1fr;
+    row-gap: 1.3rem;
     clip-path: none;
     height: auto;
     padding: 4rem 1rem;
@@ -234,6 +234,7 @@
   .development {
     grid-template-columns: 1fr;
     padding: 0 1rem 5rem;
+    row-gap: 2rem;
     .development_img {
       grid-column: 2;
       grid-row: 1;

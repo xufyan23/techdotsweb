@@ -63,8 +63,8 @@ const Footer = () => {
               <li>
                 <address className="mb-0">
                   Al Hafeez Executive,
-                  <span className="d-block">6th floor Office 601- 603 C3,</span>
-                  <span className="d-block">Gulberg III, Lahore</span>
+                  <span className="d-block d-inline-xs ">6th floor Office 601- 603 C3,</span>
+                  <span className="d-block d-inline-xs ">Gulberg III, Lahore</span>
                 </address>
                 <a href="tel:+92 9587738861">+47 333 78 901</a>
               </li>
