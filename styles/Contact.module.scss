@@ -28,7 +28,7 @@
 }
 
 .contact_block {
-  background: url(/_next/static/media/img_side.f2a3a5e0.svg) no-repeat;
+  background: url("https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729602/Techdots/images/img_side_am64jg.svg") no-repeat;
   background-position: bottom 40px left;
 }
 
@@ -53,5 +53,8 @@
       padding-left: 0.5rem;
       padding-right: 0.5rem;
     }
+  }
+  .contact_block {
+    background: none;
   }
 }

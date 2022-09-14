@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import BlogCard from '../components/blogCard';
 import Header from "../components/header";
-import styles from "../styles/Blogs.module.scss";
 import getPosts from "../services/post";
+import styles from "../styles/Blogs.module.scss";
 
 const Blogs = ({posts}) => {
 

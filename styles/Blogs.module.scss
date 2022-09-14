@@ -24,9 +24,8 @@
     padding-bottom: 1rem;
   }
   .blog_cardgrid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
     gap: 2rem;
     padding-top: 6rem;
     padding-bottom: 4rem;
@@ -34,6 +33,11 @@
   .blog_card {
     border: 0 !important;
     box-shadow: 0 0 13px 2px #eee !important;
+    width: auto;
+    .blog_card_img {
+      width: auto;
+      height: auto;
+    }
   }
 }
 

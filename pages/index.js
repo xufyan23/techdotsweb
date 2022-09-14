@@ -238,7 +238,7 @@ const Home = ({posts}) => {
               <div className={styles.icon}>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729600/Techdots/images/project-icon_hjgqzw.svg" width="25" height="25" alt=""/>
               </div>
-              <p className="bold-text mt-1 mb-2">Project Based</p>
+              <h3 className="bold-text mt-1 mb-2">Project Based</h3>
               <p>
                 We oversee all the development efforts for your project. In addition to full-stack developers we have
                 certified scrum masters in-house to handle any agile project management needs.
@@ -248,7 +248,7 @@ const Home = ({posts}) => {
             <div className={styles.icon}>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729602/Techdots/images/team-icon_vc0rui.svg" width={48} height={48} alt=""/>
               </div>
-              <p className="bold-text mt-1 mb-2">Team Augmentation</p>
+              <h3 className="bold-text mt-1 mb-2">Team Augmentation</h3>
               <p>
                 We offer full-stack development consulting to supplement your team when additional resources are needed
                 to speed up your project.
@@ -258,7 +258,7 @@ const Home = ({posts}) => {
             <div className={styles.icon}>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/developer-icon_mxa8px.svg" width={48} height={48} alt=""/>
               </div>
-              <p className="bold-text mt-1 mb-2">Retainer</p>
+              <h3 className="bold-text mt-1 mb-2">Retainer</h3>
               <p>
                 Monthly time and materials development for your application, product, or service with an 80 hour a month minimum.
               </p>

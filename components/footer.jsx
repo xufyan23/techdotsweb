@@ -11,7 +11,9 @@ const Footer = () => {
             <h2>
               Got a project? <span className="d-block d-inline-xs">Let&apos;s talk</span>
             </h2>
-            <button className="btn primary-btn">Book Appointment</button>
+            <Link href = "https://techdots.zohobookings.com/#/customer/custom-software-development">
+              <a target="_blank" className="btn primary-btn">Book Appointment</a>
+            </Link>
           </div>
           <div className={`${styles.footer_list_block}`}>
             <p>Company</p>
