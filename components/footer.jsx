@@ -28,11 +28,11 @@ const Footer = () => {
                   <a>Services</a>
                 </Link>
               </li>
-              {/* <li>
-                <Link href="#/">
-                  <a>Industries we’ve worked in</a>
+              <li>
+                <Link href="careers">
+                  <a>Careers</a>
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
 

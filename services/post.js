@@ -1,7 +1,8 @@
 import imageUrlBuilder from "@sanity/image-url";
 
-  const getPosts = async () => {
-	const query = encodeURIComponent('*[_type == "post"]');
+  const getPosts = async (customQuery = undefined) => {
+
+	const query = encodeURIComponent(customQuery || '*[_type == "post"]');
 	const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
 	const result = await fetch(url).then(res => res.json());
 

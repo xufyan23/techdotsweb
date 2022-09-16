@@ -24,10 +24,7 @@ const Home = ({posts}) => {
   }
 
   useEffect(() => {
-      if (posts.length > 3) {
-        setShowMorePostsBtn(true);
-      }
-      setMappedPosts(posts.slice(0, 3));
+      setMappedPosts(posts);
   }, [posts]);
 
   return (
@@ -411,7 +408,7 @@ const Home = ({posts}) => {
             }
           </div>
 
-          <div className={`text-center m-auto ${showMorePostsBtn ? 'd-block' : 'd-none'}`}>
+          <div className="text-center m-auto">
             <Link href="/blogs">
               <a className="btn primary-btn">Show All</a>
             </Link>
@@ -528,7 +525,7 @@ const Home = ({posts}) => {
 export default Home;
 
 export const getServerSideProps = async pageContext => {
-  const posts = await getPosts();
+  const posts = await getPosts('*[_type == "post" && "blog" in categories[]->title] | order(_createdAt desc) [0...4]');
   return {
     props: {
       posts: posts,

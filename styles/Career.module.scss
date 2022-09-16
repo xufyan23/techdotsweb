@@ -1,0 +1,47 @@
+@import './vaiables.scss';
+
+.career_wrapper {
+  .career_bg {
+    background-color: $clr-blue-900;
+    color: $clr-white;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  h2 {
+    padding-top: 3rem;
+    text-align: center;
+    &:after {
+      margin: auto;
+    }
+  }
+  .career_card_section {
+    min-height: 30rem;
+  }
+  .career_cardgrid {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+  .career_card_block {
+    width: 300px;
+    position: relative;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 13px 2px #eee;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 4px;
+      height: 100%;
+      background: $clr-blue-900;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}

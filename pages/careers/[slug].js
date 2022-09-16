@@ -5,7 +5,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../components/header";
 import styles from"../../styles/Post.module.scss";
 
-const Post = ({title, body, image}) => {
+const Career = ({title, body, image}) => {
   const [imageUrl, setImageUrl] = useState('');
   useEffect(() => {
     const imgBuilder = imageUrlBuilder ({
@@ -18,18 +18,18 @@ const Post = ({title, body, image}) => {
   }, [image]);
 
   return (
-    <div className={`blog-wrapper ${styles.post_wrapper}`}>
-      <Header />
-      <div className={styles.post_container}>
-        <h1>{title}</h1>
-        <div className={styles.blog_banner}>
-          {imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
-        </div>
-        <div className={styles.description}>
-          <BlockContent blocks={body}/>
-        </div>
-      </div>
-    </div>
+		<div className={`blog-wrapper ${styles.post_wrapper}`}>
+		<Header />
+		<div className={styles.post_container}>
+			<h1>{title}</h1>
+			<div className={styles.blog_banner}>
+				{imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
+			</div>
+			<div className={styles.description}>
+				<BlockContent blocks={body}/>
+			</div>
+		</div>
+	</div>
   )
 };
 
@@ -42,7 +42,7 @@ export const getServerSideProps = async pageContext => {
     }
   }
 
-  const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "blog" in categories[]->title]`)
+  const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "career" in categories[]->title]`)
 
 
   const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
@@ -65,4 +65,4 @@ export const getServerSideProps = async pageContext => {
   }
 };
 
-export default Post;
+export default Career;

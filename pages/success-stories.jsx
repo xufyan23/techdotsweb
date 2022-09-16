@@ -20,7 +20,7 @@ const SuccessStories = ({posts}) => {
     scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
   };
   useEffect(() => {
-    setMappedPosts(posts.slice(0, 2));
+    setMappedPosts(posts);
     setBlogPost(posts);
   }, [posts]);
 
@@ -137,7 +137,7 @@ const SuccessStories = ({posts}) => {
 export default SuccessStories;
 
 export const getServerSideProps = async (pageContext) => {
-  const posts = await getPosts();
+  const posts = await getPosts('*[_type == "post" && "blog" in categories[]->title] | order(_createdAt desc) [0...2]');
   return {
     props: {
       posts: posts,

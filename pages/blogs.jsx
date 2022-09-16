@@ -65,7 +65,7 @@ const Blogs = ({posts}) => {
 export default Blogs;
 
 export const getServerSideProps = async (pageContext) => {
-  const posts = await getPosts();
+  const posts = await getPosts('*[_type == "post" && "blog" in categories[]->title] | order(_createdAt desc)');
   return {
     props: {
       posts: posts,
