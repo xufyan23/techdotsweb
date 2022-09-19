@@ -294,7 +294,7 @@ const ContactForm = () => {
                 className={`clr-green ${styles.email_link}`}
                 href="mailto:accounts@techdots.com"
               >
-                hello@techdots.com
+                accounts@techdots.com
               </a>
             </div>
           </div>
