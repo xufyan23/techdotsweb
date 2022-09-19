@@ -24,8 +24,8 @@ const Career = ({posts}) => {
         <Header />
         <div className={styles.career_bg}>
           <div className="container">
-            <div className={styles.banner_col}>
-              <div className={styles.banner_text}>
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-7">
                 <h1>Career</h1>
                 <p>
                   Contrary to popular belief, Lorem Ipsum is not simply random
@@ -33,10 +33,6 @@ const Career = ({posts}) => {
                   45 BC, making it over
                 </p>
               </div>
-              {/* <div className={styles.banner_img}>
-                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
-                  width={486} height={324} alt="banner image"/>
-              </div> */}
             </div>
           </div>
         </div>
@@ -44,7 +40,7 @@ const Career = ({posts}) => {
         <section className={styles.career_card_section}>
           <div className="container">
             <h2>Open Positions</h2>
-            <div className={styles.career_cardgrid}>
+            <div className={styles.career_card_grid}>
               {
                 mappedPosts.length ? (
                   mappedPosts.map((item, index) => (
@@ -55,7 +51,7 @@ const Career = ({posts}) => {
                   />
                 ))
               ) : (
-                <>We dont have any job opening right now</>
+                <p>We dont have any job opening right now</p>
               )}
             </div>
           </div>

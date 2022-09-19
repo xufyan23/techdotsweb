@@ -17,16 +17,17 @@
   .career_card_section {
     min-height: 30rem;
   }
-  .career_cardgrid {
+  .career_card_grid {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     padding-top: 3rem;
     padding-bottom: 5rem;
   }
   .career_card_block {
-    width: 300px;
+    width: 19rem;
     position: relative;
     padding: 1rem 1.5rem;
     box-shadow: 0 0 13px 2px #eee;
@@ -42,6 +43,20 @@
     }
     h3 {
       font-size: 1rem;
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .career_wrapper {
+    .career_card_section {
+      .container {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
+    .career_card_block {
+      width: 22rem;
     }
   }
 }
