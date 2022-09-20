@@ -97,6 +97,10 @@
       color: $clr-green-400;
       background: transparent;
       border: 0;
+      &:focus, &:visited {
+        border: 2px dashed;
+        padding: 0.3rem 0.5rem;
+      }
     }
     .col_blog_img {
       // height: 21.875rem;
