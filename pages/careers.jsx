@@ -51,7 +51,7 @@ const Career = ({posts}) => {
                   />
                 ))
               ) : (
-                <p>We dont have any job opening right now</p>
+                <p className={styles.no_opening}>We don&apos;t have any job opening right now</p>
               )}
             </div>
           </div>

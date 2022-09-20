@@ -45,6 +45,12 @@
       font-size: 1rem;
     }
   }
+  .no_opening {
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 13px 2px #eee;
+    outline: 1px solid #b8e5bd;
+    border-radius: 4px;
+  }
 }
 
 @media(max-width: 480px) {
