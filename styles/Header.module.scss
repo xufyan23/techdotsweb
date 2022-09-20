@@ -11,6 +11,7 @@
       padding: 0 1.5rem !important;
       font-size: 13px !important;
       color: $clr-white;
+      text-transform: capitalize;
       &:after {
         content: '';
         height: 2px;
@@ -23,13 +24,13 @@
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
-      &:hover, &.active {
+      &:hover, &.active &:focus {
         &:after {
           transform: scaleX(1);
           transform-origin: bottom left;
         }
         a {
-          color: $clr-white;
+          color: $clr-green-400;
         }
       }
     }
