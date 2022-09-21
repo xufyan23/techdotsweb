@@ -434,11 +434,15 @@ hr {
   input[type=checkbox] {
     width: 1.5rem;
     height: 1.5rem;
+    align-items: center;
   }
-  input[type=checkbox]::before {
-    height: 10px;
-    width: 5px;
-    border-width: 2px;
+
+  .terms-check {
+    input[type=checkbox]::before {
+      height: 9px;
+      width: 5px;
+      border-width: 2px;
+    }
   }
 
   .rc-slider-rail, .rc-slider-track {
@@ -484,7 +488,8 @@ hr {
 }
 input[type="checkbox"] {
   display: grid;
-  place-content: center;
+  justify-content: center;
+  align-items: flex-start;
   margin-right: 1rem;
   width: 1.15em;
   height: 1.15em;
@@ -499,8 +504,8 @@ input[type="checkbox"] {
 
 input[type="checkbox"]::before {
   content: "";
-  width: 5px;
-  height: 10px;
+  width: 6px;
+  height: 11px;
   border-bottom: 2px solid $clr-blue-500;
   border-right: 2px solid $clr-blue-500;
   opacity: 0;
