@@ -117,7 +117,7 @@ const QuoteStepFour = ({onStepComplete, onStepBack, stepFour, setStepFour}) => {
             }
         </div>
         <div className="form-group mb-2">
-          <label className="checkbox-container terms-check">
+          <label className="checkbox-container terms-check align-items-start">
             <input
               id="accept-checkbox"
               type="checkbox"
