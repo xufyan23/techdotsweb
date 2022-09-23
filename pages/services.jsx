@@ -82,8 +82,8 @@ const Services = () => {
               </div>
             </div>
             <div className={`${styles.validation_img}`}>
-              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729601/Techdots/images/img1_ideaValidation_jgpeuf.png"
-                width="100%" height="100%" layout="responsive" alt="Validation img" loading="lazy"
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_ideaValidation_xo1jsl.png"
+                width="100%" height="100%" layout="responsive" alt="Idea Validation" loading="lazy"
               />
             </div>
           </div>
@@ -91,8 +91,8 @@ const Services = () => {
 
         <section className={`${styles.design}`}>
           <div className={`${styles.design_img}`}>
-            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/img1_design_jtbbie.png"
-              width={"100%"} height={"100%"} layout="fill" alt="design img"/>
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
+              width={"100%"} height={"100%"} layout="fill" alt="design"/>
           </div>
           <div className={`${styles.design_text}`}>
             <h3>Design</h3>
@@ -132,8 +132,8 @@ const Services = () => {
             </div>
           </div>
           <div className={`${styles.development_img}`}>
-            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729604/Techdots/images/img1_softwareDev_fbjej2.png"
-              width={755} height={405} alt="development img" loading="lazy" />
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_softwareDev_olhftz.png"
+              width={755} height={405} alt="software development" loading="lazy" />
           </div>
         </section>
 

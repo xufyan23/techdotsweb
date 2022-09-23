@@ -61,7 +61,7 @@ const Design = () => {
 
         <section className={`${styles.design} ${style.section_top_pd} ${style.section_bottom_pd} ${style.design_block}`}>
           <div className={`${styles.design_img} ${style.section_img}`}>
-            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/img1_design_jtbbie.png"
+            <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
               width={755} height={405} alt="design img" />
           </div>
           <div className={`${styles.design_text}`}>

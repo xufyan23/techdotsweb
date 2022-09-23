@@ -24,7 +24,7 @@
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
-      &:hover, &.active &:focus {
+      &:hover, &.active, &:focus {
         &:after {
           transform: scaleX(1);
           transform-origin: bottom left;

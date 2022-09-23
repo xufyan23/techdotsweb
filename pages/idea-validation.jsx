@@ -103,7 +103,7 @@ const IdeaValidation = () => {
               </div>
             </div>
             <div className={`${styles.validation_img} ${style.block_img}`}>
-              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729601/Techdots/images/img1_ideaValidation_jgpeuf.png"
+              <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_ideaValidation_xo1jsl.png"
                 alt="Validation img" width="100%" height="100%" layout="responsive" loading="lazy"
               />
             </div>
