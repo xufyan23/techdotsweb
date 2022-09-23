@@ -364,7 +364,8 @@ const Home = ({posts}) => {
             <div className = {`${styles.pricing_card} ${styles.active}`}>
               <p className={styles.pricing_card_heading}>Retainer</p>
               <div className={`${styles.pricing_card_icon}`}>
-                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729609/Techdots/images/ic_retainer_nuleb3.svg" width={40} height={35} layout="fixed" alt="Retainer"/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729609/Techdots/images/ic_retainer_nuleb3.svg"
+                  width={40} height={35} layout="fixed" alt="Retainer"/>
               </div>
               <p className={styles.pricing_card_des}>
                 We focus on your technical and business requirements and give a specific budget with no hidden costs.
@@ -374,9 +375,10 @@ const Home = ({posts}) => {
               </div>
             </div>
             <div className={styles.pricing_card}>
-              <p className={styles.pricing_card_heading}>Hourly</p>
+              <p className={styles.pricing_card_heading}>Fixed Price</p>
               <div className={styles.pricing_card_icon}>
-                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/ic_fixedPrice_srmff3.svg" width={18} height={35} layout="fixed" alt="Fixed Price"/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/ic_fixedPrice_srmff3.svg"
+                  width={18} height={35} layout="fixed" alt="Fixed Price"/>
               </div>
               <p className={styles.pricing_card_des}>
                 Our team enters into a partnership with you in the long-term, and you pay a set amount each month.
