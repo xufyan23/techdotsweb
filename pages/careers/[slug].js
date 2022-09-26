@@ -18,18 +18,18 @@ const Career = ({title, body, image}) => {
   }, [image]);
 
   return (
-		<div className={`blog-wrapper ${styles.post_wrapper}`}>
-		<Header />
-		<div className={styles.post_container}>
-			<h1>{title}</h1>
-			<div className={styles.blog_banner}>
-				{imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
-			</div>
-			<div className={styles.description}>
-				<BlockContent blocks={body}/>
-			</div>
-		</div>
-	</div>
+    <div className={`blog-wrapper ${styles.post_wrapper}`}>
+      <Header />
+      <article className={styles.post_container}>
+        <h1>{title}</h1>
+        <div className={styles.blog_banner}>
+          {imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
+        </div>
+        <div className={styles.description}>
+          <BlockContent blocks={body}/>
+        </div>
+      </article>
+    </div>
   )
 };
 

@@ -59,7 +59,7 @@ const SoftwareDevelopment = () => {
           </div>
         </section>
 
-        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} ${style.section_development}`}>
+        <article className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} ${style.section_development}`}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
               <h3 className="mb-4">Software Development as a Digital Asset</h3>
@@ -98,7 +98,7 @@ const SoftwareDevelopment = () => {
                 width={"100%"} height={"100%"} layout="responsive" alt="development img" loading="lazy" />
             </div>
           </div>
-        </section>
+        </article>
       </div>
     </>
   );

@@ -101,19 +101,17 @@ const SuccessStories = ({posts}) => {
 
         <section className={`${styles.card_section}`}>
           <div className="container">
-            <div>
-              {blogPost.length ? (
-                blogPost.map((item, index) =>
-                  index % 2 === 0 ? (
-                    <RightImgBlog item={item} key={index}/>
-                  ) : (
-                    <LeftImgBlog item={item} key={index} />
-                  )
+            {blogPost.length ? (
+              blogPost.map((item, index) =>
+                index % 2 === 0 ? (
+                  <RightImgBlog item={item} key={index}/>
+                ) : (
+                  <LeftImgBlog item={item} key={index} />
                 )
-              ) : (
-                <>No Posts Yet</>
-              )}
-            </div>
+              )
+            ) : (
+              <>No Posts Yet</>
+            )}
           </div>
         </section>
 

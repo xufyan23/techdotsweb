@@ -6,7 +6,7 @@ export default function RightImgBlog({ item }) {
   const router = useRouter();
 
   return (
-    <div className={`${styles.col_space} row col-reverse`}>
+    <article className={`${styles.col_space} row col-reverse`}>
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <h3 className={styles.right_heading}>{item.title}</h3>
         <p>{item.displayDesicription}</p>
@@ -24,6 +24,6 @@ export default function RightImgBlog({ item }) {
           <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

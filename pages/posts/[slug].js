@@ -20,7 +20,7 @@ const Post = ({title, body, image}) => {
   return (
     <div className={`blog-wrapper ${styles.post_wrapper}`}>
       <Header />
-      <div className={styles.post_container}>
+      <article className={styles.post_container}>
         <h1>{title}</h1>
         <div className={styles.blog_banner}>
           {imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
@@ -28,7 +28,7 @@ const Post = ({title, body, image}) => {
         <div className={styles.description}>
           <BlockContent blocks={body}/>
         </div>
-      </div>
+      </article>
     </div>
   )
 };

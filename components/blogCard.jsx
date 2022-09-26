@@ -5,7 +5,7 @@ import style from "../styles/Blogs.module.scss";
 export default function BlogCard({ item, onClick }) {
 	// console.log(item.mainImage)
   return (
-    <div className={`${styles.success_card} ${style.blog_card}`} onClick={onClick}>
+    <article className={`${styles.success_card} ${style.blog_card}`} onClick={onClick}>
       <div className={`${styles.success_card_img} ${style.blog_card_img}`}>
         <Image src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
       </div>
@@ -14,6 +14,6 @@ export default function BlogCard({ item, onClick }) {
         <h3 className="link-heading mb-2 mt-2">{item.title}</h3>
         <small className="text-muted d-block">{item.displayDesicription}</small>
       </div>
-    </div>
+    </article>
   );
 }

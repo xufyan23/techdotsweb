@@ -23,7 +23,7 @@ const Blogs = ({posts}) => {
       </Head>
       <div className={`${styles.blog_wrapper} blog-wrapper`}>
         <Header />
-        <div className={styles.blog_bg}>
+        <section className={styles.blog_bg}>
           <div className="container">
             <div className={styles.banner_col}>
               <div className={styles.banner_text}>
@@ -40,7 +40,7 @@ const Blogs = ({posts}) => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div className="container">
           <div className={styles.blog_cardgrid}>
             {

@@ -6,7 +6,7 @@ export default function LeftImgBlog({ item}) {
   const router = useRouter();
 
   return (
-    <div className={`${styles.col_space} row`}>
+    <article className={`${styles.col_space} row`}>
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <div className={styles.col_blog_img}>
           <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
@@ -24,6 +24,6 @@ export default function LeftImgBlog({ item}) {
             width={20} height={14} alt='learn more'/>
         </button>
       </div>
-    </div>
+    </article>
   );
 }

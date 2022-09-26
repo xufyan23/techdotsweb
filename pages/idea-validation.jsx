@@ -60,7 +60,7 @@ const IdeaValidation = () => {
           </div>
         </section>
 
-        <section className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} ${style.validation_block}`}>
+        <article className={`${styles.validation} ${style.section_top_pd} ${style.section_bottom_pd} ${style.validation_block}`}>
           <div className={`${styles.validation_grid}`}>
             <div className={`${styles.validation_text}`}>
               <h3 className="mb-3">What we Do For Idea Validations</h3>
@@ -108,7 +108,7 @@ const IdeaValidation = () => {
               />
             </div>
           </div>
-        </section>
+        </article>
       </div>
     </>
   );
