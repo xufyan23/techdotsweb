@@ -137,9 +137,9 @@ const Home = ({posts}) => {
               <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
                 <div className={styles.img_block}>
                   <Image
-                    src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1664119538/Techdots/images/who-we-are_bxiyal.svg"
+                    src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663942632/Techdots/images/who-we-are_tpim8s.svg"
                     width={600}
-                    height={400}
+                    height={350}
                     alt="who we are"
                     // layout="fixed"
                     loading = "lazy"
