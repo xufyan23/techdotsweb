@@ -67,9 +67,10 @@
     //   width: 100vw;
     //   height: 100vh;
     //   background: rgb(21 21 21 / 50%);
+    //   transform: translateX(-100%);
     //   position: absolute;
     //   top: 0;
-    //   left: 100%;
+    //   left: 0;
     // }
     .navbar {
       .navbar-nav {
@@ -86,6 +87,9 @@
       .nav_link {
         &.active {
           background: $clr-blue-900;
+          a {
+            color: $clr-white;
+          }
         }
         &:after {
           display: none;

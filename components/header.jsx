@@ -60,7 +60,7 @@ const Header = () => {
                 }`}
               >
                 <Link className="nav-link" href="/">
-                  <a>Who are we</a>
+                  <a>Home</a>
                 </Link>
               </li>
               <li
