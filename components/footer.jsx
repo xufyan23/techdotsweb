@@ -19,8 +19,8 @@ const Footer = () => {
             <p>Company</p>
             <ul>
               <li>
-                <Link href="success-stories">
-                  <a>Success Stories</a>
+                <Link href="portfolio">
+                  <a>Portfolio</a>
                 </Link>
               </li>
               <li>

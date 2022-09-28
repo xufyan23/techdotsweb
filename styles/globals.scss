@@ -222,6 +222,13 @@ hr {
   margin: 1.4rem 0;
 }
 
+.text-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 .menu-close {
   display: none;
 }
@@ -415,6 +422,14 @@ hr {
     line-height: 1.2;
     &:after {
       display: none;
+    }
+  }
+  article {
+    ul {
+      padding-left: 1rem;
+    }
+    ul, li {
+      list-style: disc;
     }
   }
 }

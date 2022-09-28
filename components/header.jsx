@@ -74,10 +74,10 @@ const Header = () => {
               </li>
               <li
                 className={`${styles.nav_link} ${
-                  router.pathname === "/success-stories" ? styles.active : ""
+                  router.pathname === "/portfolio" ? styles.active : ""
                 }`}
               >
-                <Link className="nav-link" href="/success-stories">
+                <Link className="nav-link" href="/portfolio">
                   <a>Portfolio</a>
                 </Link>
               </li>

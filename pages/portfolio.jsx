@@ -6,23 +6,23 @@ import ContactForm from "../components/contactForm";
 import Header from "../components/header";
 import getPosts from "../services/post";
 import { useState, useEffect, useRef } from "react";
-import styles from "../styles/SuccessStories.module.scss";
+import styles from "../styles/Portfolio.module.scss";
 import RightImgBlog from "../components/rightImgBlog";
 import LeftImgBlog from "../components/leftImgBlog";
 
-const SuccessStories = ({posts}) => {
+const Portfolio = ({posts, bannerPosts}) => {
   const router = useRouter();
   const [mappedPosts, setMappedPosts] = useState([]);
-  const [blogPost, setBlogPost] = useState([])
+  const [portfolioPost, setPortfolioPost] = useState([])
   const scrollToContact = useRef(null);
 
   const handleScroll = () => {
     scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
   };
   useEffect(() => {
-    setMappedPosts(posts);
-    setBlogPost(posts);
-  }, [posts]);
+    setMappedPosts(bannerPosts);
+    setPortfolioPost(posts);
+  }, [posts, bannerPosts]);
 
   return (
     <>
@@ -66,7 +66,7 @@ const SuccessStories = ({posts}) => {
                       <div
                         key={index}
                         onClick={() =>
-                          router.push(`/posts/${item.slug.current}`)
+                          router.push(`/porfolios/${item.slug.current}`)
                         }
                         className={`${styles.success_card} ${
                           index > 0 ? styles.small_card : ""
@@ -84,7 +84,7 @@ const SuccessStories = ({posts}) => {
                           <h3 className="link-heading mb-2 mt-2">
                             {item.title}
                           </h3>
-                          <small className="text-muted d-block">
+                          <small className="text-muted text-ellipsis">
                             {item.displayDesicription}
                           </small>
                         </div>
@@ -101,12 +101,12 @@ const SuccessStories = ({posts}) => {
 
         <section className={`${styles.card_section}`}>
           <div className="container">
-            {blogPost.length ? (
-              blogPost.map((item, index) =>
+            {portfolioPost.length ? (
+              portfolioPost.map((item, index) =>
                 index % 2 === 0 ? (
-                  <RightImgBlog item={item} key={index}/>
+                  <RightImgBlog item={item} type="portfolios" key={index}/>
                 ) : (
-                  <LeftImgBlog item={item} key={index} />
+                  <LeftImgBlog item={item} type="portfolios" key={index} />
                 )
               )
             ) : (
@@ -132,13 +132,16 @@ const SuccessStories = ({posts}) => {
   );
 };
 
-export default SuccessStories;
+export default Portfolio;
 
 export const getServerSideProps = async (pageContext) => {
-  const posts = await getPosts('*[_type == "post" && "blog" in categories[]->title] | order(_createdAt desc) [0...2]');
+  const posts = await getPosts('*[_type == "post" && "portfolio" in categories[]->title] | order(_createdAt desc)');
+  const bannerPosts = await getPosts('*[_type == "post" && "portfolio" in categories[]->title] | order(_createdAt desc) [0...2]');
+
   return {
     props: {
-      posts: posts,
+      posts,
+      bannerPosts,
     },
   };
 };

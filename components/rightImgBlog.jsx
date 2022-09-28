@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import styles from "../styles/SuccessStories.module.scss";
+import styles from "../styles/Portfolio.module.scss";
 
-export default function RightImgBlog({ item }) {
+export default function RightImgBlog({ item, type }) {
   const router = useRouter();
 
   return (
@@ -12,7 +12,7 @@ export default function RightImgBlog({ item }) {
         <p>{item.displayDesicription}</p>
         <button
           className={`${styles.learn_more} learn-more`}
-          onClick={() => router.push(`/posts/${item.slug.current}`)}
+          onClick={() => router.push(`/${type}/${item.slug.current}`)}
         >
           Learn More
           <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
