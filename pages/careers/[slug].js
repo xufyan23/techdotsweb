@@ -26,7 +26,7 @@ const Career = ({title, body, image}) => {
           {imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
         </div>
         <div className={styles.description}>
-          <BlockContent blocks={body}/>
+          <BlockContent blocks={body} projectId="p3umg9xf" dataset="production"/>
         </div>
       </article>
     </div>
