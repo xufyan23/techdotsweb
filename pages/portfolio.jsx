@@ -6,9 +6,10 @@ import ContactForm from "../components/contactForm";
 import Header from "../components/header";
 import getPosts from "../services/post";
 import { useState, useEffect, useRef } from "react";
-import styles from "../styles/Portfolio.module.scss";
 import RightImgBlog from "../components/rightImgBlog";
 import LeftImgBlog from "../components/leftImgBlog";
+import MetaTags from '../components/common/metaTags';
+import styles from "../styles/Portfolio.module.scss";
 
 const Portfolio = ({posts, bannerPosts}) => {
   const router = useRouter();
@@ -27,7 +28,11 @@ const Portfolio = ({posts, bannerPosts}) => {
   return (
     <>
       <Head>
-        <title>Services</title>
+        <MetaTags
+          title="Portfolio"
+          description="Techdots is a product-focused software development"
+          keywords="Portfolio"
+        />
       </Head>
       <div className={`${styles.success_stories} success-wrapper`}>
         <section className="banner">
@@ -36,7 +41,7 @@ const Portfolio = ({posts, bannerPosts}) => {
             <div className="banner_col">
               <div className="banner_text">
                 <div className="banner_text-box">
-                  <div className="clr-green">Success Stories</div>
+                  {/* <div className="clr-green">P</div> */}
                   <h1>Portfolio</h1>
                   <p>
                     Techdots is a product-focused software development

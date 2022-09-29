@@ -19,18 +19,23 @@ const Footer = () => {
             <p>Company</p>
             <ul>
               <li>
-                <Link href="portfolio">
+                <Link href="/portfolio">
                   <a>Portfolio</a>
                 </Link>
               </li>
               <li>
-                <Link href="services">
+                <Link href="/services">
                   <a>Services</a>
                 </Link>
               </li>
               <li>
-                <Link href="careers">
+                <Link href="/careers">
                   <a>Careers</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blogs">
+                  <a>Blogs</a>
                 </Link>
               </li>
             </ul>
@@ -40,17 +45,17 @@ const Footer = () => {
             <p>Services</p>
             <ul className="">
               <li>
-                <Link href="idea-validation">
+                <Link href="/idea-validation">
                   <a>Idea Validation Service</a>
                 </Link>
               </li>
               <li>
-                <Link href="design">
+                <Link href="/design">
                   <a>Design Services</a>
                 </Link>
               </li>
               <li>
-                <Link href="software-development">
+                <Link href="/software-development">
                   <a>Software Development</a>
                 </Link>
               </li>

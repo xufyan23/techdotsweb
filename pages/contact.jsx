@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import ContactForm from "../components/contactForm";
 import Header from "../components/header";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Contact.module.scss";
 
 const Contact = () => {
@@ -9,6 +10,11 @@ const Contact = () => {
     <>
       <Head>
         <title>Contact</title>
+        <MetaTags
+          title="Contact"
+          description="Contact"
+          keywords="Contact"
+        />
       </Head>
       <div className="contact-wrapper">
         <Header />

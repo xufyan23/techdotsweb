@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "../components/header";
 import ContactForm from "../components/contactForm"
 import { useRef } from "react";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Services.module.scss";
 
 const Services = () => {
@@ -16,7 +17,11 @@ const Services = () => {
   return (
     <>
       <Head>
-        <title>Services</title>
+        <MetaTags
+          title="Services"
+          description="Techdots is a product-focused software development agency for enterprise & high-growth companies."
+          keywords="Quotation"
+        />
       </Head>
       <div className="services">
         <section className="banner">
@@ -25,7 +30,7 @@ const Services = () => {
             <div className="banner_col">
               <div className="banner_text">
                 <div className="banner_text-box">
-                  <div className="clr-green">Services</div>
+                  {/* <div className="clr-green">Services</div> */}
                   <h1>What we offer</h1>
                   <p>
                     Techdots is a product-focused software development

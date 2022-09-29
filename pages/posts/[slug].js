@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Head from 'next/head';
 import { useState, useEffect } from "react";
 import imageUrlBuilder  from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../components/header";
+import MetaTags from '../components/common/metaTags';
 import styles from"../../styles/Post.module.scss";
 
-const Post = ({title, body, image}) => {
+const Post = ({post}) => {
   const [imageUrl, setImageUrl] = useState('');
   useEffect(() => {
     const imgBuilder = imageUrlBuilder ({
@@ -13,23 +15,32 @@ const Post = ({title, body, image}) => {
       dataset: 'production'
     });
 
-    setImageUrl(imgBuilder.image(image).url())
+    setImageUrl(imgBuilder.image(post.mainImage).url())
 
-  }, [image]);
+  }, [post.mainImage]);
 
   return (
-    <div className={`blog-wrapper ${styles.post_wrapper}`}>
-      <Header />
-      <article className={styles.post_container}>
-        <h1>{title}</h1>
-        <div className={styles.blog_banner}>
-          {imageUrl && <Image src={imageUrl} alt={title} width={"100%"} height={"100%"} layout="responsive"/>}
-        </div>
-        <div className={styles.description}>
-          <BlockContent blocks={body} projectId="p3umg9xf" dataset="production"/>
-        </div>
-      </article>
-    </div>
+    <>
+      <Head>
+        <MetaTags
+          title={post.title}
+          description={post.displayDesicription}
+          keywords={post.title}
+        />
+      </Head>
+      <div className={`blog-wrapper ${styles.post_wrapper}`}>
+        <Header />
+        <article className={styles.post_container}>
+          <h1>{post.title}</h1>
+          <div className={styles.blog_banner}>
+            {imageUrl && <Image src={imageUrl} alt={post.title} width={"100%"} height={"100%"} layout="responsive"/>}
+          </div>
+          <div className={styles.description}>
+            <BlockContent blocks={post.body} projectId="p3umg9xf" dataset="production"/>
+          </div>
+        </article>
+      </div>
+    </>
   )
 };
 
@@ -57,9 +68,7 @@ export const getServerSideProps = async pageContext => {
   else {
     return {
       props: {
-        title: post.title,
-        body: post.body,
-        image: post.mainImage,
+        post,
       }
     }
   }

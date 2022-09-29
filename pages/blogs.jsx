@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import BlogCard from '../components/blogCard';
 import Header from "../components/header";
 import getPosts from "../services/post";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Blogs.module.scss";
 
 const Blogs = ({posts}) => {
@@ -19,7 +20,11 @@ const Blogs = ({posts}) => {
   return (
     <>
       <Head>
-        <title>Blogs</title>
+        <MetaTags
+          title={posts.title}
+          description={posts.displayDesicription}
+          keywords={posts.title}
+        />
       </Head>
       <div className={`${styles.blog_wrapper} blog-wrapper`}>
         <Header />

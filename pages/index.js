@@ -2,15 +2,13 @@ import Head from 'next/head';
 import Header from '../components/header';
 import Image from 'next/image';
 import Link from "next/link";
-import ProjectSample from '../public/images/sample-img.png';
-import ProjectSample2 from '../public/images/sample-2.png';
-import ProjectSample3 from '../public/images/sample-3.png';
 import Star from '../public/images/star.svg';
 import ContactForm from '../components/contactForm';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import BlogCard from '../components/blogCard';
 import getPosts from '../services/post';
+import MetaTags from '../components/common/metaTags';
 import styles from '../styles/Home.module.scss';
 
 const Home = ({posts}) => {
@@ -30,7 +28,12 @@ const Home = ({posts}) => {
   return (
     <div>
       <Head>
-        <title>Techdots - Your Full-Stack Development Partner</title>
+        {/* <title>Techdots - Your Full-Stack Development Partner</title> */}
+        <MetaTags
+          title="Techdots - Your Full-Stack Development Partner"
+          description="Your Full-Stack Development Partner"
+          keywords="Accelerating your digital transformation"
+        />
       </Head>
       <section className="banner">
         <Header/>
@@ -73,7 +76,7 @@ const Home = ({posts}) => {
           <div className={styles.info}>
             <h2 className="heading-center">Your Full-Stack Development Partner</h2>
             <p className={`${styles.sub_heading} mt-4`}>
-            Techdots help businesses navigate any and all facets of the digital landscape from creating
+              Techdots help businesses navigate any and all facets of the digital landscape from creating
               strategic software to dynamic mobile solutions that deliver tangible business results.
             </p>
             <div className='text-center mb-4'>

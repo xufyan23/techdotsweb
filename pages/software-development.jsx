@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
 import { useRef } from "react";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Services.module.scss";
 import style from "../styles/ServicesPages.module.scss";
 
@@ -14,7 +15,11 @@ const SoftwareDevelopment = () => {
   return (
     <>
       <Head>
-        <title>Software Development</title>
+        <MetaTags
+          title="Software Development"
+          description="Cutting-Edge Software Development Solutions"
+          keywords="Software Development"
+        />
       </Head>
       <div className={`${style.content_wrapper}`}>
         <section className={`${style.content_banner}`}>

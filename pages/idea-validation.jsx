@@ -2,8 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
-// import ContactForm from "../components/contactForm";
 import { useRef } from "react";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Services.module.scss";
 import style from "../styles/ServicesPages.module.scss";
 
@@ -15,7 +15,11 @@ const IdeaValidation = () => {
   return (
     <>
       <Head>
-        <title>Idea Validation</title>
+        <MetaTags
+          title="Idea Validation"
+          description="Get the Affirmation for Your Prototype"
+          keywords="Idea Validation"
+        />
       </Head>
       <div className={`${style.content_wrapper}`}>
         <section className={`${style.content_banner}`}>

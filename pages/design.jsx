@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "../components/header";
 import { useRef } from "react";
 import styles from "../styles/Services.module.scss";
+import MetaTags from '../components/common/metaTags';
 import style from "../styles/ServicesPages.module.scss";
 
 const Design = () => {
@@ -14,7 +15,11 @@ const Design = () => {
   return (
     <>
       <Head>
-        <title>Design</title>
+        <MetaTags
+          title="Design"
+          description="Embrace the Visual Appeal of your MVP"
+          keywords="Design"
+        />
       </Head>
       <div className={`${style.content_wrapper}`}>
         <section className={`${style.content_banner}`}>

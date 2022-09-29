@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import getPosts from "../services/post";
 import CareerCard from "../components/careerCard";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Career.module.scss";
 
 const Career = ({posts}) => {
@@ -18,7 +19,11 @@ const Career = ({posts}) => {
   return (
     <>
       <Head>
-        <title>Career</title>
+        <MetaTags
+          title="Career"
+          description="Career"
+          keywords="Career"
+        />
       </Head>
       <div className={`${styles.career_wrapper} career-wrapper`}>
         <Header />

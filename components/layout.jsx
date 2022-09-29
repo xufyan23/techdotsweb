@@ -8,13 +8,13 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>Techdots</title>
-        <meta name="Techdots" content="Techdots"/>
-        <meta name="title" content="Techdots"></meta>
+        {/* <meta name="Techdots" content="Techdots"/>
+        <meta name="title" content="Techdots"/>
         <meta name="description" content="Your Full-Stack Development Partner"/>
         <meta name ="keywords" content ="Accelerating your digital transformation"/>
-        <meta name="theme-color" content="#283552"></meta>
+        <meta name="theme-color" content="#283552"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <link rel="apple-touch-icon" href="../public/apple-icon.png"/>
+        <link rel="apple-touch-icon" href="../public/apple-icon.png"/> */}
         {/* <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet"/> */}
       </Head>
       <main>{children}</main>

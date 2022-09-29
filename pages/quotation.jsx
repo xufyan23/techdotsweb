@@ -7,6 +7,7 @@ import QuotestepFive from "../components/quoteStepFive";
 import QuoteStepFour from "../components/quoteStepFour";
 import QuoteStepOne from "../components/quoteStepOne";
 import QuoteStepTwo from "../components/quoteStepTwo";
+import MetaTags from '../components/common/metaTags';
 import styles from "../styles/Quotation.module.scss";
 
 const Quotation = () => {
@@ -58,7 +59,6 @@ const Quotation = () => {
           <meta charset="utf-8">
           <title>Quotation Email</title>
           <meta name="description" content="Qouation">
-          <meta name="author" content="SitePoint">
           <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
         </head>
 
@@ -109,6 +109,11 @@ const Quotation = () => {
     <>
       <Head>
         <title>Quotation</title>
+        <MetaTags
+          title="Quotation"
+          description="Quotation"
+          keywords="Quotation"
+        />
       </Head>
       <div className="quotation-wrapper">
         <section className="banner">
