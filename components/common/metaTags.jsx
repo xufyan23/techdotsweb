@@ -16,14 +16,14 @@ const MetaTags = ({title, description, keywords}) => {
       <meta property ="twitter:title" content ="Techdots"/>
       <meta property ="twitter:description" content ="Techdots help businesses navigate any and all facets of the digital landscape from creating
               strategic software to dynamic solutions"/>
-      <meta property ="twitter:image" content ="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/logo_nrmjxm.svg"/>
+      <meta property ="twitter:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1664456980/pzryowzfqkmlcvomvpfp.png"/>
       {/* facebook */}
       <meta property ="og:type" content ="website"/>
       <meta property ="og:url" content ="https://www.techdots.dev/"/>
       <meta property ="og:title" content ="Techdots"/>
       <meta property ="og:description" content ="Techdots help businesses navigate any and all facets of the digital landscape from creating
               strategic software to dynamic solutions"/>
-      <meta property ="og:image" content ="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/logo_nrmjxm.svg"/>
+      <meta property ="og:image" content ="http://res.cloudinary.com/dpu5ywrox/image/upload/v1664456980/pzryowzfqkmlcvomvpfp.png"/>
     </>
   )
 }
