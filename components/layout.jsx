@@ -1,6 +1,6 @@
 import Footer from './footer'
 import Head from "next/head";
-// import "@fontsource/comfortaa";
+import "@fontsource/comfortaa";
 import Script from "next/script";
 
 const Layout = ({ children }) => {
