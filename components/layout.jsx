@@ -1,6 +1,6 @@
 import Footer from './footer'
 import Head from "next/head";
-import "@fontsource/comfortaa";
+// import "@fontsource/comfortaa";
 import Script from "next/script";
 
 const Layout = ({ children }) => {
@@ -8,8 +8,16 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>Techdots</title>
-        {/* <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap"
-          rel="stylesheet"/> */}
+          <style dangerouslySetInnerHTML={ {
+            __html: `</style>
+              <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap"
+                media="print"
+                onload="this.media='all';"
+              />
+              <style>`
+          } }></style>
       </Head>
       <main>{children}</main>
       <Footer />
