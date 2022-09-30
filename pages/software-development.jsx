@@ -100,7 +100,7 @@ const SoftwareDevelopment = () => {
             </div>
             <div className={`${styles.validation_img} ${style.development_inner_img}`}>
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_softwareDev_olhftz.png"
-                width={"100%"} height={"100%"} layout="responsive" alt="development img" loading="lazy" />
+                width={755} height={405}alt="development img" loading="lazy" />
             </div>
           </div>
         </article>

@@ -67,7 +67,7 @@
   }
   .validation_img {
     justify-self: flex-end;
-    transform: translateX(7rem);
+    transform: translateX(19rem);
     width: 100%;
     height: 100%;
     z-index: 99;
@@ -91,6 +91,7 @@
   color: #ffffff;
   // z-index: -1;
   .design_img {
+    position: relative;
     align-self: flex-end;
     transform: translate(-8rem, -1rem);
     width: 43.75rem;
@@ -118,6 +119,9 @@
   .validation {
     .validation_grid {
       grid-template-columns: 0.2fr 1fr 1fr;
+    }
+    .validation_img {
+      transform: translateX(5rem);
     }
   }
 }
@@ -170,7 +174,7 @@
 
   .validation {
     .validation_img {
-      transform: translateX(2rem);
+      transform: translateX(3rem);
     }
   }
 

@@ -53,16 +53,32 @@
       align-self: flex-start;
     }
   }
+  .section_development {
+    .development_inner_img {
+      transform: translateX(17rem);
+    }
+  }
 }
 
 // .validation_inner {
 //   transform: translateX(17rem);
 // }
 
-@media(max-width: 1366px) {
+
+@media(max-width: 1440px) {
   .content_wrapper {
     .content_banner {
       min-height: 42rem;
+    }
+  }
+}
+
+@media(max-width: 1440px) {
+  .content_wrapper {
+    .section_development {
+      .development_inner_img {
+        transform: translateX(5rem);
+      }
     }
   }
 }

@@ -31,7 +31,7 @@ const Contact = () => {
               </div>
               <div className={styles.banner_img}>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729609/Techdots/images/contatc-us_txmweg.svg"
-                  width={"100%"} height={"100%"} layout='responsive' alt="banner image" />
+                  width={"100%"} height={"100%"} layout='responsive' priority={true} alt="banner image" />
               </div>
             </div>
           </div>

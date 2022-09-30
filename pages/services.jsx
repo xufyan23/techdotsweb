@@ -88,7 +88,7 @@ const Services = () => {
             </div>
             <div className={`${styles.validation_img}`}>
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_ideaValidation_xo1jsl.png"
-                width="100%" height="100%" layout="responsive" alt="Idea Validation" loading="lazy"
+                width={723} height={430} alt="Idea Validation" loading="lazy"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ const Services = () => {
         <section className={`${styles.design}`}>
           <div className={`${styles.design_img}`}>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
-              width={"100%"} height={"100%"} layout="fill" alt="design"/>
+              layout="fill" alt="design" priority={true} />
           </div>
           <div className={`${styles.design_text}`}>
             <h3>Design</h3>
