@@ -17,8 +17,8 @@ const Contact = () => {
         />
       </Head>
       <div className="contact-wrapper">
-        <Header />
         <section className={styles.contact_banner}>
+          <Header />
           <div className="container">
             <div className={styles.banner_col}>
               <div className={styles.banner_text}>

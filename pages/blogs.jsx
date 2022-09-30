@@ -27,8 +27,8 @@ const Blogs = ({posts}) => {
         />
       </Head>
       <div className={`${styles.blog_wrapper} blog-wrapper`}>
-        <Header />
         <section className={styles.blog_bg}>
+          <Header />
           <div className="container">
             <div className={styles.banner_col}>
               <div className={styles.banner_text}>

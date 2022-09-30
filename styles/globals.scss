@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
 @import './vaiables.scss';
 
 @font-face {
@@ -409,7 +410,7 @@ hr {
 
 .contact-wrapper, .blog-wrapper, .career-wrapper {
   header {
-    background: $clr-blue-900;
+    // background: $clr-blue-900;
     .navbar {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -418,6 +419,9 @@ hr {
 }
 
 .blog-wrapper {
+  header {
+    background: $clr-blue-900;
+  }
   h2 {
     line-height: 1.2;
     &:after {

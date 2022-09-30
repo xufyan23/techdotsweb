@@ -8,12 +8,13 @@
 
 .contact_banner {
   background-color: $clr-blue-900;
+  padding-top: 1rem;
   .banner_col {
     display: grid;
     grid-template-columns: 0.04fr 1fr 0.9fr;
     gap: 2rem;
     align-items: center;
-    padding: 5rem 0;
+    padding: 2rem 0 3rem;
   }
   .banner_text {
     grid-column: 2;

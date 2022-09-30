@@ -26,8 +26,8 @@ const Career = ({posts}) => {
         />
       </Head>
       <div className={`${styles.career_wrapper} career-wrapper`}>
-        <Header />
         <div className={styles.career_bg}>
+          <Header />
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-7">

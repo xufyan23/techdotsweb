@@ -114,7 +114,13 @@
     transform: translateX(6rem);
   }
 }
-
+@media(max-width: 1440px) {
+  .validation {
+    .validation_grid {
+      grid-template-columns: 0.2fr 1fr 1fr;
+    }
+  }
+}
 @media(max-width: 1024px) {
   .consultation {
     .consultation_grid {
