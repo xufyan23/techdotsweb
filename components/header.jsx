@@ -13,6 +13,7 @@ const Header = () => {
     navBarCollapse.current.classList.remove("show");
     overlay.current.classList.add("hide");
     overlay.current.classList.remove('show');
+    document.body.style.overflow = 'unset'
   }
 
   return (
@@ -52,9 +53,6 @@ const Header = () => {
             className="navbar-collapse collapse justify-content-center d-block"
             id="navbarNav"
             ref={navBarCollapse}
-            onClick={()=>{
-              document.body.style.overflow = 'unset'
-            }}
           >
             <ul className="navbar-nav align-items-center">
               <div className="menu-close" onClick={handleMenuClose}>

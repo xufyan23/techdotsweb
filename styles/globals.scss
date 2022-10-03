@@ -776,6 +776,7 @@ input[type="checkbox"]:checked {
       // box-shadow: 0 0 11px 0px #002466;
       transform: translateX(-500px);
       z-index: 999999;
+      overflow-y: auto;
       &.show {
         display: block !important;
         transform: translateX(0);
