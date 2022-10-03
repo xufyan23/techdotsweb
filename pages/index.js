@@ -16,9 +16,14 @@ const Home = ({posts}) => {
   const [mappedPosts, setMappedPosts] = useState([]);
   const [showMorePostsBtn, setShowMorePostsBtn] = useState(false);
   const scrollToContact = useRef(null);
+  const scrollDown = useRef(null);
 
   const handleScroll = () => {
     scrollToContact.current ?.scrollIntoView({behavior: 'smooth'})
+  }
+
+  const handleScrollDown = () => {
+    scrollDown.current ?.scrollIntoView({behavior: 'smooth'})
   }
 
   useEffect(() => {
@@ -54,11 +59,11 @@ const Home = ({posts}) => {
                   <button className="btn primary-btn btn-white" onClick={handleScroll}>Contact Us</button>
                 </div>
               </div>
-              <div className="scroll_down">
+              <div className="scroll_down" onClick={handleScrollDown}>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729601/Techdots/images/banner-line_ggnjjq.svg"
                   width="512px" height="9px" alt=""
                 />
-                <Image className="" src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/d-arrow-down_ld5zfx.svg"
+                <Image className="scroll-down-icon" src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/d-arrow-down_ld5zfx.svg"
                 alt="scroll down" width={14} height={14}
                 />
               </div>
@@ -71,7 +76,7 @@ const Home = ({posts}) => {
         </div>
       </section>
 
-      <section className={styles.whoweare}>
+      <section className={styles.whoweare} ref={scrollDown}>
         <div className="container">
           <div className={styles.info}>
             <h2 className="heading-center">Your Full-Stack Development Partner</h2>

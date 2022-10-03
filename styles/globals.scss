@@ -275,6 +275,9 @@ hr {
         display: flex;
         align-items: center;
         gap: 2rem;
+        .scroll-down-icon {
+          cursor: pointer;
+        }
       }
     }
     .banner_img {
@@ -595,19 +598,6 @@ input[type="checkbox"]:checked {
   }
 }
 
-@-webkit-keyframes slide-out-left {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-1000px);
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-}
-
 /*=====  loader  ======*/
 .load-row span {
   display: inline-block;
@@ -642,6 +632,23 @@ input[type="checkbox"]:checked {
     transform: translateY(10px);
   }
 }
+
+.slide-top {
+	-webkit-animation: slide-top 2s ease-in-out infinite both;
+	        animation: slide-top 2s ease-in-out infinite both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
 
 
 @media (max-width: 1440px) {
@@ -740,19 +747,34 @@ input[type="checkbox"]:checked {
         justify-content: center;
       }
     }
+    .overlay {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 999999;
+      inset: 0;
+      background: $clr-black;
+      transition: opacity 0.3s 0.25s;
+      transform: translateX(-1000px);
+      &.show {
+        transform: translateX(0);
+        opacity: 0.5;
+      }
+      &.hide {
+        opacity: 0;
+      }
+    }
     .navbar-collapse {
       min-height: 100vh;
       height: 100%;
       width: 250px;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s;
       animation: slide-out-left;
       position: fixed;
-      bottom: 0;
-      left: 0px;
-      // display: block !important;
+      inset: 0;
       background: rgb(25 55 111);
-      box-shadow: 0 0 11px 0px #002466;
-      transform: translateX(-1000px);
+      // box-shadow: 0 0 11px 0px #002466;
+      transform: translateX(-500px);
       z-index: 999999;
       &.show {
         display: block !important;
@@ -915,6 +937,11 @@ input[type="checkbox"]:checked {
       .primary-btn {
         margin-bottom: 1rem;
         margin-right: 0;
+      }
+    }
+    .banner_col {
+      .banner_text {
+        padding-left: 0;
       }
     }
   }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from '../styles/Header.module.scss';
@@ -7,9 +7,12 @@ import styles from '../styles/Header.module.scss';
 const Header = () => {
   const router = useRouter();
   const navBarCollapse = useRef();
+  const overlay = useRef();
 
   const handleMenuClose = () => {
     navBarCollapse.current.classList.remove("show");
+    overlay.current.classList.add("hide");
+    overlay.current.classList.remove('show');
   }
 
   return (
@@ -24,6 +27,7 @@ const Header = () => {
               </a>
             </Link>
           </div>
+          <div ref={overlay} id="overlay" onClick={handleMenuClose} className="overlay hide"></div>
           <button
             className="navbar-toggler"
             type="button"
@@ -37,12 +41,15 @@ const Header = () => {
               width={30} height={30} alt=""
               onClick={()=>{
                 document.body.style.overflow = 'hidden'
+                // overlay.current.classList.remove('d-none');
+                overlay.current.classList.remove('hide');
+                overlay.current.classList.add('show');
               }}
             /></span>
           </button>
 
           <div
-            className="navbar-collapse collapse justify-content-center"
+            className="navbar-collapse collapse justify-content-center d-block"
             id="navbarNav"
             ref={navBarCollapse}
             onClick={()=>{
