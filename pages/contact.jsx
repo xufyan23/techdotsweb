@@ -24,9 +24,9 @@ const Contact = () => {
               <div className={styles.banner_text}>
                 <h1>Contact Us</h1>
                 <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over
+                  Let talk about your website or project. We are here to help
+                  <span className="d-block">and answer any question you might have.
+                  We look forward hearing from you.</span>
                 </p>
               </div>
               <div className={styles.banner_img}>

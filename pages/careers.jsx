@@ -31,11 +31,9 @@ const Career = ({posts}) => {
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-7">
-                <h1>Career</h1>
+                <h1>Join Techdots amazing team </h1>
                 <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature from
-                  45 BC, making it over
+                  We innovate build cool stuff and have fun. Want to join us? See what kind of jobs are available now
                 </p>
               </div>
             </div>

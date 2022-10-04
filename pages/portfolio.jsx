@@ -44,9 +44,9 @@ const Portfolio = ({posts, bannerPosts}) => {
                   {/* <div className="clr-green">P</div> */}
                   <h1>Portfolio</h1>
                   <p>
-                    Techdots is a product-focused software development
+                    Lets create something great together
                     <span className="d-block">
-                      agency for enterprise & high-growth companies.
+                    We deliver digital products & statergies that help you grow
                     </span>
                   </p>
                   <div className="btn-block">

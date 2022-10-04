@@ -11,7 +11,7 @@
   padding-top: 1rem;
   .banner_col {
     display: grid;
-    grid-template-columns: 0.04fr 1fr 0.9fr;
+    grid-template-columns: 0.04fr 0.8fr 0.9fr;
     gap: 2rem;
     align-items: center;
     padding: 2rem 0 3rem;
@@ -23,7 +23,7 @@
   .banner_img {
     span {
       padding-top: 0 !important;
-      aspect-ratio: 3/2;
+      aspect-ratio: 3/1.5;
     }
   }
 }
