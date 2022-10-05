@@ -16,7 +16,7 @@ export default function RightImgBlog({ item, type }) {
         >
           Learn More
           <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
-            width={20} height={14} alt='learn more'/>
+            width={20} height={14} alt='learn more' priority={false}/>
         </button>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">

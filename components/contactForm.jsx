@@ -118,10 +118,10 @@ const ContactForm = () => {
     <div className={`${styles.contact_form}`}>
       <h2 className="mb-4">What would you like to do?</h2>
 
-      <GoogleReCaptchaProvider
+      {/* <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-      >
-        <GoogleReCaptcha onVerify={onVerify} />
+      > */}
+        {/* <GoogleReCaptcha onVerify={onVerify} /> */}
         <form
           onSubmit={(handleSubmit(onSubmit, handleError), handleEmail)}
           method="post"
@@ -299,7 +299,7 @@ const ContactForm = () => {
             </div>
           </div>
         </form>
-      </GoogleReCaptchaProvider>
+      {/* </GoogleReCaptchaProvider> */}
     </div>
   );
 };

@@ -9,7 +9,8 @@ export default function LeftImgBlog({ item, type}) {
     <article className={`${styles.col_space} row`}>
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <div className={styles.col_blog_img}>
-          <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
+          <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%"
+          layout="responsive" priority={false}/>
         </div>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ptxs-1">

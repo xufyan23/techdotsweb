@@ -46,7 +46,7 @@ const Portfolio = ({posts, bannerPosts}) => {
                   <p>
                     Lets create something great together
                     <span className="d-block">
-                    We deliver digital products & statergies that help you grow
+                    We deliver digital products & statergies that help you grow.
                     </span>
                   </p>
                   <div className="btn-block">
@@ -83,8 +83,8 @@ const Portfolio = ({posts, bannerPosts}) => {
                             alt={item.title}
                             loading="lazy"
                           /> */}
-                        <Image className={styles.card_img} src={item.mainImage} alt={item.title} width={"100%"} height={"100%"}
-                        layout="responsive" priority={true}/>
+                          <Image className={styles.card_img} src={item.mainImage} alt={item.title} width={"100%"} height={"100%"}
+                          layout="responsive" priority={false}/>
                         </div>
                         <div className={`${styles.success_card_des}`}>
                           <h3 className="link-heading mb-2 mt-2">

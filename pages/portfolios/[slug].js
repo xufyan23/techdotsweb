@@ -34,7 +34,7 @@ const Portfolio = ({post}) => {
         <article className={styles.post_container}>
           <h1>{post.title}</h1>
           <div className={styles.description}>
-            <BlockContent blocks={post.body} projectId="p3umg9xf" dataset="production"/>
+            <BlockContent blocks={post.body} projectId="p3umg9xf" dataset="production" priority={false}/>
           </div>
         </article>
       </div>
