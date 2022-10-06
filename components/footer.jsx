@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import mixpanel from 'mixpanel-browser';
+mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY);
 import styles from "../styles/Footer.module.scss";
 
 const Footer = () => {
+  const handleFooterLink = () => {
+    mixpanel.track("click_footer_link");
+  }
   return (
     <footer className={`${styles.footer}`}>
       <div className="container">
@@ -20,22 +25,22 @@ const Footer = () => {
             <ul>
               <li>
                 <Link href="/portfolio">
-                  <a>Portfolio</a>
+                  <a onClick={handleFooterLink}>Portfolio</a>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <a>Services</a>
+                  <a onClick={handleFooterLink}>Services</a>
                 </Link>
               </li>
               <li>
                 <Link href="/careers">
-                  <a>Careers</a>
+                  <a onClick={handleFooterLink}>Careers</a>
                 </Link>
               </li>
               <li>
                 <Link href="/blogs">
-                  <a>Blogs</a>
+                  <a onClick={handleFooterLink}>Blogs</a>
                 </Link>
               </li>
             </ul>
@@ -46,17 +51,17 @@ const Footer = () => {
             <ul className="">
               <li>
                 <Link href="/idea-validation">
-                  <a>Idea Validation Service</a>
+                  <a onClick={handleFooterLink}>Idea Validation Service</a>
                 </Link>
               </li>
               <li>
                 <Link href="/design">
-                  <a>Design Services</a>
+                  <a onClick={handleFooterLink}>Design Services</a>
                 </Link>
               </li>
               <li>
                 <Link href="/software-development">
-                  <a>Software Development</a>
+                  <a onClick={handleFooterLink}>Software Development</a>
                 </Link>
               </li>
             </ul>
@@ -71,9 +76,8 @@ const Footer = () => {
                   <span className="d-block d-inline-xs ">6th floor Office 601- 603 C3,</span>
                   <span className="d-block d-inline-xs ">Gulberg III, Lahore</span>
                 </address>
-                <a href="tel:+92 9587738861">+47 333 78 901</a>
+                {/* <a href="tel:+92 9587738861">+923214757374</a> */}
               </li>
-
             </ul>
           </div>
         </div>
@@ -85,7 +89,7 @@ const Footer = () => {
             <p className="mb-0">Copyright © 2022 Techdots™. All Rights Reserved.</p>
             <div className={`${styles.social_icons}`}>
               <Link href="https://www.linkedin.com/company/tech-dots-dev/mycompany/">
-                <a target="_blank"><Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/linkedin_rqxjhc.svg"
+                <a target="_blank" onClick={handleFooterLink}><Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/linkedin_rqxjhc.svg"
                   width={20} height={20} alt="Linked In"/></a>
             </Link>
             </div>

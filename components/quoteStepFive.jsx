@@ -1,9 +1,12 @@
-import styles from  "../styles/Quotation.module.scss";
 import Loader from "./loader";
+import mixpanel from 'mixpanel-browser';
+mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY);
+import styles from  "../styles/Quotation.module.scss";
 
 const QuotestepFive = ({onStepComplete, onStepBack, stepOne, stepTwo, stepThree, loading}) => {
   const handleSubmit = () => {
     onStepComplete()
+    mixpanel.track("submit_quotation");
   }
 
   const handlePrevious = () => {

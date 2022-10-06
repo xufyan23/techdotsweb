@@ -5,6 +5,8 @@ import Header from "../components/header";
 import ContactForm from "../components/contactForm"
 import { useRef } from "react";
 import MetaTags from '../components/common/metaTags';
+import mixpanel from 'mixpanel-browser';
+mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY);
 import styles from "../styles/Services.module.scss";
 
 const Services = () => {
@@ -12,7 +14,12 @@ const Services = () => {
 
   const handleScroll = () => {
     scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
+    mixpanel.track("contact_us");
   };
+
+  const handleBookAppointment = () => {
+    mixpanel.track("book_appointment");
+  }
 
   return (
     <>
@@ -45,7 +52,7 @@ const Services = () => {
                   </ul>
                   <div className="btn-block">
                     <Link href="https://techdots.zohobookings.com/#/customer/custom-software-development">
-                      <a target="_blank" className="btn primary-btn">Book Appointment</a>
+                      <a target="_blank" className="btn primary-btn" onClick={handleBookAppointment}>Book Appointment</a>
                     </Link>
                     <button
                       className="btn primary-btn btn-white"
@@ -110,7 +117,7 @@ const Services = () => {
             </p>
             <div className="mt-4 text-center-xs">
               <Link href="design">
-                <a className="btn primary-btn">
+                <a className="btn primary-btn" onClick={handleBookAppointment}>
                   Book Appointment
                 </a>
               </Link>
@@ -130,7 +137,7 @@ const Services = () => {
             </p>
             <div className="text-center-xs">
               <Link href="software-development">
-                <a className="btn primary-btn">
+                <a className="btn primary-btn" onClick={handleBookAppointment}>
                   Book Appointment
                 </a>
               </Link>

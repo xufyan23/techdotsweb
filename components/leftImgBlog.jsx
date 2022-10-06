@@ -20,7 +20,7 @@ export default function LeftImgBlog({ item, type}) {
           className={`${styles.learn_more} learn-more`}
           onClick={() => router.push(`/${type}/${item.slug.current}`)}
         >
-          Learn More
+          Find out More
           <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
             width={20} height={14} alt='learn more'/>
         </button>

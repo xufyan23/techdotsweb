@@ -1,6 +1,7 @@
 import Footer from './footer'
 import Head from "next/head";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+
 // import "@fontsource/comfortaa";
 import Script from "next/script";
 
@@ -23,7 +24,7 @@ const Layout = ({ children }) => {
       <GoogleReCaptchaProvider
         reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       >
-      <main>{children}</main>
+        <main>{children}</main>
       </GoogleReCaptchaProvider>
       <Footer />
       <Script

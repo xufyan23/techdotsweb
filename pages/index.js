@@ -9,6 +9,8 @@ import { useRouter } from 'next/router';
 import BlogCard from '../components/blogCard';
 import getPosts from '../services/post';
 import MetaTags from '../components/common/metaTags';
+import mixpanel from 'mixpanel-browser';
+mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY);
 import styles from '../styles/Home.module.scss';
 
 const Home = ({posts}) => {
@@ -20,10 +22,23 @@ const Home = ({posts}) => {
 
   const handleScroll = () => {
     scrollToContact.current ?.scrollIntoView({behavior: 'smooth'})
+    mixpanel.track("contact_us");
   }
 
   const handleScrollDown = () => {
     scrollDown.current ?.scrollIntoView({behavior: 'smooth'})
+  }
+
+  const handleBookAppoitment = () => {
+    mixpanel.track("book_appointment");
+  }
+
+  const handleGetQuote = () => {
+    mixpanel.track("get_quote");
+  }
+
+  const handleShowAll = () => {
+    mixpanel.track("show_all");
   }
 
   useEffect(() => {
@@ -54,7 +69,7 @@ const Home = ({posts}) => {
                 <div className="btn-block">
                   <Link
                     href = "https://techdots.zohobookings.com/#/customer/custom-software-development">
-                    <a target="_blank" className="btn primary-btn">Book Appointment</a>
+                    <a target="_blank" className="btn primary-btn" onClick={handleBookAppoitment}>Book Appointment</a>
                   </Link>
                   <button className="btn primary-btn btn-white" onClick={handleScroll}>Contact Us</button>
                 </div>
@@ -86,7 +101,7 @@ const Home = ({posts}) => {
             </p>
             <div className='text-center mb-4'>
               <Link href="quotation">
-                <a className='btn primary-btn mb-2'>Get a Quote</a>
+                <a className='btn primary-btn mb-2' onClick={handleGetQuote}>Get a Quote</a>
               </Link>
             </div>
             <div className={styles.sub_heading}>
@@ -145,7 +160,7 @@ const Home = ({posts}) => {
               <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
                 <div className={styles.img_block}>
                   <Image
-                    src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663942632/Techdots/images/who-we-are_tpim8s.svg"
+                    src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1665037366/Techdots/images/who-we-are_rzejdt.svg"
                     width={600}
                     height={350}
                     alt="who we are"
@@ -215,7 +230,7 @@ const Home = ({posts}) => {
               </p>
               <Link href="software-development">
                 <a className="learn-more" target="_blank">
-                  Learn More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
+                Find out More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
                     width={20} height={14} alt="learn more"/>
                 </a>
               </Link>
@@ -239,7 +254,7 @@ const Home = ({posts}) => {
               </p>
               <Link href="idea-validation">
                 <a className="learn-more" target="_blank">
-                  Learn More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg" width={20} height={14} alt="learn more" />
+                  Find out More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg" width={20} height={14} alt="learn more" />
                 </a>
               </Link>
             </div>
@@ -254,7 +269,7 @@ const Home = ({posts}) => {
               </p>
               <Link href="design">
                 <a className="learn-more" target="_blank">
-                  Learn More  <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
+                  Find out More <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729603/Techdots/images/arrow-right_h6m1bd.svg"
                     width={20} height={14} alt='learn more' />
                 </a>
               </Link>
@@ -348,7 +363,7 @@ const Home = ({posts}) => {
 
           <div className="text-center m-auto">
             <Link href="/blogs">
-              <a className="btn primary-btn">Show All</a>
+              <a className="btn primary-btn" onClick={handleShowAll}>Show All</a>
             </Link>
           </div>
         </div>

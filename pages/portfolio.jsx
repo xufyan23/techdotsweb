@@ -20,6 +20,7 @@ const Portfolio = ({posts, bannerPosts}) => {
   const handleScroll = () => {
     scrollToContact.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   useEffect(() => {
     setMappedPosts(bannerPosts);
     setPortfolioPost(posts);

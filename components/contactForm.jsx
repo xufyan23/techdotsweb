@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import Recaptcha from "./recaptcha";
-import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
+// import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
+import mixpanel from 'mixpanel-browser';
+mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_KEY);
 import styles from "../styles/ContactForm.module.scss";
 
 const ContactForm = () => {
@@ -28,6 +30,10 @@ const ContactForm = () => {
   const onVerify = (token) => {
     setToken(token);
   };
+
+  const handleSendMessage = () => {
+    mixpanel.track("send_us_a_message");
+  }
 
   const onCheckboxChanged = (event) => {
     const name = event.target.name;
@@ -285,6 +291,7 @@ const ContactForm = () => {
               type="submit"
               className="btn primary-btn"
               disabled={!isDirty || !isValid}
+              onClick={handleSendMessage}
             >
               Send us a message
             </button>
