@@ -39,7 +39,10 @@ const Blogs = ({posts}) => {
               </div>
               <div className={styles.banner_img}>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
-                  width={486} height={324} alt="banner image"/>
+                  width={486} height={324} alt="banner image"
+                  placeholder="blur"
+                  blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
+                />
               </div>
             </div>
           </div>

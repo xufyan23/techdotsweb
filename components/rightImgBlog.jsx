@@ -21,7 +21,10 @@ export default function RightImgBlog({ item, type }) {
       </div>
       <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <div className={styles.col_blog_img}>
-          <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive" loading="lazy"/>
+          <Image className={styles.card_img} src={item.mainImage} alt={item.title} width="100%" height="100%" layout="responsive"
+            placeholder="blur"
+            blurDataURL={item.mainImage}
+          />
         </div>
       </div>
     </article>

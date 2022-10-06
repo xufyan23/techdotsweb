@@ -68,6 +68,8 @@ const Services = () => {
                   src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
                   alt="work station"
                   width={486} height={324}
+                  placeholder="blur"
+                  blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729607/Techdots/images/validation_co06vp.svg"
                 />
               </div>
             </div>
@@ -95,7 +97,9 @@ const Services = () => {
             </div>
             <div className={`${styles.validation_img}`}>
               <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_ideaValidation_xo1jsl.png"
-                width={723} height={430} alt="Idea Validation" loading="lazy"
+                width={723} height={430} alt="Idea Validation"
+                placeholder="blur"
+                blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_ideaValidation_xo1jsl.png"
               />
             </div>
           </div>
@@ -104,7 +108,10 @@ const Services = () => {
         <section className={`${styles.design}`}>
           <div className={`${styles.design_img}`}>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
-              layout="fill" alt="design" priority={true} />
+              layout="fill" alt="design" priority={true}
+              placeholder="blur"
+              blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
+            />
           </div>
           <div className={`${styles.design_text}`}>
             <h3>Design</h3>
@@ -145,7 +152,10 @@ const Services = () => {
           </div>
           <div className={`${styles.development_img}`}>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_softwareDev_olhftz.png"
-              width={755} height={405} alt="software development" loading="lazy" />
+              width={755} height={405} alt="software development"
+              placeholder="blur"
+              blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_softwareDev_olhftz.png"
+            />
           </div>
         </section>
 

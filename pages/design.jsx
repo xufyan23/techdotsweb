@@ -67,7 +67,10 @@ const Design = () => {
         <article className={`${styles.design} ${style.section_top_pd} ${style.section_bottom_pd} ${style.design_block}`}>
           <div className={`${styles.design_img} ${style.section_img}`}>
             <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
-              width={755} height={405} alt="design img" />
+              width={755} height={405} alt="design img"
+              placeholder="blur"
+              blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1663060055/Techdots/images/img1_design_usaunt.png"
+            />
           </div>
           <div className={`${styles.design_text}`}>
               <h3 className="mb-4">How We Design</h3>

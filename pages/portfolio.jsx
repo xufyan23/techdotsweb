@@ -31,8 +31,8 @@ const Portfolio = ({posts, bannerPosts}) => {
       <Head>
         <MetaTags
           title="Portfolio"
-          description="Techdots is a product-focused software development"
-          keywords="Portfolio"
+          description="We deliver digital products & statergies that help you grow dd"
+          keywords="Lets create something great together"
         />
       </Head>
       <div className={`${styles.success_stories} success-wrapper`}>
@@ -85,7 +85,10 @@ const Portfolio = ({posts, bannerPosts}) => {
                             loading="lazy"
                           /> */}
                           <Image className={styles.card_img} src={item.mainImage} alt={item.title} width={"100%"} height={"100%"}
-                          layout="responsive" priority={false}/>
+                            layout="responsive" priority={false}
+                            placeholder="blur"
+                            blurDataURL={item.mainImage}
+                          />
                         </div>
                         <div className={`${styles.success_card_des}`}>
                           <h3 className="link-heading mb-2 mt-2">

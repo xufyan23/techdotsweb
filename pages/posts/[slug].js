@@ -33,7 +33,10 @@ const Post = ({post}) => {
         <article className={styles.post_container}>
           <h1>{post.title}</h1>
           <div className={styles.blog_banner}>
-            {imageUrl && <Image src={imageUrl} alt={post.title} width={"100%"} height={"100%"} layout="responsive"/>}
+            {imageUrl && <Image src={imageUrl} alt={post.title} width={"100%"} height={"100%"} layout="responsive"
+              placeholder="blur"
+              blurDataURL={imageUrl}
+            />}
           </div>
           <div className={styles.description}>
             <BlockContent blocks={post.body} projectId="p3umg9xf" dataset="production"/>
