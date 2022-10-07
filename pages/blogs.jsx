@@ -34,7 +34,7 @@ const Blogs = ({posts}) => {
               <div className={styles.banner_text}>
                 <h1>Our Blogs</h1>
                 <p>
-                  Stay tuned with the latest news and industry articles around techdots blogs
+                  Stay tuned with the latest news and industry articles around techdots blogs.
                 </p>
               </div>
               <div className={styles.banner_img}>

@@ -24,9 +24,9 @@ const Contact = () => {
               <div className={styles.banner_text}>
                 <h1>Contact Us</h1>
                 <p>
-                  Let talk about your website or project. We are here to help
-                  <span className="d-block">and answer any question you might have.
-                  We look forward hearing from you.</span>
+                  Let&apos;s talk about your website or project. We are here to help
+                  <span className="d-block">and answer any questions you might have.
+                  We look forward to hearing from you.</span>
                 </p>
               </div>
               <div className={styles.banner_img}>

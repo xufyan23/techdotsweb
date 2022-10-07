@@ -45,9 +45,9 @@ const Portfolio = ({posts, bannerPosts}) => {
                   {/* <div className="clr-green">P</div> */}
                   <h1>Portfolio</h1>
                   <p>
-                    Lets create something great together
+                    Let&apos;s create something great together
                     <span className="d-block">
-                    We deliver digital products & statergies that help you grow.
+                    We deliver digital products and strategies that help you grow.
                     </span>
                   </p>
                   <div className="btn-block">

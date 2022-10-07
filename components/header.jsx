@@ -24,7 +24,7 @@ const Header = () => {
             <Link href="/">
               <a>
                 <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/logo_nrmjxm.svg"
-                  width={95} height={26} alt="techdots"/>
+                  width={95} height={26} unoptimized={true} alt="techdots"/>
               </a>
             </Link>
           </div>
@@ -112,6 +112,7 @@ const Header = () => {
                       width={20}
                       height={20}
                       alt="Linked In"
+                      unoptimized={true}
                     />
                   </a>
                 </Link>

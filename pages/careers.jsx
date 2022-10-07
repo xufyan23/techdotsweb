@@ -33,7 +33,7 @@ const Career = ({posts}) => {
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-8 col-xxl-7">
                 <h1>Join Techdots amazing team </h1>
                 <p>
-                  We innovate build cool stuff and have fun. Want to join us? See what kind of jobs are available now
+                  We innovate, build cool stuff, and have fun. Want to join us? See what kinds of jobs are available now.
                 </p>
               </div>
             </div>
