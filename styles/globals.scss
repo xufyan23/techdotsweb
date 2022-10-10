@@ -1,7 +1,7 @@
 @import './vaiables.scss';
 
 @font-face {
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   src: url('https://res.cloudinary.com/dcfzux5xq/raw/upload/v1655905208/Techdots/fonts/Helvetica/Helvetica_quk2eq.woff2') format("woff2");
   font-display: swap;
 }
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: $font-comfortaa;
+  font-family: $font-comfortaa, sans-serif;
   color: $clr-black;
 }
 
