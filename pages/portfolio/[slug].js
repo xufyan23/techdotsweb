@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Head from 'next/head';
 import { useState, useEffect } from "react";
-import imageUrlBuilder  from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../components/header";
 import MetaTags from '../../components/common/metaTags';

@@ -72,7 +72,7 @@ const Portfolio = ({posts, bannerPosts}) => {
                       <div
                         key={index}
                         onClick={() =>
-                          router.push(`/portfolios/${item.slug.current}`)
+                          router.push(`/portfolio/${item.slug.current}`)
                         }
                         className={`${styles.success_card} ${
                           index > 0 ? styles.small_card : ""
@@ -114,9 +114,9 @@ const Portfolio = ({posts, bannerPosts}) => {
             {portfolioPost.length ? (
               portfolioPost.map((item, index) =>
                 index % 2 === 0 ? (
-                  <RightImgBlog item={item} type="portfolios" key={index}/>
+                  <RightImgBlog item={item} type="portfolio" key={index}/>
                 ) : (
-                  <LeftImgBlog item={item} type="portfolios" key={index} />
+                  <LeftImgBlog item={item} type="portfolio" key={index} />
                 )
               )
             ) : (

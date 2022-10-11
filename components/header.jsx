@@ -82,8 +82,8 @@ const Header = () => {
                   router.pathname === "/portfolio" ? styles.active : ""
                 }`}
               >
-                <Link className="nav-link" href="/portfolios">
-                  <a>Portfolios</a>
+                <Link className="nav-link" href="/portfolio">
+                  <a>Portfolio</a>
                 </Link>
               </li>
               <li
