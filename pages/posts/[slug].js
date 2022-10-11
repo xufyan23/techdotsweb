@@ -5,17 +5,15 @@ import imageUrlBuilder  from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../components/header";
 import MetaTags from '../../components/common/metaTags';
+import getPosts from "../../services/post";
 import styles from"../../styles/Post.module.scss";
 
 const Post = ({post}) => {
   const [imageUrl, setImageUrl] = useState('');
   useEffect(() => {
-    const imgBuilder = imageUrlBuilder ({
-      projectId: 'p3umg9xf',
-      dataset: 'production'
-    });
-
-    setImageUrl(imgBuilder.image(post.mainImage).url())
+    if (post.mainImage) {
+      setImageUrl((post.mainImage))
+    }
 
   }, [post.mainImage]);
 
@@ -56,25 +54,45 @@ export const getServerSideProps = async pageContext => {
     }
   }
 
-  const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "blog" in categories[]->title]`)
+  const result = await getPosts(`*[_type == "post" && slug.current == "${pageSlug}" && "blog" in categories[]->title]`);
 
-
-  const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
-
-  const result = await fetch(url).then(res => res.json());
-  const post = result.result[0];
-  if(!post) {
+  if (!result.length) {
     return {
       notFound: true
     }
   }
-  else {
-    return {
-      props: {
-        post,
-      }
+  // const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "career" in categories[]->title]`)
+
+
+  // const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
+
+  // const result = await fetch(url).then(res => res.json());
+  const post = result[0];
+  return {
+    props: {
+      post,
     }
   }
+
+  // const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "blog" in categories[]->title]`)
+
+
+  // const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
+
+  // const result = await fetch(url).then(res => res.json());
+  // const post = result.result[0];
+  // if(!post) {
+  //   return {
+  //     notFound: true
+  //   }
+  // }
+  // else {
+  //   return {
+  //     props: {
+  //       post,
+  //     }
+  //   }
+  // }
 };
 
 export default Post;

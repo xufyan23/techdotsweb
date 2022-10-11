@@ -72,7 +72,7 @@ const Portfolio = ({posts, bannerPosts}) => {
                       <div
                         key={index}
                         onClick={() =>
-                          router.push(`/porfolios/${item.slug.current}`)
+                          router.push(`/portfolios/${item.slug.current}`)
                         }
                         className={`${styles.success_card} ${
                           index > 0 ? styles.small_card : ""

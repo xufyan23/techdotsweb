@@ -62,10 +62,13 @@ const Home = ({posts}) => {
             <div className="banner_text">
               <div className="banner_text-box">
                 <h1>
-                  <span className="clr-green d-block">Custom Software Solutions </span>
+                  <span className="clr-green d-block">Custom Software Solutions</span>
                   For Global Companies
                 </h1>
-                <p className="mb-4 mt-3">Our global team develops software that adds value to your small startup, promising SMB, or established enterprise.</p>
+                <p className="mb-4 mt-3">
+                  Our global team develops software that adds value to your small startup,
+                  <span className='d-block'>promising SMB, or established enterprise.</span>
+                </p>
                 <div className="btn-block">
                   <Link
                     href = "https://techdots.zohobookings.com/#/customer/custom-software-development">
@@ -362,15 +365,17 @@ const Home = ({posts}) => {
             success stories along the way.</p>
           </div>
           <div className={styles.success_card_block}>
-            {
-              mappedPosts.length ? mappedPosts.map((item, index) => (
-                <BlogCard
-                  onClick={() => router.push(`/posts/${item.slug.current}`)
-                }
-                key={index}
-                item={item}/>
-              )) : <>No Posts Yet</>
-            }
+            <div className={styles.success_card_grid}>
+              {
+                mappedPosts.length ? mappedPosts.map((item, index) => (
+                  <BlogCard
+                    onClick={() => router.push(`/posts/${item.slug.current}`)
+                  }
+                  key={index}
+                  item={item}/>
+                )) : <>No Posts Yet</>
+              }
+            </div>
           </div>
 
           <div className="text-center m-auto">

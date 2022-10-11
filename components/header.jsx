@@ -23,8 +23,8 @@ const Header = () => {
           <div className={`navbar-brand ${styles.navbar_brand}`}>
             <Link href="/">
               <a>
-                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729612/Techdots/images/logo_nrmjxm.svg"
-                  width={95} height={26} unoptimized={true} alt="techdots"/>
+                <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/c_scale,q_auto,w_190/v1662729612/Techdots/images/logo_nrmjxm.svg"
+                  width={95} height={26} alt="techdots"/>
               </a>
             </Link>
           </div>
@@ -82,8 +82,8 @@ const Header = () => {
                   router.pathname === "/portfolio" ? styles.active : ""
                 }`}
               >
-                <Link className="nav-link" href="/portfolio">
-                  <a>Portfolio</a>
+                <Link className="nav-link" href="/portfolios">
+                  <a>Portfolios</a>
                 </Link>
               </li>
               <li
@@ -111,8 +111,7 @@ const Header = () => {
                       src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729611/Techdots/images/linkedin_rqxjhc.svg"
                       width={20}
                       height={20}
-                      alt="Linked In"
-                      unoptimized={true}
+                      alt="Linked In page"
                     />
                   </a>
                 </Link>

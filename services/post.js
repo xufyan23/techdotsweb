@@ -19,7 +19,7 @@ import imageUrlBuilder from "@sanity/image-url";
 	return posts.map(post => {
 		return {
 			...post,
-			mainImage: imgBuilder.image(post.mainImage).url(),
+			mainImage: post.mainImage ? imgBuilder.image(post.mainImage).url(): null,
 		}
 	});
 }

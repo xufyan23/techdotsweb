@@ -24,7 +24,7 @@ const Footer = () => {
             <p>Company</p>
             <ul>
               <li>
-                <Link href="/portfolio">
+                <Link href="/portfolios">
                   <a onClick={handleFooterLink}>Portfolio</a>
                 </Link>
               </li>
