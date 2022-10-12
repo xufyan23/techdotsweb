@@ -165,13 +165,13 @@ const Home = ({posts}) => {
               <div className="col-12 col-sm-12 col-lg-6 col-xl-6 col-xxl-6">
                 <div className={styles.img_block}>
                   <Image
-                    src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1665037366/Techdots/images/who-we-are_rzejdt.svg"
+                    src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1665575607/Techdots/images/who-we-are_zl0epy.svg"
                     width={600}
                     height={350}
                     alt="who we are"
                     // layout="fixed"
                     placeholder="blur"
-                    blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1665037366/Techdots/images/who-we-are_rzejdt.svg"
+                    blurDataURL="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1665575607/Techdots/images/who-we-are_zl0epy.svg"
                   />
                 </div>
               </div>
