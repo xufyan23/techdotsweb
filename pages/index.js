@@ -417,10 +417,10 @@ const Home = ({posts}) => {
               <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <div className="carousel-img">
-                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729613/Techdots/images/sample-3_mvbkd8.png"
-                        alt="user" width={100} height={100} layout="fixed" loading="lazy" />
-                    </div>
+                    {/* <div className="carousel-img">
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1664954141/Techdots/images/chris_nn7djp.jpg"
+                        alt="user" width={100} height={100} layout="fixed"/>
+                    </div> */}
                     <p className="carousel-description">
                       I appreciate the proactive approach and their ability to suggest and implement improvements to a
                       prospective solution on both business and architectural levels.
@@ -438,10 +438,10 @@ const Home = ({posts}) => {
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <div className="carousel-img">
-                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729613/Techdots/images/sample-2_dkhyzh.png"
+                    {/* <div className="carousel-img">
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1664954141/Techdots/images/robert_ose15j.jpg"
                         width={100} height={100} layout="fixed" alt="user"/>
-                    </div>
+                    </div> */}
                     <p className="carousel-description">
                       No doubt, Techdots is a reliable and agile technology partner. We appraise their dedicated work ethic
                       and their approach towards security issues. That is what set them apart and our top pick
@@ -459,10 +459,10 @@ const Home = ({posts}) => {
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <div className="carousel-img">
-                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1662729606/Techdots/images/card-img-3_qnhjcv.png"
+                    {/* <div className="carousel-img">
+                      <Image src="https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1664954141/Techdots/images/allen_jmskp9.jpg"
                         width={100} height={100} layout="fixed" alt="user"/>
-                    </div>
+                    </div> */}
                     <p className="carousel-description">
                       I would definitely recommend Techdots for your projects. It’s amazing to see the team work perfectly
                       in sync delivering best results.
