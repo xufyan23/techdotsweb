@@ -7,7 +7,7 @@ async function sendEmail(req, res) {
     const {email,subject, message, attachments} = req.body;
     const msg = {
       to: email, // Change to your recipient
-      from: 'sufyan@techdots.dev', // Change to your verified sender
+      from: 'accounts@techdots.dev', // Change to your verified sender
       subject: subject,
       html: message,
       attachments,

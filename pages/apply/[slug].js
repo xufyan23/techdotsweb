@@ -93,7 +93,7 @@ const ApplyNow = ({post}) => {
       // console.log(text, acceptedFiles[0].name, acceptedFiles[0].type);
       // console.log('ABC ', text.substring(text.indexOf("base64,") + 7));
       const body = JSON.stringify({
-        email: "sufyan@techdots.dev",
+        email: "hr@techdots.dev",
         subject: post.title,
         attachments: [
           {
