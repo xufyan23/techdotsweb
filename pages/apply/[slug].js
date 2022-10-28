@@ -242,11 +242,11 @@ const ApplyNow = ({post}) => {
                 </div>
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label> Select Gender</label>
+                    <label> Select Gender*</label>
                     <select className="form-select" name="gender" {...register("gender", registerOptions.gender)}
                     // onChange={(e) => setGender(e.target.value)}
                     style={handleBorderValidation(errors.position)}>
-                      <option value="">Gender*</option>
+                      <option value="">Gender</option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                       <option value="not to be disclosed">Not to be disclosed</option>
