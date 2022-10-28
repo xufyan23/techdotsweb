@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: $font-comfortaa, sans-serif;
+  font-family: $font-comfortaa;
   color: $clr-black;
 }
 
@@ -158,14 +158,17 @@ small {
   font-size: 0.75rem;
 }
 
-.form-control {
-  font-size: 14px;
-  min-height: 2.5rem;
+.form-control, .form-select {
   &:focus {
     outline: 1px solid $clr-blue-500;
     box-shadow: none;
     border-color: transparent;
   }
+}
+
+.form-control {
+  font-size: 14px;
+  min-height: 2.5rem;
 }
 
 .learn-more {
@@ -231,6 +234,11 @@ hr {
 
 .menu-close {
   display: none;
+}
+
+.apply-now {
+  position: absolute;
+  right: 25%;
 }
 
 .fixed-nav {
@@ -501,6 +509,35 @@ hr {
       font-weight: 700;
     }
   }
+}
+
+/*----------  drag and drop file  ----------*/
+.dropzone {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem;
+  height: 120px !important;
+  // padding-top: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px dashed $clr-green-300;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bXgVCj {
+  @extend .primary-btn;
+  color: $clr-white !important;
+  min-width: auto !important;
+}
+.dmajdp {
+  align-items: center;
+  span {
+    text-decoration: none !important;
+  }
+}
+.file-types {
+  display: none !important;
 }
 
 /*----------  checkbox  ----------*/

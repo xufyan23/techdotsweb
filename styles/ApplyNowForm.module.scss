@@ -1,0 +1,57 @@
+@import '../styles/vaiables.scss';
+
+.applynow_wrapper {
+  max-width: 60%;
+  margin: 2rem auto 4rem auto;
+  h1 {
+    font-size: clamp(1rem, 12px + 3.3vw, 2.6875rem);
+  }
+}
+.submission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem auto;
+  height: 59vh;
+  text-align: center;
+  padding: 0 0.5rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+.success_icon {
+  span {
+    overflow: visible !important;
+  }
+}
+
+
+// .sc-bcXHqe  {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: center;
+// 	gap: 0.5rem;
+// 	height: 120px;
+// 	margin-bottom: 1.5rem;
+// 	border: 2px dashed $clr-green-300;
+// 	border-radius: 5px;
+// 	cursor: pointer;
+// }
+
+
+
+
+@media(max-width: 1366px) {
+  .applynow_wrapper {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 500px) {
+  .submission {
+    padding: 1rem;
+    text-align: center;
+  }
+}

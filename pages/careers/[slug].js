@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from 'next/head';
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
@@ -9,6 +10,7 @@ import getPosts from "../../services/post";
 import styles from"../../styles/Post.module.scss";
 
 const Career = ({post}) => {
+  const router = useRouter();
   const [imageUrl, setImageUrl] = useState('');
   useEffect(() => {
     if (post.mainImage) {
@@ -29,6 +31,12 @@ const Career = ({post}) => {
       <div className={`blog-wrapper ${styles.post_wrapper}`}>
         <Header />
         <article className={styles.post_container}>
+          <div className="apply-now">
+            <button className="btn primary-btn"
+              onClick={() => router.push(`/apply/${post.slug.current}`)}
+              key={post}
+            >Apply Now</button>
+          </div>
           <h1>{post.title}</h1>
           <div className={styles.blog_banner}>
             {imageUrl && <Image src={imageUrl} alt={post.title} width={"100%"} height={"100%"} layout="responsive"
