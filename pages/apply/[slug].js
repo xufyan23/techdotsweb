@@ -422,7 +422,7 @@ const ApplyNow = ({post}) => {
                 />
             </div>
             <h3>Application Submitted</h3>
-            <p>Thankyou for your intrest!</p>
+            <p>Thankyou for your interest!</p>
             <p>Our team will review your application and call you for interview</p>
           </div>
           : ''
