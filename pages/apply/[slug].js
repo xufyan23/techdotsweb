@@ -119,23 +119,22 @@ const ApplyNow = ({post}) => {
             <h3>You've got a new mail from ${data.fullName}, their email is: ${data.email}</h3>
             <h3>Personal Information</h3>
             <ul>
-              <li>Full Name: ${data.fullName}</li>
-              <li>Phone: ${data.phone}</li>
-              <li>City: ${data.city}</li>
-              <li>Address: ${data.address ?? 'N/A'}</li>
-              <li>ZipCode: ${data.zipCode ?? 'N/A'}</li>
-              <li>Gender: ${data.gender}</li>
+              <li><strong>Full Name:</strong> ${data.fullName}</li>
+              <li><strong>Phone:</strong> ${data.phone}</li>
+              <li><strong>City:</strong> ${data.city}</li>
+              <li><strong>Address:</strong> ${data.address ?? 'N/A'}</li>
+              <li><strong>ZipCode:</strong> ${data.zipCode ?? 'N/A'}</li>
+              <li><strong>Gender:</strong> ${data.gender}</li>
             </ul>
             <h3>Work Information</h3>
             <ul>
-              <li>Position Title: ${data.position}</li>
-              <li>Expected Salray: ${data.expectedSalary}</li>
-              <li>Total Experience: ${data.experience}</li>
-              <li>Last Degree: ${data.degree}</li>
-              <li>LinkedIn: ${data.linkedIn}</li>
-              <li>Portfolio: ${data.portfolio ?? 'N/A'}</li>
+              <li><strong>Position Title: </strong>${data.position}</li>
+              <li><strong>Expected Salray:</strong> ${data.expectedSalary}</li>
+              <li><strong>Total Experience:</strong> ${data.experience}</li>
+              <li><strong>Last Degree:</strong> ${data.degree}</li>
+              <li><strong>LinkedIn:</strong> ${data.linkedIn}</li>
+              <li><strong>Portfolio:</strong> ${data.portfolio ?? 'N/A'}</li>
             </ul>
-
           </div>
         </body>
         </html>`,
