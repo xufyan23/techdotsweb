@@ -14,7 +14,7 @@ import Loader from '../../components/loader';
 // const fileTypes = ["PDF", "DOCX", "DOC"];
 
 const ApplyNow = ({post}) => {
-  const { register, handleSubmit, handleError, reset, formState: { errors } } = useForm({
+  const { register,handleSubmit, handleError, reset, formState: { errors } } = useForm({
     mode: "onBlur"
   });
 
@@ -60,14 +60,12 @@ const ApplyNow = ({post}) => {
     phone: { required: "Phone is required" },
     city: { required: "City is required" },
     state: { required: "State is required" },
-    zipCode: {required: "Zip Code is required"},
     gender: {required: "Gender is required"},
     position: {required: "Position title is required"},
     expectedSalary: {required: "Expected salary is required"},
     experience: {required: "Experience is required"},
     degree: {required: "Degree is required"},
     linkedIn: {required: "LinkedIn url is required"},
-    portfolio: {required: "Portfolio is required"},
     attachFile: {required: "Please attach file"}
   };
 
@@ -93,8 +91,9 @@ const ApplyNow = ({post}) => {
       // console.log(text, acceptedFiles[0].name, acceptedFiles[0].type);
       // console.log('ABC ', text.substring(text.indexOf("base64,") + 7));
       const body = JSON.stringify({
-        email: "hr@techdots.dev",
+        email: "hina@techdots.dev",
         subject: post.title,
+        fromName: 'TechDots',
         attachments: [
           {
             content: fileData,
@@ -122,8 +121,8 @@ const ApplyNow = ({post}) => {
               <li><strong>Full Name:</strong> ${data.fullName}</li>
               <li><strong>Phone:</strong> ${data.phone}</li>
               <li><strong>City:</strong> ${data.city}</li>
-              <li><strong>Address:</strong> ${data.address ?? 'N/A'}</li>
-              <li><strong>ZipCode:</strong> ${data.zipCode ?? 'N/A'}</li>
+              <li><strong>Address:</strong> ${!data.address || data.address == '' ? 'N/A': data.address}</li>
+              <li><strong>ZipCode:</strong> ${!data.zipCode || data.zipCode == '' ? 'N/A': data.zipCode}</li>
               <li><strong>Gender:</strong> ${data.gender}</li>
             </ul>
             <h3>Work Information</h3>
@@ -133,7 +132,7 @@ const ApplyNow = ({post}) => {
               <li><strong>Total Experience:</strong> ${data.experience}</li>
               <li><strong>Last Degree:</strong> ${data.degree}</li>
               <li><strong>LinkedIn:</strong> ${data.linkedIn}</li>
-              <li><strong>Portfolio:</strong> ${data.portfolio ?? 'N/A'}</li>
+              <li><strong>Portfolio:</strong> ${!data.portfolio || data.portfolio == '' ? 'N/A': data.portfolio}</li>
             </ul>
           </div>
         </body>
@@ -187,12 +186,24 @@ const ApplyNow = ({post}) => {
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Full Name*</label>
+                    <label>Full Name
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="fullname"
                       // value={fullName}
                       style={handleBorderValidation(errors.fullName)}
-                      {...register("fullName", registerOptions.fullName)}
+                      // {...register("fullName", registerOptions.fullName)}
                       // onChange={(e) => {setFullName(e.target.value)}}
+                      {...register("fullName", {
+                        required: {
+                          value: true,
+                          message: "Full Name is required",
+                        },
+                        pattern: {
+                          value: /([A-Z])\w+/g,
+                          message: "Your Full name is not valid",
+                        },
+                      })}
                     />
                     <span className="text-danger">
                       {errors?.fullName && errors.fullName.message}
@@ -201,7 +212,9 @@ const ApplyNow = ({post}) => {
                 </div>
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Email*</label>
+                    <label>Email
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="email" className="form-control" id="email"
                       // value={email}
                       style={handleBorderValidation(errors.email)}
@@ -228,12 +241,25 @@ const ApplyNow = ({post}) => {
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Phone*</label>
+                    <label>Phone
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="phone"
                       // value={phone}
                       style={handleBorderValidation(errors.phone)}
-                      {...register("phone", registerOptions.phone)}
+                      // {...register("phone", registerOptions.phone)}
                       // onChange={(e) => {setPhone(e.target.value)}}
+                      {...register("phone", {
+                        required: {
+                          value: true,
+                          message: "Phone number is required",
+                        },
+                        pattern: {
+                          value:
+                          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/g,
+                          message: "Your phone number is not valid",
+                        },
+                      })}
                     />
                     <span className="text-danger">
                       {errors?.phone && errors.phone.message}
@@ -242,7 +268,9 @@ const ApplyNow = ({post}) => {
                 </div>
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label> Select Gender*</label>
+                    <label> Select Gender
+                      <span className="text-danger">*</span>
+                    </label>
                     <select className="form-select" name="gender" {...register("gender", registerOptions.gender)}
                     // onChange={(e) => setGender(e.target.value)}
                     style={handleBorderValidation(errors.position)}>
@@ -261,7 +289,9 @@ const ApplyNow = ({post}) => {
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>City*</label>
+                    <label>City
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="city"
                       // value={city}
                       style={handleBorderValidation(errors.city)}
@@ -275,7 +305,9 @@ const ApplyNow = ({post}) => {
                 </div>
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>State*</label>
+                    <label>State
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="state"
                       // value={state}
                       style={handleBorderValidation(errors.state)}
@@ -288,7 +320,6 @@ const ApplyNow = ({post}) => {
                   </div>
                 </div>
               </div>
-
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
@@ -296,7 +327,7 @@ const ApplyNow = ({post}) => {
                     <input type="text" className="form-control" id="zipcode"
                       // value={zipCode}
                       // onChange={(e) => {setZipCode(e.target.value)}}
-                      {...register("zipCode", registerOptions.zipCode)}
+                      {...register("zipCode")}
                     />
                   </div>
                 </div>
@@ -305,7 +336,7 @@ const ApplyNow = ({post}) => {
                     <label>Address</label>
                     <input type="text" className="form-control" id="address"
                       // vlaue={address} onChange={(e) => {setAddress(e.target.value)}}
-                      {...register("address", registerOptions.address)}
+                      {...register("address", register.address)}
                     />
                   </div>
                 </div>
@@ -314,7 +345,9 @@ const ApplyNow = ({post}) => {
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Position Title*</label>
+                    <label>Position Title
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="positionTitle"
                       // value={position}
                       style={handleBorderValidation(errors.position)}
@@ -328,7 +361,9 @@ const ApplyNow = ({post}) => {
                 </div>
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Expected Salary*</label>
+                    <label>Expected Salary
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="salaray"
                       // value={expectedSalary}
                       style={handleBorderValidation(errors.expectedSalary)}
@@ -345,7 +380,9 @@ const ApplyNow = ({post}) => {
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Total Experience (Years)*</label>
+                    <label>Total Experience (Years)
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="experience"
                       // value={experience}
                       style={handleBorderValidation(errors.experience)}
@@ -359,7 +396,9 @@ const ApplyNow = ({post}) => {
                 </div>
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Last Degree*</label>
+                    <label>Last Degree
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="degree"
                       // value={degree}
                       style={handleBorderValidation(errors.degree)}
@@ -376,7 +415,9 @@ const ApplyNow = ({post}) => {
               <div className="row">
                 <div className="col-xs-12 col-sm12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <div className="form-group mb-3">
-                    <label>Linkedin Profile*</label>
+                    <label>Linkedin Profile
+                      <span className="text-danger">*</span>
+                    </label>
                     <input type="text" className="form-control" id="lnkedin"
                       // value={linkedIn}
                       style={handleBorderValidation(errors.linkedIn)}
@@ -403,7 +444,7 @@ const ApplyNow = ({post}) => {
                     <label>Portfolio</label>
                     <input type="text" className="form-control" id="portfolio"
                       // value={portfolio} onChange={(e) => {setPortfolio(e.target.value)}}
-                      {...register("portfolio", registerOptions.portfolio)}
+                      {...register("portfolio", register.portfolio)}
                     />
                   </div>
                 </div>
