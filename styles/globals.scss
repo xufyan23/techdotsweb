@@ -349,10 +349,11 @@ hr {
     .carousel-description {
       width: 28rem;
       font-size: clamp(1.2rem, calc( 12px + 1.800vw ), 1.5rem);
-      &:before {
+      position: relative;
+      &:before, &:after{
         content: '"';
-        display: block;
-        height: 25px;
+        display: inline-block;
+        letter-spacing: 5px;
       }
     }
     .rating {
