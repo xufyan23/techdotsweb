@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 
 import styles from '../../styles/ApplyNowForm.module.scss';
 import Loader from '../../components/loader';
+import Header from '../../components/header';
 
 // const fileTypes = ["PDF", "DOCX", "DOC"];
 
@@ -166,7 +167,8 @@ const ApplyNow = ({post}) => {
           keywords={post.title}
         />
       </Head>
-      <div>
+      <div className="applynow">
+        <Header/>
         <div className={`${styles.applynow_wrapper} ${emailSuccess ? 'd-none' : ''}`}>
           <div className="container">
             <h1 className="text-center mb-4">Apply for {post.title}</h1>
@@ -200,7 +202,7 @@ const ApplyNow = ({post}) => {
                           message: "Full Name is required",
                         },
                         pattern: {
-                          value: /([A-Z])\w+/g,
+                          value: /([a-z])\w+/g,
                           message: "Your Full name is not valid",
                         },
                       })}

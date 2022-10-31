@@ -511,6 +511,16 @@ hr {
   }
 }
 
+.applynow {
+  header {
+    background: $clr-blue-900;
+    .navbar {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
 /*----------  drag and drop file  ----------*/
 .dropzone {
   display: flex !important;
