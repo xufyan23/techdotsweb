@@ -90,7 +90,7 @@ const Services = () => {
               <div className="text-center-xs">
                 <Link href="idea-validation" >
                   <a className="btn primary-btn">
-                    Book Appointment
+                    Find out More
                   </a>
                 </Link>
               </div>
@@ -125,7 +125,7 @@ const Services = () => {
             <div className="mt-4 text-center-xs">
               <Link href="design">
                 <a className="btn primary-btn" onClick={handleBookAppointment}>
-                  Book Appointment
+                  Find out More
                 </a>
               </Link>
             </div>
@@ -145,7 +145,7 @@ const Services = () => {
             <div className="text-center-xs">
               <Link href="software-development">
                 <a className="btn primary-btn" onClick={handleBookAppointment}>
-                  Book Appointment
+                  Find out More
                 </a>
               </Link>
             </div>

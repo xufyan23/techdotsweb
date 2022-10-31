@@ -15,10 +15,10 @@
       &:after {
         content: '';
         height: 2px;
-        width: 100%;
+        width: 92%;
         position: absolute;
         bottom: -7px;
-        left: 0;
+        left: 5px;
         background-color: $clr-green-400;
         transform: scaleX(0);
         transform-origin: bottom right;
