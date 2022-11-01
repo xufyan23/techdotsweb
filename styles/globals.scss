@@ -337,7 +337,7 @@ hr {
 
 .carousel {
   .carousel-inner {
-    overflow: visible;
+    position: relative;
   }
   .carousel-item {
     .carousel-img {
@@ -352,23 +352,22 @@ hr {
     .carousel-description {
       width: 28rem;
       font-size: clamp(1.2rem, calc( 12px + 1.800vw ), 1.5rem);
-      position: relative;
       &:before {
         content: '';
         display: inline-block;
         height: 25px;
-        width: 30px;
-        background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1667288713/Techdots/images/quote-left_evs5pp.svg') no-repeat;
+        width: 23px;
+        background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1667293949/Techdots/images/left-quote_aam9et.svg') no-repeat;
         background-size: 18px;
-        position: absolute;
-        left: -22px;
+        // position: absolute;
+        // left: -22px;
       }
       &:after {
         content: '';
         display: inline-block;
         height: 25px;
         width: 30px;
-        background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1667288713/Techdots/images/quote-right_slsnja.svg') no-repeat;
+        background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1667293949/Techdots/images/right-quote_sva1nx.svg') no-repeat;
         background-size: 20px;
         margin-left: 5px;
       }
