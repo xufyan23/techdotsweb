@@ -336,6 +336,9 @@ hr {
 }
 
 .carousel {
+  .carousel-inner {
+    overflow: visible;
+  }
   .carousel-item {
     .carousel-img {
       padding-bottom: 1.5rem;
@@ -350,10 +353,24 @@ hr {
       width: 28rem;
       font-size: clamp(1.2rem, calc( 12px + 1.800vw ), 1.5rem);
       position: relative;
-      &:before, &:after{
-        content: '"';
+      &:before {
+        content: '';
         display: inline-block;
-        letter-spacing: 5px;
+        height: 25px;
+        width: 30px;
+        background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1667288713/Techdots/images/quote-left_evs5pp.svg') no-repeat;
+        background-size: 18px;
+        position: absolute;
+        left: -22px;
+      }
+      &:after {
+        content: '';
+        display: inline-block;
+        height: 25px;
+        width: 30px;
+        background: url('https://res.cloudinary.com/dcfzux5xq/image/upload/q_auto/v1667288713/Techdots/images/quote-right_slsnja.svg') no-repeat;
+        background-size: 20px;
+        margin-left: 5px;
       }
     }
     .rating {
@@ -368,6 +385,7 @@ hr {
       }
       .name {
         font-weight: 600;
+        color: $clr-grey-300;
       }
       .designation {
         font-size: 13px;

@@ -423,7 +423,7 @@ const Home = ({posts}) => {
                     </div> */}
                     <p className="carousel-description">
                       I appreciate the proactive approach and their ability to suggest and implement improvements to a
-                      prospective solution on both business and architectural levels.
+                      prospective solution on both business and architectural levels
                     </p>
                     <div className="rating">
                       <Image className="mr-3" src={Star} alt="rating"/>
@@ -465,7 +465,7 @@ const Home = ({posts}) => {
                     </div> */}
                     <p className="carousel-description">
                       I would definitely recommend Techdots for your projects. It’s amazing to see the team work perfectly
-                      in sync delivering best results.
+                      in sync delivering best results
                     </p>
                     <div className="rating">
                       <Image className="mr-3" src={Star} alt="rating"/>
