@@ -61,38 +61,13 @@ export const getServerSideProps = async pageContext => {
       notFound: true
     }
   }
-  // const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "career" in categories[]->title]`)
 
-
-  // const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
-
-  // const result = await fetch(url).then(res => res.json());
   const post = result[0];
   return {
     props: {
       post,
     }
   }
-
-  // const query = encodeURIComponent(`*[_type == "post" && slug.current == "${pageSlug}" && "blog" in categories[]->title]`)
-
-
-  // const url = `https://p3umg9xf.api.sanity.io/v1/data/query/production?query=${query}`;
-
-  // const result = await fetch(url).then(res => res.json());
-  // const post = result.result[0];
-  // if(!post) {
-  //   return {
-  //     notFound: true
-  //   }
-  // }
-  // else {
-  //   return {
-  //     props: {
-  //       post,
-  //     }
-  //   }
-  // }
 };
 
 export default Post;
