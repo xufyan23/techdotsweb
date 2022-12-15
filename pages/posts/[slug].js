@@ -6,6 +6,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import Header from "../../components/header";
 import MetaTags from '../../components/common/metaTags';
 import getPosts from "../../services/post";
+import serializers from "../../services/sanitySerializers";
 import styles from"../../styles/Post.module.scss";
 
 const Post = ({post}) => {
@@ -14,7 +15,6 @@ const Post = ({post}) => {
     if (post.mainImage) {
       setImageUrl((post.mainImage))
     }
-
   }, [post.mainImage]);
 
   return (
@@ -37,7 +37,7 @@ const Post = ({post}) => {
             />}
           </div>
           <div className={styles.description}>
-            <BlockContent blocks={post.body} projectId="p3umg9xf" dataset="production"/>
+            <BlockContent blocks={post.body} projectId="p3umg9xf" dataset="production" serializers={serializers} />
           </div>
         </article>
       </div>

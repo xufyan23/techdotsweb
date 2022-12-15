@@ -6,7 +6,7 @@ const QuoteStepTwo = ({onStepComplete, onStepBack, stepTwo, setStepTwo}) => {
 
   const handleTextArea = (event) => {
     const textArea = event.target.value
-    console.log(textArea)
+    // console.log(textArea)
     setStepTwo(textArea);
   }
 
